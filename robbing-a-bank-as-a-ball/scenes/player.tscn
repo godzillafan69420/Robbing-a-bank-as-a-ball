@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dndik2mqbsyem" path="res://player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://8310dahbwb7t" path="res://art/player/sprite_0.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bkpotqtl66cac" path="res://art/player/sprite_1.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://5mdbc6ivgst" path="res://art/player/sprite_2.png" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://bdkfr7d0n3xq3" path="res://scenes/gun_pivot.gd" id="4_qlg0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tuyoq"]
 
@@ -59,7 +61,18 @@ script = ExtResource("1_qhqgy")
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1000295492]
 shape = SubResource("CircleShape2D_tuyoq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=367426644]
+[node name="direction" type="Node2D" parent="." unique_id=87363467]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="direction" unique_id=367426644]
+position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_fjrip")
 animation = &"idle"
 frame_progress = 0.1341449
+
+[node name="gunPivot" type="Node2D" parent="." unique_id=522363693]
+rotation = 4.548328
+script = ExtResource("4_qlg0r")
+
+[node name="Sprite2D" type="Sprite2D" parent="gunPivot" unique_id=139556560]
+position = Vector2(14, 2)
+texture = ExtResource("4_dqkch")
