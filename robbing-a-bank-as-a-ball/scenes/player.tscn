@@ -56,6 +56,7 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=65606597]
+floor_stop_on_slope = false
 script = ExtResource("1_qhqgy")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1000295492]
@@ -76,3 +77,10 @@ script = ExtResource("4_qlg0r")
 [node name="Sprite2D" type="Sprite2D" parent="gunPivot" unique_id=139556560]
 position = Vector2(14, 2)
 texture = ExtResource("4_dqkch")
+
+[node name="shootTimer" type="Timer" parent="." unique_id=787396112]
+wait_time = 0.67
+one_shot = true
+
+[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shootTimer" to="gunPivot" method="_on_shoot_timer_timeout"]

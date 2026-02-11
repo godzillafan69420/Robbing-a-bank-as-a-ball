@@ -8,12 +8,12 @@ distance = -572.0
 
 [node name="test area" type="Node2D" unique_id=1200752352]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=678311109]
+position = Vector2(361, 158)
+zoom = Vector2(1.5, 1.5)
+
 [node name="player" parent="." unique_id=65606597 instance=ExtResource("1_yldxj")]
 position = Vector2(359, 182)
-
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=678311109]
-position = Vector2(2, -24)
-zoom = Vector2(1.5, 1.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2130934677]
 position = Vector2(7, -340)
@@ -23,4 +23,3 @@ shape = SubResource("WorldBoundaryShape2D_yldxj")
 
 [node name="bullet" parent="." unique_id=126405255 instance=ExtResource("2_f0p7x")]
 position = Vector2(170, 186)
-rotation = -0.567232

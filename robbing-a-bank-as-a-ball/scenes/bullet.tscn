@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bf0ysmfn1ag00"]
+
+[ext_resource type="Script" uid="uid://c686tieqlhecu" path="res://bullet.gd" id="1_y25gk"]
+[ext_resource type="Texture2D" uid="uid://bd74cwaadwj8j" path="res://art/sprite_3.png" id="2_l5glv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoqba"]
+size = Vector2(5, 4)
+
+[node name="bullet" type="Area2D" unique_id=126405255]
+script = ExtResource("1_y25gk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1975314477]
+shape = SubResource("RectangleShape2D_eoqba")
+
+[node name="Timer" type="Timer" parent="." unique_id=1433485555]
+wait_time = 6.7
+one_shot = true
+autostart = true
+
+[node name="Sprite3" type="Sprite2D" parent="." unique_id=1558954818]
+texture = ExtResource("2_l5glv")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
