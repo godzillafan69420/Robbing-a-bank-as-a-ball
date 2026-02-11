@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tva7ldu20ots"
-path="res://.godot/imported/sprite_5.png-e8f108addddd70d4e5ccc7c98d951c25.ctex"
+uid="uid://c10p6pyil0kix"
+path="res://.godot/imported/marblePillarbottom.png-2f4b71c1733fef9ebe02c2d8add270ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/enemy/sprite_5.png"
-dest_files=["res://.godot/imported/sprite_5.png-e8f108addddd70d4e5ccc7c98d951c25.ctex"]
+source_file="res://marblePillarbottom.png"
+dest_files=["res://.godot/imported/marblePillarbottom.png-2f4b71c1733fef9ebe02c2d8add270ee.ctex"]
 
 [params]
 
