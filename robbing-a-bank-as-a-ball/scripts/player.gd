@@ -34,12 +34,16 @@ func _physics_process(delta: float) -> void:
 	if Currentstate == States.walking:
 		velocity.x = direction * SPEED
 		$direction/AnimatedSprite2D.stop()
-	elif Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump:
-		velocity = mouseDirection.normalized() * 500 * -1
-		canJump = false
-	elif Currentstate != States.walking and is_on_floor():
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$direction/AnimatedSprite2D.play("idle")
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump:
+			velocity = mouseDirection.normalized() * 500 * -1
+			canJump = false
+	else:
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump:
+			velocity = mouseDirection.normalized() * 500 * -1
+			canJump = false
+		elif Currentstate != States.walking and is_on_floor():
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			$direction/AnimatedSprite2D.play("idle")
 	
 		
 	move_and_slide()

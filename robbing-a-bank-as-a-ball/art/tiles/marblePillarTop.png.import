@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://damor723f2ipq"
-path="res://.godot/imported/marblepillar.png-522d91a8a7b9de6be6e644b2e8fcdeeb.ctex"
+uid="uid://dqbxn6vrbg8ig"
+path="res://.godot/imported/marblePillarTop.png-85c6d34327b659805ca68c2758a9d04d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://marblepillar.png"
-dest_files=["res://.godot/imported/marblepillar.png-522d91a8a7b9de6be6e644b2e8fcdeeb.ctex"]
+source_file="res://art/tiles/marblePillarTop.png"
+dest_files=["res://.godot/imported/marblePillarTop.png-85c6d34327b659805ca68c2758a9d04d.ctex"]
 
 [params]
 
