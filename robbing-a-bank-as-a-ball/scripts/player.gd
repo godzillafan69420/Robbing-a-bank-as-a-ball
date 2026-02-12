@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const MAXSPEED = 150
+const MAXSPEED = 100
 const SPEED = 25.0
 const shotgunStrength = 670
 enum States {ragdoll, walking, dead, idle}
