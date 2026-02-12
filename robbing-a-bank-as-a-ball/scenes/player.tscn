@@ -55,8 +55,7 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=65606597]
-floor_stop_on_slope = false
+[node name="player" type="CharacterBody2D" unique_id=2057271089]
 script = ExtResource("1_qhqgy")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1000295492]
@@ -71,7 +70,7 @@ animation = &"idle"
 frame_progress = 0.1341449
 
 [node name="gunPivot" type="Node2D" parent="." unique_id=522363693]
-rotation = 4.548328
+rotation = -1.7348574
 script = ExtResource("4_qlg0r")
 
 [node name="Sprite2D" type="Sprite2D" parent="gunPivot" unique_id=139556560]
@@ -79,8 +78,14 @@ position = Vector2(14, 2)
 texture = ExtResource("4_dqkch")
 
 [node name="shootTimer" type="Timer" parent="." unique_id=787396112]
-wait_time = 0.67
+wait_time = 0.4
 one_shot = true
 
-[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
+[node name="reloadTime" type="Timer" parent="." unique_id=2009690881]
+wait_time = 0.85
+one_shot = true
+
 [connection signal="timeout" from="shootTimer" to="gunPivot" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="reloadTime" to="gunPivot" method="_on_reload_time_timeout"]
+[connection signal="timeout" from="reloadTime" to="." method="_on_reload_time_timeout"]
