@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bgbc0pvj3lmxq"]
+
+[ext_resource type="Script" uid="uid://dr7ysramew1ib" path="res://triangle.gd" id="1_ad2ka"]
+[ext_resource type="Texture2D" uid="uid://tva7ldu20ots" path="res://art/enemy/spike.png" id="2_i5e8t"]
+[ext_resource type="Texture2D" uid="uid://ncvw4bt0ky1j" path="res://art/enemy/spikes.png" id="3_010eu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfngh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i5e8t")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_010eu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ad2ka"]
+radius = 130.0
+
+[node name="enemies" type="Area2D" unique_id=1433434572]
+script = ExtResource("1_ad2ka")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=534298249]
+polygon = PackedVector2Array(0, -15, -16, 15, 16, 15)
+disabled = true
+
+[node name="Spikes" type="AnimatedSprite2D" parent="." unique_id=2028701591]
+sprite_frames = SubResource("SpriteFrames_pfngh")
+animation = &"angry"
+
+[node name="playerdector" type="Area2D" parent="." unique_id=940915852 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerdector" unique_id=1788428707]
+shape = SubResource("CircleShape2D_ad2ka")
+
+[connection signal="body_entered" from="playerdector" to="." method="_on_playerdector_body_entered"]

@@ -55,7 +55,7 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=2057271089]
+[node name="player" type="CharacterBody2D" unique_id=2057271089 groups=["player"]]
 script = ExtResource("1_qhqgy")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1000295492]
@@ -85,7 +85,7 @@ one_shot = true
 wait_time = 0.85
 one_shot = true
 
-[connection signal="timeout" from="shootTimer" to="gunPivot" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="reloadTime" to="gunPivot" method="_on_reload_time_timeout"]
+[connection signal="timeout" from="shootTimer" to="gunPivot" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="reloadTime" to="." method="_on_reload_time_timeout"]
+[connection signal="timeout" from="reloadTime" to="gunPivot" method="_on_reload_time_timeout"]
