@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	print("burst: " + str(burstCount))
 
 	var direction := Input.get_axis("left", "right")
-	momentum = SPEED * 0.9 * direction
+	momentum = SPEED * 0.75 * direction
 	if momentum > MAXSPEED:
 		momentum = MAXSPEED
 	if momentum < -MAXSPEED:
