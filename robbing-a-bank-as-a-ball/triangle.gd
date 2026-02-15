@@ -11,15 +11,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	playerPosition = $".".get_parent().find_child("player").position
 	if CurrentStates ==state.idle:
 		$Spikes.animation = "idle"
 	if CurrentStates ==state.attacking:
 		$Spikes.animation = "angry"
 		direction = playerPosition - position
-		position += direction.normalized() * 400
+		position += direction.normalized() * 100 * delta
 
 
 func _on_playerdector_body_entered(body: CharacterBody2D) -> void:
 	if body.is_in_group("player"):
 		CurrentStates = state.attacking
-		playerPosition = body.position
+		
