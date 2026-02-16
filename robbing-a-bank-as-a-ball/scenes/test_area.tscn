@@ -29,5 +29,11 @@ position = Vector2(2, -7)
 limit_smoothed = true
 position_smoothing_speed = 1.0
 
-[node name="enemies" parent="." unique_id=1433434572 instance=ExtResource("3_vtm10")]
-position = Vector2(784, 208)
+[node name="enemies" parent="." unique_id=1433434572 groups=["enemy"] instance=ExtResource("3_vtm10")]
+position = Vector2(2102, 208)
+
+[node name="enemies2" parent="." unique_id=1458457438 groups=["enemy"] instance=ExtResource("3_vtm10")]
+position = Vector2(2134, 208)
+
+[node name="enemies3" parent="." unique_id=1569313429 groups=["enemy"] instance=ExtResource("3_vtm10")]
+position = Vector2(2166, 208)

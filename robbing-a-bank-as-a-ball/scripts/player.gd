@@ -11,6 +11,8 @@ var mouseDirection: Vector2
 var canJump: bool = true
 var burstCount: int = 2
 var momentum: float
+var HP: float = 6
+var invincibility: bool = false
 func _process(delta: float) -> void:
 	mouseposition = get_global_mouse_position()
 	mouseDirection = mouseposition - position
@@ -63,7 +65,8 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			$direction/AnimatedSprite2D.play("idle")
 	
-	
+	if HP <= 0:
+		print("you die")
 		
 	move_and_slide()
 
@@ -72,6 +75,21 @@ func _on_shoot_timer_timeout() -> void:
 	canJump = true
 
 
+
 func _on_reload_time_timeout() -> void:
 	burstCount = 2
 	canJump = true
+
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area.is_in_group("enemy") and !invincibility:
+		HP -= 1
+		invincibility = true
+		$invincibility.start()
+		$direction/AnimatedSprite2D.set_modulate(Color8(255,255,255,120))
+
+
+
+func _on_invincibility_timeout() -> void:
+	invincibility = false
+	$direction/AnimatedSprite2D.set_modulate(Color8(255,255,255,255))

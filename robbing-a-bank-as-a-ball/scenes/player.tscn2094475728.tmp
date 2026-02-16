@@ -86,7 +86,7 @@ wait_time = 0.4
 one_shot = true
 
 [node name="reloadTime" type="Timer" parent="." unique_id=2009690881]
-wait_time = 1.42
+wait_time = 1.67
 one_shot = true
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=2039845215]

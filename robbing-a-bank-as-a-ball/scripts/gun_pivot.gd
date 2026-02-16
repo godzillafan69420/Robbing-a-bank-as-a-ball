@@ -10,9 +10,6 @@ var reloading: bool = false
 func _ready() -> void:
 	player = get_parent()
 func _process(delta: float) -> void:
-	
-	print(burstShot)
-	print(canShoot)
 	degrees = atan2(get_global_mouse_position().y - $"..".position.y, get_global_mouse_position().x - $"..".position.x)
 	$".".rotation =  degrees
 	if (abs(rad_to_deg(degrees)) < 270) && (abs(rad_to_deg(degrees)) > 90):
@@ -22,6 +19,7 @@ func _process(delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot and burstShot > 0:
 		for i in range(15):
 			var bullet = bulletPrefab.instantiate()
+			bullet.add_to_group("bullet")
 			bullet.position = player.position
 			player.get_parent().add_child(bullet)
 			bullet.rotation = deg_to_rad((i*2) +rad_to_deg(degrees)-10)
