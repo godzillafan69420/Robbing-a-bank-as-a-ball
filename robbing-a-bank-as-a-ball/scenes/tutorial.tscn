@@ -47,6 +47,14 @@ offset_right = 814.0
 offset_bottom = 174.0
 text = "R to reload (wow)"
 
+[node name="Label4" type="Label" parent="." unique_id=499096041]
+offset_left = 603.0
+offset_top = -54.0
+offset_right = 804.0
+offset_bottom = -5.0
+text = "click in the air 
+ give you extra distance"
+
 [node name="Label3" type="Label" parent="." unique_id=361495334]
 offset_left = 1879.0
 offset_top = 151.0
