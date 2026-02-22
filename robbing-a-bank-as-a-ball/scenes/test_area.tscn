@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://ou64xr7bwm7t" path="res://scenes/player.tscn" id="1_yldxj"]
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="2_f0p7x"]
+[ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="3_a0f05"]
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="3_vtm10"]
-[ext_resource type="Texture2D" uid="uid://ivbckqnoi84i" path="res://art/UI/UI1.png" id="4_a0f05"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtm10"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnrqy"]
 texture = ExtResource("2_f0p7x")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -14,7 +14,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_a0f05"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vtm10")
+sources/0 = SubResource("TileSetAtlasSource_xnrqy")
 
 [node name="test area" type="Node2D" unique_id=1200752352]
 
@@ -25,12 +25,7 @@ tile_set = SubResource("TileSet_a0f05")
 [node name="player" parent="." unique_id=65606597 instance=ExtResource("1_yldxj")]
 position = Vector2(958, -5)
 
-[node name="UI" type="CanvasLayer" parent="player" unique_id=1094219007]
-
-[node name="HP" type="Sprite2D" parent="player/UI" unique_id=793779969]
-position = Vector2(582, 45)
-scale = Vector2(2, 2)
-texture = ExtResource("4_a0f05")
+[node name="UI" parent="player" unique_id=1997593276 instance=ExtResource("3_a0f05")]
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=678311109]
 position = Vector2(2, -7)

@@ -21,11 +21,14 @@ var momentum: float
 var HP: float = 6
 var invincibility: bool = false
 var UIHP: Sprite2D
+
 func _ready() -> void:
 	UIHP = get_node("UI/HP")
+	
 func _process(delta: float) -> void:
 	mouseposition = get_global_mouse_position()
 	mouseDirection = mouseposition - position
+	
 	
 	
 		

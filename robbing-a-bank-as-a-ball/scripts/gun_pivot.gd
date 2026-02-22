@@ -6,9 +6,10 @@ var canShoot = true
 var degrees
 var burstShot: int = 2
 var reloading: bool = false
-
+var UIBulletP: Label
 func _ready() -> void:
 	player = get_parent()
+	UIBulletP = player.get_node("UI/bulletAmont")
 func _process(delta: float) -> void:
 	degrees = atan2(get_global_mouse_position().y - $"..".position.y, get_global_mouse_position().x - $"..".position.x)
 	$".".rotation =  degrees
@@ -29,6 +30,18 @@ func _process(delta: float) -> void:
 	if burstShot < 1 and !reloading:
 		reloading = true
 		$"../reloadTime".start()
+	if Input.is_action_just_pressed("reload") and !reloading:
+		burstShot = 0
+		player.burstCount = 0
+		reloading = true
+		$"../reloadTime".start()
+	if reloading:
+		UIBulletP.text = "reloading"
+	elif burstShot >0:
+		UIBulletP.text = str(burstShot)+"/2"
+	
+	else:
+		UIBulletP.text = "reloading"
 		
 
 
