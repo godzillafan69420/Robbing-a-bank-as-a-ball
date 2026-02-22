@@ -1,5 +1,12 @@
 extends CharacterBody2D
 
+const HPLook1 = preload("res://art/UI/UI1.png")
+const HPLook2 = preload("res://art/UI/UI2.png")
+const HPLook3 = preload("res://art/UI/UI3.png")
+const HPLook4 = preload("res://art/UI/UI4.png")
+
+
+
 
 const MAXSPEED = 100
 const SPEED = 25.0
@@ -13,6 +20,9 @@ var burstCount: int = 2
 var momentum: float
 var HP: float = 6
 var invincibility: bool = false
+var UIHP: Sprite2D
+func _ready() -> void:
+	UIHP = get_node("UI/HP")
 func _process(delta: float) -> void:
 	mouseposition = get_global_mouse_position()
 	mouseDirection = mouseposition - position
@@ -67,7 +77,15 @@ func _physics_process(delta: float) -> void:
 	
 	if HP <= 0:
 		print("you die")
-		
+	
+	if HP >= 5:
+		UIHP.texture = HPLook1
+	elif HP >= 3:
+		UIHP.texture = HPLook2
+	elif  HP  >1:
+		UIHP.texture = HPLook3
+	elif HP == 1:
+		UIHP.texture = HPLook4
 	move_and_slide()
 
 
