@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="2_4kmhl"]
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="3_cq4me"]
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="4_4kmhl"]
+[ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="5_cq4me"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yjpi"]
 texture = ExtResource("3_cq4me")
@@ -30,7 +31,13 @@ position = Vector2(175, 216)
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1698522927]
 
 [node name="enemies" parent="." unique_id=1433434572 instance=ExtResource("4_4kmhl")]
-position = Vector2(2277, 208)
+position = Vector2(2108, 208)
+
+[node name="enemies2" parent="." unique_id=1303775023 instance=ExtResource("4_4kmhl")]
+position = Vector2(2076, 208)
+
+[node name="enemies3" parent="." unique_id=2046550327 instance=ExtResource("4_4kmhl")]
+position = Vector2(2044, 208)
 
 [node name="Label" type="Label" parent="." unique_id=397597798]
 offset_left = 93.0
@@ -62,3 +69,14 @@ offset_right = 2108.0
 offset_bottom = 200.0
 text = "watch out for spikes.
 don't let it touch you"
+
+[node name="Label5" type="Label" parent="." unique_id=692959292]
+offset_left = 1435.0
+offset_top = -289.0
+offset_right = 1693.0
+offset_bottom = -240.0
+text = "falling down with enough 
+momentum will damage enemies"
+
+[node name="boxBoi" parent="." unique_id=1633303472 instance=ExtResource("5_cq4me")]
+position = Vector2(736, 218)

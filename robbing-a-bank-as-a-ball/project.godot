@@ -30,6 +30,7 @@ ground=""
 player=""
 enemy=""
 bullet=""
+slamArea=""
 
 [input]
 

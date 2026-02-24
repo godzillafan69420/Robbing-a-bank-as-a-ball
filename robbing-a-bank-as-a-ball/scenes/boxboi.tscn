@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://csae7ql37s0pu"]
+
+[ext_resource type="Texture2D" uid="uid://b8b315plaq7ct" path="res://art/enemy/squareWithjawline.png" id="1_lef2n"]
+[ext_resource type="Script" uid="uid://r23mu48xeelq" path="res://scenes/boxboi.gd" id="1_wbx46"]
+[ext_resource type="Texture2D" uid="uid://5mdbc6ivgst" path="res://art/player/sprite_2.png" id="3_wjgm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nl4xf"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2ima"]
+size = Vector2(32, 32)
+
+[node name="boxBoi" type="CharacterBody2D" unique_id=1633303472]
+script = ExtResource("1_wbx46")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=598588421]
+position = Vector2(0, -12)
+texture = ExtResource("1_lef2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=26477588]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_nl4xf")
+
+[node name="hurtbox" type="Area2D" parent="." unique_id=716793497 groups=["enemy"]]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=787801144]
+shape = SubResource("RectangleShape2D_c2ima")
+
+[node name="gun" type="Node2D" parent="." unique_id=1872085648]
+
+[node name="Sprite2D" type="Sprite2D" parent="gun" unique_id=1702706476]
+position = Vector2(13, 0)
+texture = ExtResource("3_wjgm2")

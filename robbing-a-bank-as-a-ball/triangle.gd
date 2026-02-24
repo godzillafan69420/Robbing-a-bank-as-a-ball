@@ -33,4 +33,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bullet"):
 		HP -= 1
 		area.queue_free()
+	if area.is_in_group("slamArea"):
+		HP -= 10
+		
 	

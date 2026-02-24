@@ -4,7 +4,7 @@ const HPLook1 = preload("res://art/UI/UI1.png")
 const HPLook2 = preload("res://art/UI/UI2.png")
 const HPLook3 = preload("res://art/UI/UI3.png")
 const HPLook4 = preload("res://art/UI/UI4.png")
-
+const SLAMINTC = preload("res://scenes/slam_area.tscn")
 
 
 
@@ -21,6 +21,7 @@ var momentum: float
 var HP: float = 6
 var invincibility: bool = false
 var UIHP: Sprite2D
+var fallStrength: int = 0
 
 func _ready() -> void:
 	UIHP = get_node("UI/HP")
@@ -36,7 +37,18 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+		fallStrength = velocity.y
+	if is_on_floor():
+		
+		if fallStrength > 800:
+			var slam = SLAMINTC.instantiate()
+			slam.position = position
+			slam.add_to_group("slamArea")
+			get_parent().add_child(slam)
+		fallStrength = 0
+		
+		
+		
 
 	var direction := Input.get_axis("left", "right")
 	momentum = SPEED * 0.75 * direction
