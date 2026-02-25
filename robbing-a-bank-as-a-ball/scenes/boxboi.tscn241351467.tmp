@@ -10,9 +10,6 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2ima"]
 size = Vector2(32, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wbx46"]
-radius = 298.0604
-
 [node name="boxBoi" type="CharacterBody2D" unique_id=1633303472]
 script = ExtResource("1_wbx46")
 
@@ -35,13 +32,3 @@ shape = SubResource("RectangleShape2D_c2ima")
 [node name="Sprite2D" type="Sprite2D" parent="gun" unique_id=1702706476]
 position = Vector2(13, 0)
 texture = ExtResource("3_wjgm2")
-
-[node name="viewSight" type="Area2D" parent="." unique_id=2021799353]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="viewSight" unique_id=815000312]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_wbx46")
-
-[node name="shootTime" type="Timer" parent="." unique_id=509786795]
-
-[connection signal="area_entered" from="viewSight" to="." method="_on_view_sight_area_entered"]
