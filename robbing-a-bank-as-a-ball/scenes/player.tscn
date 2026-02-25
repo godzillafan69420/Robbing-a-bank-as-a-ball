@@ -86,7 +86,7 @@ wait_time = 0.4
 one_shot = true
 
 [node name="reloadTime" type="Timer" parent="." unique_id=2009690881]
-wait_time = 1.42
+wait_time = 1.2999999999999998
 one_shot = true
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=2039845215]
@@ -97,9 +97,13 @@ shape = SubResource("CircleShape2D_qlg0r")
 [node name="invincibility" type="Timer" parent="." unique_id=1530486998]
 one_shot = true
 
+[node name="Regeneration" type="Timer" parent="." unique_id=865714969]
+wait_time = 10.0
+
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shootTimer" to="gunPivot" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="reloadTime" to="." method="_on_reload_time_timeout"]
 [connection signal="timeout" from="reloadTime" to="gunPivot" method="_on_reload_time_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="timeout" from="invincibility" to="." method="_on_invincibility_timeout"]
+[connection signal="timeout" from="Regeneration" to="." method="_on_regeneration_timeout"]

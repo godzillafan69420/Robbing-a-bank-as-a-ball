@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://skvlf32gqbs0"]
 
-[ext_resource type="Script" uid="uid://bv23ahsc4ts30" path="res://scenes/slam_area.gd" id="1_dwyoc"]
+[ext_resource type="Script" uid="uid://bv23ahsc4ts30" path="res://scripts/slam_area.gd" id="1_dwyoc"]
 [ext_resource type="Texture2D" uid="uid://cpg50380dkvwm" path="res://art/particles/New Piskel-1.png.png" id="2_dcc3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmg2e"]

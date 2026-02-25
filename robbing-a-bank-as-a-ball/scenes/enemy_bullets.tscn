@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bu1jkq201ei6"]
 
-[ext_resource type="Script" uid="uid://d2mf5ovfgowef" path="res://enemy_bullets.gd" id="1_mcotl"]
+[ext_resource type="Script" uid="uid://d2mf5ovfgowef" path="res://scripts/enemy_bullets.gd" id="1_mcotl"]
 [ext_resource type="Texture2D" uid="uid://bd74cwaadwj8j" path="res://art/balls.png" id="2_5cqc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftdtp"]
@@ -17,4 +17,11 @@ shape = SubResource("RectangleShape2D_ftdtp")
 position = Vector2(-1, 0)
 texture = ExtResource("2_5cqc0")
 
+[node name="Timer" type="Timer" parent="." unique_id=221688796]
+wait_time = 6.7
+one_shot = true
+autostart = true
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

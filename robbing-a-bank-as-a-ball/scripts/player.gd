@@ -25,6 +25,7 @@ var fallStrength: int = 0
 
 func _ready() -> void:
 	UIHP = get_node("UI/HP")
+	$Regeneration.start()
 	
 func _process(delta: float) -> void:
 	mouseposition = get_global_mouse_position()
@@ -43,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		if fallStrength > 800:
 			var slam = SLAMINTC.instantiate()
 			slam.position = position
-			slam.add_to_group("slamArea")
+			slam.add_to_group("bullet")
 			get_parent().add_child(slam)
 		fallStrength = 0
 		
@@ -92,8 +93,9 @@ func _physics_process(delta: float) -> void:
 	
 	if HP <= 0:
 		print("you die")
-	
-	if HP >= 5:
+	if HP > 5:
+		HP = 5
+	if HP == 5:
 		UIHP.texture = HPLook1
 	elif HP >= 3:
 		UIHP.texture = HPLook2
@@ -126,3 +128,7 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 func _on_invincibility_timeout() -> void:
 	invincibility = false
 	$direction/AnimatedSprite2D.set_modulate(Color8(255,255,255,255))
+
+
+func _on_regeneration_timeout() -> void:
+	HP += 1
