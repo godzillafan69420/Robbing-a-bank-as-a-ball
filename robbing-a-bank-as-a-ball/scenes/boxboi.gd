@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+const bullet = preload("res://scenes/enemy_bullets.tscn")
 enum state {idle, attacking}
 var gun: Node2D
 var player: CharacterBody2D
@@ -28,3 +29,8 @@ func _process(delta: float) -> void:
 func _on_view_sight_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
 		$shootTime.start()
+
+
+func _on_shoot_time_timeout() -> void:
+	var newBullet = bullet.instantiate()
+	newBullet.add_to_group("enemy")

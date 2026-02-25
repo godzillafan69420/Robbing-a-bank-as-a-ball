@@ -45,3 +45,4 @@ shape = SubResource("CircleShape2D_wbx46")
 [node name="shootTime" type="Timer" parent="." unique_id=509786795]
 
 [connection signal="area_entered" from="viewSight" to="." method="_on_view_sight_area_entered"]
+[connection signal="timeout" from="shootTime" to="." method="_on_shoot_time_timeout"]
