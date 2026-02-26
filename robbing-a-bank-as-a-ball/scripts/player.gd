@@ -46,6 +46,7 @@ func _physics_process(delta: float) -> void:
 			slam.position = position
 			slam.add_to_group("bullet")
 			get_parent().add_child(slam)
+			
 		fallStrength = 0
 		
 		

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1xp223bkxciv"]
+
+[ext_resource type="Script" uid="uid://umss8udplgxg" path="res://canvas_layer.gd" id="1_qkhwq"]
+[ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="2_3d1i7"]
+
+[node name="mainMenu" type="CanvasLayer" unique_id=1642017201]
+script = ExtResource("1_qkhwq")
+
+[node name="Masterart" type="Sprite2D" parent="." unique_id=888839114]
+modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
+position = Vector2(318.5, 180.50002)
+scale = Vector2(0.5512153, 0.55401236)
+texture = ExtResource("2_3d1i7")
+
+[node name="Button" type="Button" parent="." unique_id=1599516938]
+offset_left = 240.0
+offset_top = 148.0
+offset_right = 353.0
+offset_bottom = 192.0
+text = "tutorial/Museum"
+
+[node name="Label" type="Label" parent="." unique_id=1336749874]
+offset_left = 161.0
+offset_top = 43.0
+offset_right = 438.0
+offset_bottom = 130.0
+text = "Rob a bank as a disable ball with a shotgun
+and kill box and other shapes. 
+(I know good title)"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
