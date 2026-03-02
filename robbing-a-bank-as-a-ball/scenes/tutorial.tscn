@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dx8ym8ec06e2" path="res://scenes/box.tscn" id="10_0epgs"]
 [ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="12_0hilk"]
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="12_ej4tf"]
+[ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="14_0hilk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbqnl"]
 texture = ExtResource("3_cq4me")
@@ -124,6 +125,14 @@ offset_bottom = -5.0
 text = "click in the air 
  give you extra distance"
 
+[node name="Label8" type="Label" parent="." unique_id=1072291980]
+offset_left = 928.0
+offset_top = -92.0
+offset_right = 1129.0
+offset_bottom = -43.0
+text = "tnt damages you and the enemies
+but if you far away enough you will fly"
+
 [node name="Label3" type="Label" parent="." unique_id=361495334]
 offset_left = 1879.0
 offset_top = 151.0
@@ -187,3 +196,6 @@ texture = ExtResource("4_ikfo1")
 [node name="Unnamed2" type="Sprite2D" parent="." unique_id=1858234747]
 position = Vector2(3144, -3)
 texture = ExtResource("4_ikfo1")
+
+[node name="TNT" parent="." unique_id=309049693 instance=ExtResource("14_0hilk")]
+position = Vector2(1077, 176)
