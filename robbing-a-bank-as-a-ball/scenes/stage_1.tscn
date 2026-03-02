@@ -89,10 +89,10 @@ position = Vector2(175, 216)
 position = Vector2(623, 277)
 
 [node name="box" parent="." unique_id=436887472 instance=ExtResource("9_ybch3")]
-position = Vector2(512, 266)
+position = Vector2(512, 263)
 
 [node name="box2" parent="." unique_id=669731349 instance=ExtResource("9_ybch3")]
-position = Vector2(512, 233)
+position = Vector2(512, 229)
 
 [node name="box3" parent="." unique_id=1066153880 instance=ExtResource("9_ybch3")]
 position = Vector2(512, 190)

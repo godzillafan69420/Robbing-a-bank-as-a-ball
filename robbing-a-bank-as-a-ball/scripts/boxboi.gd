@@ -7,7 +7,7 @@ var player: CharacterBody2D
 var playerPosition: Vector2
 var direction: float
 var CurrentState
-var HP: int = 10
+var HP: int = 6
 
 func _ready() -> void:
 	CurrentState = state.idle
