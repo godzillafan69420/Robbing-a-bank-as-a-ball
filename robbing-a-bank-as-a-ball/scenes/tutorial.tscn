@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://c10p6pyil0kix" path="res://art/tiles/marblePillarbottom.png" id="8_0epgs"]
 [ext_resource type="Texture2D" uid="uid://dqbxn6vrbg8ig" path="res://art/tiles/marblePillarTop.png" id="9_g2equ"]
 [ext_resource type="PackedScene" uid="uid://dx8ym8ec06e2" path="res://scenes/box.tscn" id="10_0epgs"]
+[ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="12_0hilk"]
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="12_ej4tf"]
-[ext_resource type="AudioStream" uid="uid://cth7irmr3po2c" path="res://music/the what 2.mp3" id="12_tbcdj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbqnl"]
 texture = ExtResource("3_cq4me")
@@ -176,7 +176,8 @@ position = Vector2(175, 216)
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1698522927]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1238771571]
-stream = ExtResource("12_tbcdj")
+stream = ExtResource("12_0hilk")
+volume_db = -6.597
 autoplay = true
 
 [node name="Unnamed" type="Sprite2D" parent="." unique_id=790948693]
