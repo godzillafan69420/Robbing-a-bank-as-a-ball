@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ciquqxd01x6mx"]
 
-[ext_resource type="Script" uid="uid://goenk55ikqu4" path="res://explosion.gd" id="1_17npe"]
+[ext_resource type="Script" uid="uid://goenk55ikqu4" path="res://scripts/explosion.gd" id="1_17npe"]
 [ext_resource type="Texture2D" uid="uid://brttq1cv5sx3x" path="res://art/particles/explosionParticle.png" id="2_aw4cw"]
 [ext_resource type="Texture2D" uid="uid://b1avdwt4ufwhm" path="res://art/particles/New Piskel (2).png" id="3_3el85"]
 

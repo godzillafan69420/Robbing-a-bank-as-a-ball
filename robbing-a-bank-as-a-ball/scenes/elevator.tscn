@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://i1vjewqas3pv"]
+
+[ext_resource type="Script" uid="uid://b77ijg38pban8" path="res://scripts/elevator.gd" id="1_8lbij"]
+[ext_resource type="Texture2D" uid="uid://slwe4hipb3pd" path="res://art/tiles/evelavator.png" id="2_jmdsd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gisge"]
+size = Vector2(129, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr5mj"]
+atlas = ExtResource("2_jmdsd")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xslfi"]
+atlas = ExtResource("2_jmdsd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8m3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr5mj")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xslfi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="elevator" type="Area2D" unique_id=1408608567]
+script = ExtResource("1_8lbij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965639258]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_gisge")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1223624524]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_s8m3u")
+animation = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

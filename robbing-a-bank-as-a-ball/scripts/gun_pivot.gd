@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	else:
 		$Sprite2D.flip_v = false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot and burstShot > 0:
+		AudioManger.play("res://sfx/dennish18-shotgun-146188.mp3")
 		for i in range(15):
 			var bullet = bulletPrefab.instantiate()
 			bullet.add_to_group("bullet")
@@ -28,19 +29,23 @@ func _process(delta: float) -> void:
 		burstShot -= 1
 		canShoot = false
 	if burstShot < 1 and !reloading:
+		AudioManger.play("res://sfx/freesound_community-realistic-shotgun-cocking-sound-38640.mp3")
 		reloading = true
 		$"../reloadTime".start()
 	if Input.is_action_just_pressed("reload") and !reloading:
+		AudioManger.play("res://sfx/freesound_community-realistic-shotgun-cocking-sound-38640.mp3")
 		burstShot = 0
 		player.burstCount = 0
 		reloading = true
 		$"../reloadTime".start()
 	if reloading:
+		
 		UIBulletP.text = "reloading"
 	elif burstShot >0:
 		UIBulletP.text = str(burstShot)+"/2"
 	
 	else:
+		
 		UIBulletP.text = "reloading"
 		
 
@@ -50,6 +55,7 @@ func _on_shoot_timer_timeout() -> void:
 
 
 func _on_reload_time_timeout() -> void:
+	
 	burstShot = 2
 	canShoot = true
 	reloading = false

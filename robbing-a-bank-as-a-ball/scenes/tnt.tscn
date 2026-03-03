@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvgyx4a7knf6s"]
 
-[ext_resource type="Script" uid="uid://bb4c82r2lw7e6" path="res://scenes/tnt.gd" id="1_5ic85"]
-[ext_resource type="Texture2D" uid="uid://slwe4hipb3pd" path="res://art/tiles/New Piskel.png" id="1_jrdv8"]
+[ext_resource type="Script" uid="uid://bb4c82r2lw7e6" path="res://scripts/tnt.gd" id="1_5ic85"]
+[ext_resource type="Texture2D" uid="uid://sd3wasl3tdnp" path="res://art/tiles/boom.png" id="2_5ic85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ic85"]
 size = Vector2(32, 32)
@@ -16,7 +16,7 @@ script = ExtResource("1_5ic85")
 shape = SubResource("RectangleShape2D_5ic85")
 
 [node name="NewPiskel" type="Sprite2D" parent="." unique_id=186959731]
-texture = ExtResource("1_jrdv8")
+texture = ExtResource("2_5ic85")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=567898210]
 

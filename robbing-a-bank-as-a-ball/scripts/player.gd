@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		
 		if fallStrength > 800:
+			AudioManger.play("res://sfx/explosion.mp3")
 			var slam = SLAMINTC.instantiate()
 			slam.position = position
 			slam.add_to_group("bullet")

@@ -13,7 +13,16 @@ config_version=5
 config/name="robbing a bank as a ball"
 run/main_scene="uid://c1xp223bkxciv"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/image="uid://1x4abotw080f"
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://can8j2vjfv01q"
+
+[autoload]
+
+AudioManger="*uid://cifdvw2ugtnh1"
 
 [display]
 

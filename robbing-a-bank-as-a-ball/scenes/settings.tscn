@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cqxw8vglo305k"]
+
+[ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="1_5p8wc"]
+
+[node name="settings" type="Node2D" unique_id=1894853199]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=221334271]
+
+[node name="202603030y1Kleki" type="Sprite2D" parent="." unique_id=1776336733]
+modulate = Color(0.573792, 0.5737919, 0.5737919, 1)
+position = Vector2(285, 156)
+scale = Vector2(0.5575342, 0.5575342)
+texture = ExtResource("1_5p8wc")

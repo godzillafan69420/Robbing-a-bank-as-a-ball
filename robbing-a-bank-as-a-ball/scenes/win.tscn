@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo71cvtdv6ve8"]
 
-[ext_resource type="Script" uid="uid://2ufwyox05wjj" path="res://scenes/win.gd" id="1_826fv"]
+[ext_resource type="Script" uid="uid://2ufwyox05wjj" path="res://scripts/win.gd" id="1_826fv"]
 [ext_resource type="Texture2D" uid="uid://fpfv0jo8e1t6" path="res://art/tiles/sprite_1.png" id="1_r4oei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_826fv"]
