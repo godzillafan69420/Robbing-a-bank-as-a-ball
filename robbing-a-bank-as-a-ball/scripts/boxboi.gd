@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 	else:
 		gun.find_child("Sprite2D").flip_v = false
 	if HP <= 0:
+		AudioManger.play("res://sfx/vmanDying.wav")
 		queue_free()
 
 	

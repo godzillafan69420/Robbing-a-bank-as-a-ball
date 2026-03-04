@@ -15,10 +15,9 @@ scale = Vector2(0.5575342, 0.5575342)
 texture = ExtResource("1_5p8wc")
 
 [node name="settings" type="VBoxContainer" parent="." unique_id=352453851]
-offset_left = 131.0
-offset_top = 6.0
-offset_right = 440.0
-offset_bottom = 297.0
+offset_left = 128.0
+offset_right = 437.0
+offset_bottom = 361.0
 
 [node name="turnOffMusic" type="CheckButton" parent="settings" unique_id=1752292657]
 layout_mode = 2
@@ -55,6 +54,14 @@ text = "ᗜˬᗜ"
 layout_mode = 2
 text = "Tuff mode. doesn't work"
 
+[node name="thickOfit" type="Button" parent="settings" unique_id=1038970202]
+layout_mode = 2
+text = "Thick of it(Cut content)"
+
+[node name="diesOfdeath" type="Button" parent="settings" unique_id=1498368652]
+layout_mode = 2
+text = "death(cut content)"
+
 [node name="Button" type="Button" parent="." unique_id=928786943]
 offset_right = 82.0
 offset_bottom = 34.0
@@ -63,4 +70,6 @@ text = "main menu"
 [connection signal="toggled" from="settings/turnOffMusic" to="." method="_on_turn_off_music_toggled"]
 [connection signal="value_changed" from="settings/vol" to="." method="_on_vol_value_changed"]
 [connection signal="toggled" from="settings/useless4" to="." method="_on_useless_4_toggled"]
+[connection signal="button_down" from="settings/thickOfit" to="." method="_on_thick_ofit_button_down"]
+[connection signal="button_down" from="settings/diesOfdeath" to="." method="_on_dies_ofdeath_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

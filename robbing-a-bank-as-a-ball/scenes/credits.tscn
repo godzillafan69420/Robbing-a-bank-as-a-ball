@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cy42hpendsq1n"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1500838099]
+
+[node name="Label" type="Label" parent="." unique_id=1060309969]
+offset_left = 258.0
+offset_top = 9.0
+offset_right = 364.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 31
+text = "Credits"
+
+[node name="Label2" type="Label" parent="." unique_id=1297466382]
+offset_left = 204.0
+offset_top = 62.0
+offset_right = 416.0
+offset_bottom = 251.0
+text = "art-  Mee
+programming-  Mee
+music-  Mee
+sfx-  Mee's beautiful voicebox
+
+yeah my itch.io username is 
+cooked
+"

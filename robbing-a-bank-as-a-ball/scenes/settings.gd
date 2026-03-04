@@ -28,3 +28,11 @@ func _on_button_button_down() -> void:
 
 func _on_useless_4_toggled(toggled_on: bool) -> void:
 	Global.badapple = toggled_on
+
+
+func _on_thick_ofit_button_down() -> void:
+	AudioManger.play("res://sfx/play on the lowest volume.wav")
+
+
+func _on_dies_ofdeath_button_down() -> void:
+	AudioManger.play("res://sfx/dyingagain.mp3")
