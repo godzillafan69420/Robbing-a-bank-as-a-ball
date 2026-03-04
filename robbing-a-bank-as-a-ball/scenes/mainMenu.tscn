@@ -3,28 +3,49 @@
 [ext_resource type="Script" uid="uid://umss8udplgxg" path="res://scripts/canvas_layer.gd" id="1_qkhwq"]
 [ext_resource type="Texture2D" uid="uid://jeopehmglj32" path="res://art/tiles/2026_03_02_0xx_Kleki.png" id="2_48ign"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
+atlas = ExtResource("2_48ign")
+region = Rect2(0, 0, 1265, 730)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48ign"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"badApple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d1i7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="mainMenu" type="CanvasLayer" unique_id=1642017201]
 script = ExtResource("1_qkhwq")
 
-[node name="Masterart" type="Sprite2D" parent="." unique_id=888839114]
+[node name="Masterart" type="AnimatedSprite2D" parent="." unique_id=1401550080]
 modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
 position = Vector2(318.5, 180.50002)
 scale = Vector2(0.5512153, 0.55401236)
-texture = ExtResource("2_48ign")
+sprite_frames = SubResource("SpriteFrames_48ign")
+animation = &"badApple"
 
 [node name="Button" type="Button" parent="." unique_id=1599516938]
 offset_left = 240.0
 offset_top = 148.0
 offset_right = 353.0
 offset_bottom = 192.0
-text = "tutorial/Museum"
+text = "Museum(tutorial)"
 
 [node name="Button2" type="Button" parent="." unique_id=172081464]
 offset_left = 240.0
 offset_top = 196.0
 offset_right = 380.0
 offset_bottom = 240.0
-text = "stage 1"
+text = "bank"
 
 [node name="Button3" type="Button" parent="." unique_id=151522675]
 offset_left = 241.0
@@ -41,6 +62,14 @@ offset_bottom = 130.0
 text = "Rob a bank as a disable ball with a shotgun
 and kill box and other shapes. 
 (I know good title)"
+
+[node name="timeStage1" type="Label" parent="." unique_id=2006250236]
+offset_left = 381.0
+offset_top = 209.0
+offset_right = 461.0
+offset_bottom = 258.0
+text = "your time:
+"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cv6ouh2t5tqea"]
+
+[node name="light" type="Node2D" unique_id=2067502212]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=77572970]

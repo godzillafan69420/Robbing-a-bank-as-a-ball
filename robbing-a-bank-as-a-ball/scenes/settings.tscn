@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cqxw8vglo305k"]
 
 [ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://cjoy7fvf0h3nl" path="res://scenes/settings.gd" id="1_r6d6q"]
 
 [node name="settings" type="Node2D" unique_id=1894853199]
+script = ExtResource("1_r6d6q")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=221334271]
 
@@ -11,3 +13,52 @@ modulate = Color(0.573792, 0.5737919, 0.5737919, 1)
 position = Vector2(285, 156)
 scale = Vector2(0.5575342, 0.5575342)
 texture = ExtResource("1_5p8wc")
+
+[node name="settings" type="VBoxContainer" parent="." unique_id=352453851]
+offset_left = 145.0
+offset_top = 45.0
+offset_right = 454.0
+offset_bottom = 301.0
+
+[node name="turnOffMusic" type="CheckButton" parent="settings" unique_id=1752292657]
+layout_mode = 2
+text = "Turn off music"
+
+[node name="Label" type="Label" parent="settings" unique_id=16698916]
+layout_mode = 2
+text = "volume"
+
+[node name="vol" type="HScrollBar" parent="settings" unique_id=1048103106]
+layout_mode = 2
+min_value = -80.0
+max_value = 0.0
+
+[node name="useless" type="CheckButton" parent="settings" unique_id=764200169]
+layout_mode = 2
+text = "useless"
+
+[node name="useless2" type="CheckButton" parent="settings" unique_id=773221494]
+layout_mode = 2
+text = "more useless"
+
+[node name="useless3" type="CheckButton" parent="settings" unique_id=1589223789]
+layout_mode = 2
+text = "other one"
+
+[node name="useless4" type="CheckButton" parent="settings" unique_id=696765285]
+layout_mode = 2
+text = "ᗜˬᗜ"
+
+[node name="tuffMode" type="CheckButton" parent="settings" unique_id=807750738]
+layout_mode = 2
+text = "Tuff mode. doesn't work"
+
+[node name="Button" type="Button" parent="." unique_id=928786943]
+offset_right = 82.0
+offset_bottom = 34.0
+text = "main menu"
+
+[connection signal="toggled" from="settings/turnOffMusic" to="." method="_on_turn_off_music_toggled"]
+[connection signal="value_changed" from="settings/vol" to="." method="_on_vol_value_changed"]
+[connection signal="toggled" from="settings/useless4" to="." method="_on_useless_4_toggled"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
