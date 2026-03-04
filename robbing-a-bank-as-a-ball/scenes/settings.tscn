@@ -15,14 +15,16 @@ scale = Vector2(0.5575342, 0.5575342)
 texture = ExtResource("1_5p8wc")
 
 [node name="settings" type="VBoxContainer" parent="." unique_id=352453851]
-offset_left = 145.0
-offset_top = 45.0
-offset_right = 454.0
-offset_bottom = 301.0
+offset_left = 131.0
+offset_top = 6.0
+offset_right = 440.0
+offset_bottom = 297.0
 
 [node name="turnOffMusic" type="CheckButton" parent="settings" unique_id=1752292657]
 layout_mode = 2
-text = "Turn off music"
+text = "I'm playing games in class
+please turn off the sound so i
+don't get caught"
 
 [node name="Label" type="Label" parent="settings" unique_id=16698916]
 layout_mode = 2

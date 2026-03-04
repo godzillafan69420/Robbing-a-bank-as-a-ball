@@ -91,6 +91,7 @@ one_shot = true
 shape = SubResource("CircleShape2D_qlg0r")
 
 [node name="invincibility" type="Timer" parent="." unique_id=1530486998]
+wait_time = 0.7
 one_shot = true
 
 [node name="Regeneration" type="Timer" parent="." unique_id=865714969]

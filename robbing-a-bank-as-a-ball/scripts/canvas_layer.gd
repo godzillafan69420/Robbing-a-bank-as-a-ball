@@ -4,6 +4,11 @@ const tutorial = preload("res://scenes/tutorial.tscn")
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
+	if Global.badapple == true:
+		$Masterart.animation = "fumo"
+	else:
+		$Masterart.animation = "default"
+	
 	AudioManger.stop_all()
 	AudioManger.play("res://music/WHAT.mp3")
 	if Global.tries == 1:

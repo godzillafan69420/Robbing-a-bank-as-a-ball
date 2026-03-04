@@ -8,7 +8,7 @@
 radius = 81.154175
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aw4cw"]
-radius = 233.00215
+radius = 191.00262
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbmxj"]
 atlas = ExtResource("3_3el85")
@@ -58,7 +58,7 @@ shape = SubResource("CircleShape2D_nfeox")
 shape = SubResource("CircleShape2D_aw4cw")
 
 [node name="Timer" type="Timer" parent="." unique_id=1430718336]
-wait_time = 0.2
+wait_time = 0.15
 one_shot = true
 autostart = true
 
@@ -74,7 +74,7 @@ scale_amount_min = 0.2
 position = Vector2(9.536743e-07, -9.536743e-06)
 scale = Vector2(4.9999995, 4.9999995)
 sprite_frames = SubResource("SpriteFrames_vk406")
-frame_progress = 0.34160653
+frame_progress = 0.79264635
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="blastForceDetection" to="." method="_on_blast_force_detection_body_entered"]

@@ -112,11 +112,11 @@ text = "a and d to move left and right
 left click to get recoiled"
 
 [node name="Label9" type="Label" parent="." unique_id=1636014974]
-offset_left = -249.0
-offset_top = 226.0
-offset_right = -20.0
-offset_bottom = 275.0
-text = "what is this brotha🥀🥀😔"
+offset_left = -223.0
+offset_top = 224.0
+offset_right = 6.0
+offset_bottom = 273.0
+text = "what is this🥀🥀😔"
 
 [node name="Label6" type="Label" parent="." unique_id=22094905]
 offset_left = 380.0

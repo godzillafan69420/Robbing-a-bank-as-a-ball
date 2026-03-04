@@ -94,7 +94,7 @@ func _physics_process(delta: float) -> void:
 			$direction/AnimatedSprite2D.play("idle")
 	
 	if HP <= 0:
-		print("you die")
+		get_tree().change_scene_to_file("res://scenes/youlost.tscn")
 	if HP > 5:
 		HP = 5
 	if HP == 5:

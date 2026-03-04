@@ -2,24 +2,32 @@
 
 [ext_resource type="Script" uid="uid://umss8udplgxg" path="res://scripts/canvas_layer.gd" id="1_qkhwq"]
 [ext_resource type="Texture2D" uid="uid://jeopehmglj32" path="res://art/tiles/2026_03_02_0xx_Kleki.png" id="2_48ign"]
+[ext_resource type="Texture2D" uid="uid://bd5jede2tv7wr" path="res://art/tiles/2026_03_04_0sy_Kleki.png" id="3_48ign"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
 atlas = ExtResource("2_48ign")
 region = Rect2(0, 0, 1265, 730)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7wge"]
+atlas = ExtResource("3_48ign")
+region = Rect2(0, 0, 1265, 730)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_48ign"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"badApple",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3d1i7")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7wge")
+}],
+"loop": true,
+"name": &"fumo",
 "speed": 5.0
 }]
 
@@ -31,7 +39,7 @@ modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
 position = Vector2(318.5, 180.50002)
 scale = Vector2(0.5512153, 0.55401236)
 sprite_frames = SubResource("SpriteFrames_48ign")
-animation = &"badApple"
+animation = &"fumo"
 
 [node name="Button" type="Button" parent="." unique_id=1599516938]
 offset_left = 240.0

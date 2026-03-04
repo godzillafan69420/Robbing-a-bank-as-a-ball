@@ -9,47 +9,48 @@
 [ext_resource type="PackedScene" uid="uid://ou64xr7bwm7t" path="res://scenes/player.tscn" id="6_uiled"]
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="7_grgj4"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="8_h81jl"]
-[ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="9_cer2j"]
+[ext_resource type="PackedScene" uid="uid://i1vjewqas3pv" path="res://scenes/elevator.tscn" id="10_t8t65"]
+[ext_resource type="PackedScene" uid="uid://biemtwjfjrosw" path="res://scenes/stage_1_3.tscn" id="11_crrgr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_704hb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_250dj"]
 texture = ExtResource("1_5ae5h")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxdwj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oj8af"]
 texture = ExtResource("2_t8t65")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cqp7g"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_704hb")
-sources/1 = SubResource("TileSetAtlasSource_rxdwj")
+sources/0 = SubResource("TileSetAtlasSource_250dj")
+sources/1 = SubResource("TileSetAtlasSource_oj8af")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljn27"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uiled"]
 texture = ExtResource("3_crrgr")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4j62"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_grgj4"]
 texture = ExtResource("4_250dj")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arnhi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h81jl"]
 texture = ExtResource("5_oj8af")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4jidq"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_ljn27")
-sources/1 = SubResource("TileSetAtlasSource_e4j62")
-sources/2 = SubResource("TileSetAtlasSource_arnhi")
+sources/0 = SubResource("TileSetAtlasSource_uiled")
+sources/1 = SubResource("TileSetAtlasSource_grgj4")
+sources/2 = SubResource("TileSetAtlasSource_h81jl")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acbto"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cer2j"]
 texture = ExtResource("1_5ae5h")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -58,7 +59,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_j3p13"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_acbto")
+sources/0 = SubResource("TileSetAtlasSource_cer2j")
 
 [node name="Node2D" type="Node2D" unique_id=267983953]
 script = ExtResource("1_t8t65")
@@ -118,5 +119,6 @@ position = Vector2(716, 79)
 [node name="boxBoi10" parent="." unique_id=1452742491 instance=ExtResource("8_h81jl")]
 position = Vector2(728, 121)
 
-[node name="win" parent="." unique_id=402803828 instance=ExtResource("9_cer2j")]
-position = Vector2(1105, 253)
+[node name="elevator" parent="." unique_id=1408608567 instance=ExtResource("10_t8t65")]
+position = Vector2(1102, 250)
+scene = ExtResource("11_crrgr")

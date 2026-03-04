@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c5xitft8p5p47"]
+
+[ext_resource type="Script" uid="uid://c6pb8js1254h1" path="res://youlost.gd" id="1_k3tn0"]
+[ext_resource type="Texture2D" uid="uid://dg521s2tijkr7" path="res://art/UI/oops you lost.png" id="2_ay21y"]
+
+[node name="youlost" type="CanvasLayer" unique_id=814607315]
+script = ExtResource("1_k3tn0")
+
+[node name="OopsYouLost" type="Sprite2D" parent="." unique_id=819751165]
+modulate = Color(0.6190818, 0.6190819, 0.6190818, 1)
+position = Vector2(296, 185)
+scale = Vector2(0.55890405, 0.5589041)
+texture = ExtResource("2_ay21y")
+
+[node name="Label" type="Label" parent="." unique_id=1629782055]
+offset_left = 192.0
+offset_top = 76.0
+offset_right = 363.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 23
+text = "you died i think
+"
+
+[node name="Button" type="Button" parent="." unique_id=1831354223]
+offset_left = 206.0
+offset_top = 128.0
+offset_right = 351.0
+offset_bottom = 178.0
+text = "main menu"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
