@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dks1w3vkh1f2l"]
+
+[ext_resource type="Script" uid="uid://cn1vdcigbj6h0" path="res://scenes/win_screen.gd" id="1_hdrec"]
+[ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="1_kcs6a"]
+
+[node name="youWon" type="CanvasLayer" unique_id=955936660]
+script = ExtResource("1_hdrec")
+
+[node name="OopsYouLost" type="Sprite2D" parent="." unique_id=1188760301]
+modulate = Color(0.51007515, 0.51007515, 0.51007503, 1)
+position = Vector2(321.00003, 180)
+scale = Vector2(0.55890405, 0.5589041)
+texture = ExtResource("1_kcs6a")
+
+[node name="Label" type="Label" parent="." unique_id=1222045866]
+offset_left = 245.0
+offset_top = 55.0
+offset_right = 403.0
+offset_bottom = 85.0
+text = "You Robbed a bank"
+
+[node name="time" type="Label" parent="." unique_id=276526052]
+offset_left = 214.0
+offset_top = 114.0
+offset_right = 416.0
+offset_bottom = 150.0
+text = "Time:
+"
+
+[node name="bestTimre" type="Label" parent="." unique_id=915596415]
+offset_left = 214.0
+offset_top = 133.0
+offset_right = 416.0
+offset_bottom = 182.0
+text = "Time:
+"
+
+[node name="message" type="Label" parent="." unique_id=10260392]
+offset_left = 212.0
+offset_top = 178.0
+offset_right = 414.0
+offset_bottom = 227.0
+
+[node name="Button" type="Button" parent="." unique_id=1227846543]
+offset_left = 225.0
+offset_top = 252.0
+offset_right = 370.0
+offset_bottom = 302.0
+text = "main menu"
+
+[node name="Button2" type="Button" parent="." unique_id=784530774]
+offset_left = 224.0
+offset_top = 304.0
+offset_right = 369.0
+offset_bottom = 354.0
+text = "credits"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

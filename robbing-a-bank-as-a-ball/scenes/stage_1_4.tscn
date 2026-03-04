@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cwo5sbejcvmfg"]
 
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="1_pmbgs"]
+[ext_resource type="Script" uid="uid://qybtkt0plhdg" path="res://scripts/continuetimer.gd" id="1_wacyc"]
 [ext_resource type="Texture2D" uid="uid://df7aexx1it8ch" path="res://art/tiles/wall.png" id="2_yjmlm"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="3_eegwp"]
 [ext_resource type="Texture2D" uid="uid://c10p6pyil0kix" path="res://art/tiles/marblePillarbottom.png" id="4_cc3ch"]
@@ -62,6 +63,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hb58f")
 
 [node name="stage 1_4" type="Node2D" unique_id=1536550067]
+script = ExtResource("1_wacyc")
 
 [node name="background" type="TileMapLayer" parent="." unique_id=1774551354]
 modulate = Color(0.76240367, 0.76240367, 0.76240367, 1)

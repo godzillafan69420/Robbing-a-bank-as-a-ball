@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqxw8vglo305k"]
 
 [ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="1_5p8wc"]
-[ext_resource type="Script" uid="uid://cjoy7fvf0h3nl" path="res://scenes/settings.gd" id="1_r6d6q"]
+[ext_resource type="Script" uid="uid://cjoy7fvf0h3nl" path="res://scripts/settings.gd" id="1_r6d6q"]
 
 [node name="settings" type="Node2D" unique_id=1894853199]
 script = ExtResource("1_r6d6q")

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cqu3ruf0lb5br"]
 
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="1_c66hc"]
-[ext_resource type="Script" uid="uid://qybtkt0plhdg" path="res://scenes/continuetimer.gd" id="1_yiwy1"]
+[ext_resource type="Script" uid="uid://qybtkt0plhdg" path="res://scripts/continuetimer.gd" id="1_yiwy1"]
 [ext_resource type="Texture2D" uid="uid://df7aexx1it8ch" path="res://art/tiles/wall.png" id="2_yiwy1"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="3_pda7l"]
 [ext_resource type="Texture2D" uid="uid://c10p6pyil0kix" path="res://art/tiles/marblePillarbottom.png" id="4_hf0wi"]

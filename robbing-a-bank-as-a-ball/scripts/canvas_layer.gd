@@ -11,10 +11,7 @@ func _ready() -> void:
 	
 	AudioManger.stop_all()
 	AudioManger.play("res://music/WHAT.mp3")
-	if Global.tries == 1:
-		Global.topTime = Global.STAGE1time
-	if Global.topTime > Global.STAGE1time:
-		Global.topTime = Global.STAGE1time
+	
 	$timeStage1.text = "Time: " + str(roundf(Global.topTime))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
