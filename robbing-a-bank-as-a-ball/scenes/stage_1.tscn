@@ -135,7 +135,7 @@ position = Vector2(274, -623)
 position = Vector2(40, -503)
 
 [node name="enemies5" parent="." unique_id=655616950 instance=ExtResource("10_con43")]
-position = Vector2(9, -503)
+position = Vector2(562, -97)
 
 [node name="Error" type="Sprite2D" parent="." unique_id=1777054055]
 position = Vector2(-215, 197)
