@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://c5xitft8p5p47"]
 
 [ext_resource type="Script" uid="uid://c6pb8js1254h1" path="res://scripts/youlost.gd" id="1_k3tn0"]
-[ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="2_k3tn0"]
+[ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="2_k3tn0"]
 
 [node name="youlost" type="CanvasLayer" unique_id=814607315]
 script = ExtResource("1_k3tn0")
 
 [node name="OopsYouLost" type="Sprite2D" parent="." unique_id=819751165]
 modulate = Color(0.51007515, 0.51007515, 0.51007503, 1)
-position = Vector2(322.00003, 182)
+position = Vector2(304.00003, 161)
 scale = Vector2(0.55890405, 0.5589041)
 texture = ExtResource("2_k3tn0")
 

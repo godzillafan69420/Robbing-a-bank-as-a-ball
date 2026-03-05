@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dks1w3vkh1f2l"]
 
 [ext_resource type="Script" uid="uid://cn1vdcigbj6h0" path="res://scenes/win_screen.gd" id="1_hdrec"]
-[ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="1_kcs6a"]
+[ext_resource type="Texture2D" uid="uid://q2khaofjortu" path="res://art/UI/2026_03_05_0xk_Kleki.png" id="2_hdrec"]
 
 [node name="youWon" type="CanvasLayer" unique_id=955936660]
 script = ExtResource("1_hdrec")
@@ -10,7 +10,7 @@ script = ExtResource("1_hdrec")
 modulate = Color(0.51007515, 0.51007515, 0.51007503, 1)
 position = Vector2(321.00003, 180)
 scale = Vector2(0.55890405, 0.5589041)
-texture = ExtResource("1_kcs6a")
+texture = ExtResource("2_hdrec")
 
 [node name="Label" type="Label" parent="." unique_id=1222045866]
 offset_left = 245.0

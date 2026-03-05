@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="10_con43"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="11_ylsql"]
 [ext_resource type="PackedScene" uid="uid://i1vjewqas3pv" path="res://scenes/elevator.tscn" id="12_k3p0l"]
+[ext_resource type="Texture2D" uid="uid://cjtiwuqvdyy3s" path="res://art/tiles/error.png" id="14_kiwqh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kiwqh"]
 texture = ExtResource("1_pu7io")
@@ -135,3 +136,7 @@ position = Vector2(40, -503)
 
 [node name="enemies5" parent="." unique_id=655616950 instance=ExtResource("10_con43")]
 position = Vector2(9, -503)
+
+[node name="Error" type="Sprite2D" parent="." unique_id=1777054055]
+position = Vector2(-215, 197)
+texture = ExtResource("14_kiwqh")
