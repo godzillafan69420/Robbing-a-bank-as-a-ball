@@ -7,7 +7,9 @@ var player: CharacterBody2D
 var playerPosition: Vector2
 var direction: float
 var CurrentState
-var HP: int = 6
+@export var HP: int = 6
+
+@export var death_audio: AudioStream
 
 func _ready() -> void:
 	CurrentState = state.idle
@@ -27,7 +29,7 @@ func _process(delta: float) -> void:
 	else:
 		gun.find_child("Sprite2D").flip_v = false
 	if HP <= 0:
-		AudioManger.play("res://sfx/vmanDying.wav")
+		AudioManager.play_oneshot(death_audio)
 		queue_free()
 
 	

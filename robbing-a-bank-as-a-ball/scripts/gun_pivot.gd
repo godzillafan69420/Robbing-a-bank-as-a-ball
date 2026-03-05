@@ -1,6 +1,8 @@
 extends Node2D
 const bulletPrefab = preload("res://scenes/bullet.tscn")
 
+@export var shoot: AudioStream
+@export var reload: AudioStream
 var player
 var canShoot = true
 var degrees
@@ -18,7 +20,7 @@ func _process(delta: float) -> void:
 	else:
 		$Sprite2D.flip_v = false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot and burstShot > 0:
-		AudioManger.play("res://sfx/dennish18-shotgun-146188.mp3")
+		AudioManager.play_oneshot(shoot)
 		for i in range(15):
 			var bullet = bulletPrefab.instantiate()
 			bullet.add_to_group("bullet")
@@ -29,17 +31,17 @@ func _process(delta: float) -> void:
 		burstShot -= 1
 		canShoot = false
 	if burstShot < 1 and !reloading:
-		AudioManger.play("res://sfx/freesound_community-realistic-shotgun-cocking-sound-38640.mp3")
+		AudioManager.play_oneshot(reload)
 		reloading = true
 		$"../reloadTime".start()
 	if Input.is_action_just_pressed("reload") and !reloading:
-		AudioManger.play("res://sfx/freesound_community-realistic-shotgun-cocking-sound-38640.mp3")
+		AudioManager.play_oneshot(reload)
 		burstShot = 0
 		player.burstCount = 0
 		reloading = true
 		$"../reloadTime".start()
 	if reloading:
-		
+
 		UIBulletP.text = "reloading"
 	elif burstShot >0:
 		UIBulletP.text = str(burstShot)+"/2"

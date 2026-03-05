@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://b8b315plaq7ct" path="res://art/enemy/squareWithjawline.png" id="1_lef2n"]
 [ext_resource type="Script" uid="uid://r23mu48xeelq" path="res://scripts/boxboi.gd" id="1_wbx46"]
-[ext_resource type="AudioStream" uid="uid://cc6n5ktccdyrn" path="res://sfx/vmanDying.wav" id="2_wjgm2"]
 [ext_resource type="Texture2D" uid="uid://du8aaq1p5kk8c" path="res://art/enemy/pistol.png" id="3_wbx46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl4xf"]
@@ -16,7 +15,6 @@ radius = 298.0604
 
 [node name="boxBoi" type="CharacterBody2D" unique_id=1633303472]
 script = ExtResource("1_wbx46")
-death_audio = ExtResource("2_wjgm2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=598588421]
 position = Vector2(0, -12)

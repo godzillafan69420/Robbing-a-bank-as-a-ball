@@ -23,6 +23,8 @@ var invincibility: bool = false
 var UIHP: Sprite2D
 var fallStrength: int = 0
 
+@export var slam: AudioStream
+
 func _ready() -> void:
 	UIHP = get_node("UI/HP")
 	$Regeneration.start()
@@ -42,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		
 		if fallStrength > 800:
-			AudioManger.play("res://sfx/explosion.mp3")
+			AudioManager.play_oneshot(slam)
 			var slam = SLAMINTC.instantiate()
 			slam.position = position
 			slam.add_to_group("bullet")

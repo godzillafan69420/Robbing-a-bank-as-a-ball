@@ -61,7 +61,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cer2j")
 
-[node name="Node2D" type="Node2D" unique_id=267983953]
+[node name="stage1_2" type="Node2D" unique_id=267983953]
 script = ExtResource("1_t8t65")
 StageNum = 1
 

@@ -2,8 +2,10 @@ extends Area2D
 
 var damage = 50
 const BLASTFORCE = 1500
+@export var explosion: AudioStream
 
 func _ready() -> void:
+	AudioManager.play_oneshot(explosion)
 	$AnimatedSprite2D.play()
 func _on_timer_timeout() -> void:
 	queue_free()

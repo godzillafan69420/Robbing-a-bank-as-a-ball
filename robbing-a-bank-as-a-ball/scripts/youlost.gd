@@ -1,8 +1,7 @@
 extends CanvasLayer
 
 func _ready() -> void:
-	AudioManger.stop_all()
-	AudioManger.play("res://music/death.mp3")
+	AudioManager.play("death")
 
 func _on_button_button_down() -> void:
 	Global.STAGE1time = 0

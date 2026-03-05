@@ -2,13 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://cjoy7fvf0h3nl" path="res://scripts/settings.gd" id="1_r6d6q"]
-[ext_resource type="AudioStream" uid="uid://b6drghcxlai0s" path="res://sfx/play on the lowest volume.wav" id="2_f4mfi"]
-[ext_resource type="AudioStream" uid="uid://bkpt8tgcyy5vl" path="res://sfx/dyingagain.mp3" id="3_es4n0"]
 
 [node name="settings" type="Node2D" unique_id=1894853199]
 script = ExtResource("1_r6d6q")
-thickOfIt = ExtResource("2_f4mfi")
-dying = ExtResource("3_es4n0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=221334271]
 

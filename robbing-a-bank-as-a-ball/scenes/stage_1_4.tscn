@@ -64,6 +64,7 @@ sources/0 = SubResource("TileSetAtlasSource_hb58f")
 
 [node name="stage 1_4" type="Node2D" unique_id=1536550067]
 script = ExtResource("1_wacyc")
+StageNum = 1
 
 [node name="background" type="TileMapLayer" parent="." unique_id=1774551354]
 modulate = Color(0.76240367, 0.76240367, 0.76240367, 1)

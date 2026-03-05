@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cyf78mvcl7jpr"]
+
+[ext_resource type="Script" uid="uid://cifdvw2ugtnh1" path="res://scripts/audioManger.gd" id="1_exa1w"]
+[ext_resource type="AudioStream" uid="uid://ch8m2amasyewe" path="res://music/WHAT.mp3" id="2_wqicy"]
+[ext_resource type="PackedScene" uid="uid://dc0dh3qvxpjnc" path="res://scenes/audio_one_shot.tscn" id="2_xoic8"]
+[ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="3_xoic8"]
+[ext_resource type="AudioStream" uid="uid://cth7irmr3po2c" path="res://music/the what 2.mp3" id="4_pa2ev"]
+[ext_resource type="AudioStream" uid="uid://dqi2kegrexisk" path="res://music/death.mp3" id="5_cbhue"]
+
+[node name="Audiomanager" type="Node" unique_id=903281979 node_paths=PackedStringArray("music", "sfx")]
+script = ExtResource("1_exa1w")
+music = NodePath("music")
+sfx = NodePath("sfx")
+audio_one_scene = ExtResource("2_xoic8")
+
+[node name="music" type="Node" parent="." unique_id=1688568191]
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="music" unique_id=922895579]
+stream = ExtResource("2_wqicy")
+
+[node name="tutorial" type="AudioStreamPlayer" parent="music" unique_id=1166541675]
+stream = ExtResource("3_xoic8")
+
+[node name="stage1" type="AudioStreamPlayer" parent="music" unique_id=325000058]
+stream = ExtResource("4_pa2ev")
+
+[node name="death" type="AudioStreamPlayer" parent="music" unique_id=1817650165]
+stream = ExtResource("5_cbhue")
+
+[node name="sfx" type="Node" parent="." unique_id=1387054646]

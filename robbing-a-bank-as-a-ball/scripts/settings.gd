@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var thickOfIt: AudioStream
+@export var dying: AudioStream
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,8 +33,8 @@ func _on_useless_4_toggled(toggled_on: bool) -> void:
 
 
 func _on_thick_ofit_button_down() -> void:
-	AudioManger.play("res://sfx/play on the lowest volume.wav")
+	AudioManager.play_oneshot(thickOfIt)
 
 
 func _on_dies_ofdeath_button_down() -> void:
-	AudioManger.play("res://sfx/dyingagain.mp3")
+	AudioManager.play_oneshot(dying)

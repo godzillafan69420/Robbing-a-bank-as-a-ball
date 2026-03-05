@@ -1,43 +1,25 @@
 extends Node
 
-var num_players = 32
-var bus := "Master"
+var active_music_stream: AudioStreamPlayer
 
-var available: Array = []  # The available players
-var queue: Array = []      # The queue of sounds to play
-
-func _ready():
-# Create the pool of AudioStreamPlayer nodes
-	for i in range(num_players):
-		var p := AudioStreamPlayer.new()
-		add_child(p)
-		p.bus = bus
-		available.append(p)
-# Connect finished signal in Godot 4 style
-		p.finished.connect(_on_stream_finished.bind(p))
+@export_group("Main")
+@export var music: Node
+@export var sfx: Node
+@export var audio_one_scene: PackedScene
 
 
-func _on_stream_finished(stream: AudioStreamPlayer):
-# When finished playing a stream, make the player available again
-	available.append(stream)
-func stop_all():
-	queue.clear()  # clear anything waiting to play
+
+func play(audio_name: String, from_position: float = 0.0) -> void:
+	for i in music.get_children():
+		i.stop()
+	active_music_stream = music.get_node(audio_name)
+	active_music_stream.play(from_position)
 	
-	for player in get_children():
-		if player is AudioStreamPlayer:
-			player.stop()
-
-func play(sound_path: String):
-	queue.append(sound_path)
-func stop_current():
-	for player in get_children():
-		if player is AudioStreamPlayer and player.playing:
-			player.stop()
-
-func _process(delta: float) -> void:
-# Play a queued sound if any players are available
-	if not queue.is_empty() and not available.is_empty():
-		var player: AudioStreamPlayer = available.pop_front()
-		var path: String = queue.pop_front()
-		player.stream = load(path)
-		player.play()
+func play_oneshot(audioStream: AudioStream, volume_db: float = 0, from_positon:float = 0.0)-> AudioOneshot:
+	var audioOneShot: AudioOneshot = audio_one_scene.instantiate()
+	audioOneShot.stream = audioStream
+	audioOneShot.volume_db = volume_db
+	audioOneShot.from_position = from_positon
+	
+	sfx.add_child(audioOneShot)
+	return audioOneShot

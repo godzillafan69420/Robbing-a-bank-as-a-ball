@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bullet"):
-		AudioManger.play("res://sfx/vine-boom.mp3")
+
 		var newExplosion =  Explosion.instantiate()
 		newExplosion.position = position
 		get_parent().add_child(newExplosion)

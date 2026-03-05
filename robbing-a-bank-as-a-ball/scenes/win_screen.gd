@@ -11,7 +11,7 @@ func _ready() -> void:
 	$bestTimre.text = "Best time: " + str(round(Global.topTime))
 	if Global.STAGE1time < 30:
 		$message.text = "what tech is that"
-	elif Global.STAGE1time > 32:
+	elif Global.STAGE1time < 32:
 		$message.text = "huh how"
 	elif Global.STAGE1time == 32:
 		$message.text = "my Score"

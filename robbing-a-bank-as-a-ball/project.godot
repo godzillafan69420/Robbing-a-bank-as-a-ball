@@ -22,7 +22,7 @@ buses/default_bus_layout="uid://can8j2vjfv01q"
 
 [autoload]
 
-AudioManger="*uid://cifdvw2ugtnh1"
+AudioManager="*uid://cyf78mvcl7jpr"
 Global="*uid://cj1pvrhpmt32k"
 
 [display]

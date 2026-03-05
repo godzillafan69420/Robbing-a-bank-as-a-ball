@@ -79,6 +79,21 @@ offset_bottom = 258.0
 text = "your time:
 "
 
+[node name="Button4" type="Button" parent="." unique_id=1546009225]
+offset_left = 240.0
+offset_top = 294.0
+offset_right = 385.0
+offset_bottom = 344.0
+text = "credits"
+
+[node name="timeStage2" type="Label" parent="." unique_id=994991176]
+offset_left = 8.0
+offset_top = 330.0
+offset_right = 88.0
+offset_bottom = 379.0
+text = "Mee67 time : 32 sec"
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]

@@ -5,6 +5,7 @@ var CurrentStates
 var playerPosition: Vector2
 var direction: Vector2
 var HP: float = 5
+@export var death_audio: AudioStream
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	CurrentStates = state.idle
@@ -21,7 +22,7 @@ func _process(delta: float) -> void:
 		position += direction.normalized() * 100 * delta
 		rotation = atan2(direction.y, direction.x) + PI/2
 	if HP <= 0:
-		AudioManger.play("res://sfx/vmanDying.wav")
+		AudioManager.play_oneshot(death_audio)
 		queue_free()
 
 func _on_playerdector_body_entered(body: CharacterBody2D) -> void:
