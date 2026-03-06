@@ -13,10 +13,10 @@ scale = Vector2(0.5384448, 0.5384449)
 texture = ExtResource("2_2ckv8")
 
 [node name="Label" type="Label" parent="." unique_id=1060309969]
-offset_left = 374.0
-offset_top = 31.0
-offset_right = 480.0
-offset_bottom = 75.0
+offset_left = 33.0
+offset_top = 16.0
+offset_right = 139.0
+offset_bottom = 60.0
 theme_override_font_sizes/font_size = 31
 text = "Credits"
 
@@ -29,23 +29,23 @@ theme_override_font_sizes/font_size = 31
 text = "art  bad i know"
 
 [node name="Button" type="Button" parent="." unique_id=337412111]
-offset_left = 27.0
-offset_top = 250.0
-offset_right = 172.0
-offset_bottom = 300.0
+offset_left = 13.0
+offset_top = 66.0
+offset_right = 158.0
+offset_bottom = 116.0
 text = "main menu"
 
 [node name="Label2" type="Label" parent="." unique_id=1297466382]
-offset_left = 359.0
-offset_top = 79.0
-offset_right = 625.0
-offset_bottom = 336.0
+offset_left = 176.0
+offset_top = 61.0
+offset_right = 455.0
+offset_bottom = 318.0
 text = "art-  Kevin Xu (mee67)
 programming-  Kevin Xu
 music-  Kevin Xu
-sfx-  Kevin Xu's beautiful voicebox 
-and some random guys on the 
-internet
+sfx-  Kevin Xu, pixabay.com and that
+meme soundboard
+
 
 yeah my itch.io username is 
 cooked
