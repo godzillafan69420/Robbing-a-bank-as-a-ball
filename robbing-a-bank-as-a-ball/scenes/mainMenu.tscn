@@ -87,11 +87,11 @@ offset_bottom = 344.0
 text = "credits"
 
 [node name="timeStage2" type="Label" parent="." unique_id=994991176]
-offset_left = 8.0
+offset_left = 6.0
 offset_top = 330.0
-offset_right = 88.0
+offset_right = 158.0
 offset_bottom = 379.0
-text = "Mee67 time : 33 sec"
+text = "Mee67 time : 35 sec"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

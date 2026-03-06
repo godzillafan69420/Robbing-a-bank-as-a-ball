@@ -1,7 +1,7 @@
 extends Area2D
 
 var damage = 50
-const BLASTFORCE = 1500
+const BLASTFORCE = 3000
 @export var explosion: AudioStream
 
 func _ready() -> void:
@@ -21,4 +21,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_blast_force_detection_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		await get_tree().create_timer(0.1).timeout
 		body.velocity = (body.position- position).normalized() * BLASTFORCE
