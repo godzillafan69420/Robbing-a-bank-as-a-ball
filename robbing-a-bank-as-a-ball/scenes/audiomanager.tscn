@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dqi2kegrexisk" path="res://music/death.mp3" id="5_cbhue"]
 
 [node name="Audiomanager" type="Node" unique_id=903281979 node_paths=PackedStringArray("music", "sfx")]
+process_mode = 3
 script = ExtResource("1_exa1w")
 music = NodePath("music")
 sfx = NodePath("sfx")

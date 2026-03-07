@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="1_pu7io"]
 [ext_resource type="PackedScene" uid="uid://ou64xr7bwm7t" path="res://scenes/player.tscn" id="1_usctx"]
 [ext_resource type="Texture2D" uid="uid://df7aexx1it8ch" path="res://art/tiles/wall.png" id="2_k3p0l"]
+[ext_resource type="PackedScene" uid="uid://du761b6ageshc" path="res://scenes/pause.tscn" id="2_s6chy"]
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="2_u47qm"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="3_ilkkl"]
 [ext_resource type="Texture2D" uid="uid://c10p6pyil0kix" path="res://art/tiles/marblePillarbottom.png" id="4_kiwqh"]
@@ -66,6 +67,8 @@ sources/0 = SubResource("TileSetAtlasSource_ylsql")
 
 [node name="stage1" type="Node2D" unique_id=476973046]
 script = ExtResource("1_k3p0l")
+
+[node name="pause" parent="." unique_id=1337328558 instance=ExtResource("2_s6chy")]
 
 [node name="background" type="TileMapLayer" parent="." unique_id=1243233128]
 modulate = Color(0.76240367, 0.76240367, 0.76240367, 1)
