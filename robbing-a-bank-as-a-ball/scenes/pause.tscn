@@ -4,7 +4,15 @@
 
 [node name="pause" type="CanvasLayer" unique_id=1337328558]
 process_mode = 2
+layer = 1000
 script = ExtResource("1_f1d2v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1388937238]
+modulate = Color(0.22959322, 0.22959325, 0.22959313, 0.5372549)
+offset_left = -39.0
+offset_top = -26.0
+offset_right = 659.0
+offset_bottom = 386.0
 
 [node name="Panel" type="Panel" parent="." unique_id=1601117767]
 offset_left = 196.0
@@ -26,9 +34,6 @@ offset_top = 196.0
 offset_right = 257.0
 offset_bottom = 268.0
 theme_override_font_sizes/font_size = 15
-text = "Trying to beat my score huh. Nice
-try.
-Or you're on toliet break?"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1777083025]
 layout_mode = 0

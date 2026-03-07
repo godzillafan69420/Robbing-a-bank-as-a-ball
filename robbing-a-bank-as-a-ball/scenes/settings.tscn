@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cjoy7fvf0h3nl" path="res://scripts/settings.gd" id="1_r6d6q"]
 [ext_resource type="AudioStream" uid="uid://b6drghcxlai0s" path="res://sfx/play on the lowest volume.wav" id="2_f4mfi"]
 [ext_resource type="AudioStream" uid="uid://bkpt8tgcyy5vl" path="res://sfx/dyingagain.mp3" id="3_es4n0"]
-[ext_resource type="Texture2D" uid="uid://cjd06vdt5se3a" path="res://art/tiles/he promise.png" id="4_f4mfi"]
+[ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="4_f4mfi"]
 
 [node name="settings" type="Node2D" unique_id=1894853199]
 script = ExtResource("1_r6d6q")
@@ -14,7 +14,7 @@ dying = ExtResource("3_es4n0")
 
 [node name="202603030y1Kleki" type="Sprite2D" parent="." unique_id=1776336733]
 modulate = Color(0.573792, 0.5737919, 0.5737919, 1)
-position = Vector2(285, 156)
+position = Vector2(322, 182)
 scale = Vector2(0.5575342, 0.5575342)
 texture = ExtResource("4_f4mfi")
 
