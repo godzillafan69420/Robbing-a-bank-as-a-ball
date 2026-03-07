@@ -12,7 +12,7 @@ func _ready() -> void:
 
 	AudioManager.play("MainMenu")
 	
-	$timeStage1.text = "Time: " + str(roundf(Global.topTime))
+	$timeStage1.text = "Best Time: " + str(roundf(Global.topTime))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

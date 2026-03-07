@@ -76,7 +76,7 @@ offset_left = 381.0
 offset_top = 209.0
 offset_right = 461.0
 offset_bottom = 258.0
-text = "your time:
+text = "best time:
 "
 
 [node name="Button4" type="Button" parent="." unique_id=1546009225]
@@ -91,7 +91,7 @@ offset_left = 6.0
 offset_top = 330.0
 offset_right = 158.0
 offset_bottom = 379.0
-text = "Mee67 time : 35 sec"
+text = "my fastest: 35 sec"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
