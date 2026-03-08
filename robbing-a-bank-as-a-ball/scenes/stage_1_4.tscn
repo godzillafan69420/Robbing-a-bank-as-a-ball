@@ -77,6 +77,7 @@ tile_map_data = PackedByteArray("AAA8APL/AQAAAAAAAAD2//b/AQAAAAAAAAD2//f/AQAAAAA
 tile_set = SubResource("TileSet_os3c7")
 
 [node name="Decoration0" type="Sprite2D" parent="." unique_id=260921065]
+modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
 position = Vector2(102, 250)
 texture = ExtResource("5_4pat5")
 

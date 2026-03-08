@@ -81,6 +81,7 @@ tile_map_data = PackedByteArray("AAA8APL/AQAAAAAAAADz//f/AQAAAAAAAADz//j/AQAAAAA
 tile_set = SubResource("TileSet_1md8p")
 
 [node name="decoration" type="Node2D" parent="." unique_id=575054401]
+modulate = Color(0.851769, 0.8517689, 0.85176885, 1)
 position = Vector2(-154, 248)
 
 [node name="Decoration0" type="Sprite2D" parent="decoration" unique_id=85016230]
