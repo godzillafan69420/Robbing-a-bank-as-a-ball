@@ -56,11 +56,15 @@ func _physics_process(delta: float) -> void:
 		
 
 	var direction := Input.get_axis("left", "right")
-	momentum = SPEED * 0.75 * direction
+	if is_on_floor():
+		momentum = SPEED * 0.75 * direction
+	else:
+		momentum = 10 * 0.67 * direction
 	if momentum > MAXSPEED:
 		momentum = MAXSPEED
 	if momentum < -MAXSPEED:
 		momentum = -MAXSPEED
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
@@ -82,10 +86,14 @@ func _physics_process(delta: float) -> void:
 			burstCount -= 1
 		
 		velocity.x += momentum
-		if velocity.x > 400:
+		if velocity.x > 400 and is_on_floor():
 			velocity.x = 400
-		if velocity.x < -400:
+		if velocity.x < -400 and is_on_floor():
 			velocity.x = -400
+		if velocity.x > 800 and !is_on_floor():
+			velocity.x = 800
+		if velocity.x < -800 and !is_on_floor():
+			velocity.x = -800
 	else:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump and burstCount > 0:
 			velocity = mouseDirection.normalized() * shotgunStrength * -1
