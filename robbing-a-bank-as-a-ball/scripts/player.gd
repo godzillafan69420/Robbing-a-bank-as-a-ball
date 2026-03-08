@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		momentum = SPEED * 0.75 * direction
 	else:
-		momentum = 10 * 0.67 * direction
+		momentum = 10 * 0.8 * direction
 	if momentum > MAXSPEED:
 		momentum = MAXSPEED
 	if momentum < -MAXSPEED:

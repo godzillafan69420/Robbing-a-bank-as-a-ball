@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dks1w3vkh1f2l"]
 
-[ext_resource type="Script" uid="uid://cn1vdcigbj6h0" path="res://scenes/win_screen.gd" id="1_hdrec"]
+[ext_resource type="Script" uid="uid://cn1vdcigbj6h0" path="res://scripts/win_screen.gd" id="1_hdrec"]
 [ext_resource type="Texture2D" uid="uid://q2khaofjortu" path="res://art/UI/2026_03_05_0xk_Kleki.png" id="2_hdrec"]
 
 [node name="youWon" type="CanvasLayer" unique_id=955936660]

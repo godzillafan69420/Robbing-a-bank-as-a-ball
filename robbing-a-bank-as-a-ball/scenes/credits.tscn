@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy42hpendsq1n"]
 
-[ext_resource type="Script" uid="uid://j5domrbamuok" path="res://scenes/credits.gd" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://j5domrbamuok" path="res://scripts/credits.gd" id="1_0bpdh"]
 [ext_resource type="Texture2D" uid="uid://dq73me0se4hvl" path="res://art/UI/2026_03_05_0t8_Kleki.png" id="2_2ckv8"]
 
 [node name="credits" type="CanvasLayer" unique_id=1500838099]
