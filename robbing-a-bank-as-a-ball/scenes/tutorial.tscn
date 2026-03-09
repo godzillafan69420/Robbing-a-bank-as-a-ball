@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="3_cq4me"]
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="4_4kmhl"]
 [ext_resource type="Texture2D" uid="uid://dyu836l1aymfp" path="res://art/tiles/unnamed.jpg" id="4_ikfo1"]
+[ext_resource type="Texture2D" uid="uid://jeopehmglj32" path="res://art/tiles/2026_03_02_0xx_Kleki.png" id="5_15kfc"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="5_cq4me"]
 [ext_resource type="Texture2D" uid="uid://be7s7ul2p3av2" path="res://art/decoration/decoration4.png" id="6_15kfc"]
 [ext_resource type="Texture2D" uid="uid://bny2dxsq5uii3" path="res://art/decoration/decoration1.png" id="7_7a100"]
@@ -85,6 +86,11 @@ tile_set = SubResource("TileSet_nlqja")
 modulate = Color(0.8776157, 0.8776158, 0.8776157, 1)
 position = Vector2(99.999985, 75)
 scale = Vector2(0.32227895, 0.32227892)
+
+[node name="202603020XxKleki" type="Sprite2D" parent="decoration" unique_id=1940727065]
+position = Vector2(3928.275, 114.8074)
+scale = Vector2(0.63758266, 0.6375827)
+texture = ExtResource("5_15kfc")
 
 [node name="Nottuff" type="Sprite2D" parent="decoration" unique_id=367003423]
 texture = ExtResource("7_e13mp")

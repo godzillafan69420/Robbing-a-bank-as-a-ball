@@ -39,7 +39,6 @@ modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
 position = Vector2(318.5, 180.50002)
 scale = Vector2(0.5512153, 0.55401236)
 sprite_frames = SubResource("SpriteFrames_48ign")
-animation = &"fumo"
 
 [node name="Button" type="Button" parent="." unique_id=1599516938]
 offset_left = 240.0

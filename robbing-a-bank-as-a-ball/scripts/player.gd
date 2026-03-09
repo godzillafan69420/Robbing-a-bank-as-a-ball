@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		momentum = SPEED * 0.75 * direction
 	else:
-		momentum = 10 * 0.8 * direction
+		momentum = SPEED * 0.45 * direction
 	if momentum > MAXSPEED:
 		momentum = MAXSPEED
 	if momentum < -MAXSPEED:
@@ -90,10 +90,10 @@ func _physics_process(delta: float) -> void:
 			velocity.x = 400
 		if velocity.x < -400 and is_on_floor():
 			velocity.x = -400
-		if velocity.x > 800 and !is_on_floor():
-			velocity.x = 800
-		if velocity.x < -800 and !is_on_floor():
-			velocity.x = -800
+		if velocity.x > 600 and !is_on_floor():
+			velocity.x = 600
+		if velocity.x < -600 and !is_on_floor():
+			velocity.x = -600
 	else:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump and burstCount > 0:
 			velocity = mouseDirection.normalized() * shotgunStrength * -1
