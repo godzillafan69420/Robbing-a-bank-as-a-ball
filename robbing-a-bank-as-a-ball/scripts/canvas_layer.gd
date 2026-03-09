@@ -1,9 +1,10 @@
 extends CanvasLayer
 const tutorial = preload("res://scenes/tutorial.tscn")
-
+var patchNotes: bool = false
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
+	$"patch notes".visible = false
 	if Global.badapple == true:
 		$Masterart.animation = "fumo"
 	else:
@@ -34,3 +35,10 @@ func _on_button_3_button_down() -> void:
 
 func _on_button_4_button_down() -> void:
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+
+
+func _on_button_5_button_down() -> void:
+	if $"patch notes".visible == false:
+		$"patch notes".visible = true
+	else:
+		$"patch notes".visible = false
