@@ -14,16 +14,15 @@ func _ready() -> void:
 	elif Global.STAGE1time < 40:
 		$message.text = "he might be the goat"
 	elif Global.STAGE1time < 50:
-		$message.text = "you tried your best.
-		You're trash!!!"
-	elif Global.STAGE1time < 60:
-		$message.text = "almost hit a minute. almost"
+		$message.text = "pretty fast"
+	elif Global.STAGE1time < 75:
+		$message.text = "ok average"
 	
-	elif Global.STAGE1time < 70:
+	elif Global.STAGE1time < 100:
 		$message.text = "have a participation reward"
 	elif Global.STAGE1time == 67:
 		$message.text = "mango, mustard, burger 67 "
-	elif Global.STAGE1time >= 70:
+	elif Global.STAGE1time >= 100:
 		$message.text = "in the end the bank is still
 		dumb enough to not move the money"
 

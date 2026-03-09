@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dndik2mqbsyem" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://8310dahbwb7t" path="res://art/player/sprite_0.png" id="2_dqkch"]
 [ext_resource type="AudioStream" uid="uid://dv0mgkklt1nxy" path="res://sfx/explosion.mp3" id="2_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://bivglaoyb7mga" path="res://sfx/player dmagae.mp3" id="2_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://bkpotqtl66cac" path="res://art/player/sprite_1.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://5mdbc6ivgst" path="res://art/player/sprite_2.png" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://bdkfr7d0n3xq3" path="res://scripts/gun_pivot.gd" id="4_qlg0r"]
@@ -63,6 +64,7 @@ radius = 15.0
 
 [node name="player" type="CharacterBody2D" unique_id=2057271089 groups=["player"]]
 script = ExtResource("1_qhqgy")
+damage = ExtResource("2_ur7pv")
 slam = ExtResource("2_tuyoq")
 
 [node name="direction" type="Node2D" parent="." unique_id=87363467]

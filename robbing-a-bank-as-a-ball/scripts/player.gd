@@ -23,6 +23,7 @@ var invincibility: bool = false
 var UIHP: Sprite2D
 var fallStrength: int = 0
 
+@export var damage: AudioStream
 @export var slam: AudioStream
 
 func _ready() -> void:
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		
 		if fallStrength > 800:
-			AudioManager.play_oneshot(slam)
+			AudioManager.play_oneshot(slam, -10)
 			var slam = SLAMINTC.instantiate()
 			slam.position = position
 			slam.add_to_group("bullet")
@@ -131,6 +132,7 @@ func _on_reload_time_timeout() -> void:
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy") and !invincibility:
+		AudioManager.play_oneshot(damage, 10)
 		HP -= 1
 		invincibility = true
 		$invincibility.start()

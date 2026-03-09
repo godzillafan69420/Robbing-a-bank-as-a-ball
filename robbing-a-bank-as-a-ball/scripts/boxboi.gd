@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	else:
 		gun.find_child("Sprite2D").flip_v = false
 	if HP <= 0:
-		AudioManager.play_oneshot(death_audio)
+		AudioManager.play_oneshot(death_audio, 10)
 		queue_free()
 
 	

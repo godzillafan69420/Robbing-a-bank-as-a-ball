@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	else:
 		$Sprite2D.flip_v = false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot and burstShot > 0:
-		AudioManager.play_oneshot(shoot)
+		AudioManager.play_oneshot(shoot,-5)
 		for i in range(15):
 			var bullet = bulletPrefab.instantiate()
 			bullet.add_to_group("bullet")
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		burstShot -= 1
 		canShoot = false
 	if burstShot < 1 and !reloading:
-		AudioManager.play_oneshot(reload)
+		AudioManager.play_oneshot(reload,-5)
 		reloading = true
 		$"../reloadTime".start()
 	if Input.is_action_just_pressed("reload") and !reloading:
