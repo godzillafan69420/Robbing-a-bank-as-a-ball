@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://umss8udplgxg" path="res://scripts/canvas_layer.gd" id="1_qkhwq"]
 [ext_resource type="Texture2D" uid="uid://jeopehmglj32" path="res://art/tiles/2026_03_02_0xx_Kleki.png" id="2_48ign"]
 [ext_resource type="Texture2D" uid="uid://bd5jede2tv7wr" path="res://art/tiles/2026_03_04_0sy_Kleki.png" id="3_48ign"]
+[ext_resource type="StyleBox" uid="uid://cj3ecxp45r03u" path="res://logs.tres" id="4_l7wge"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
 atlas = ExtResource("2_48ign")
@@ -30,15 +31,6 @@ animations = [{
 "name": &"fumo",
 "speed": 5.0
 }]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48ign"]
-bg_color = Color(0.3372549, 0.28235295, 0.2784314, 0.8901961)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_detail = 20
 
 [node name="mainMenu" type="CanvasLayer" unique_id=1642017201]
 script = ExtResource("1_qkhwq")
@@ -102,10 +94,10 @@ offset_bottom = 346.0
 text = "logs"
 
 [node name="timeStage2" type="Label" parent="." unique_id=994991176]
-offset_left = 6.0
-offset_top = 330.0
-offset_right = 158.0
-offset_bottom = 379.0
+offset_left = 5.0
+offset_top = 305.0
+offset_right = 157.0
+offset_bottom = 354.0
 text = "my fastest: 32 sec"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
@@ -115,20 +107,23 @@ offset_left = 146.0
 offset_top = 30.0
 offset_right = 484.0
 offset_bottom = 354.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_48ign")
+theme_override_styles/panel = ExtResource("4_l7wge")
 
 [node name="Label" type="Label" parent="patch notes/Panel" unique_id=1868177932]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 46.0
-offset_right = 336.0
-offset_bottom = 304.0
+offset_left = 2.0
+offset_top = 31.0
+offset_right = 333.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 13
 text = "added death you can die now
 added banks 
 added settings for volume
 added tnt
 improve player movement
-and other stuff
+add a score
+winning i guess
+wr: 29 sec what in the world
 
 never going to add
 communism mode
@@ -138,8 +133,8 @@ me"
 [node name="Label2" type="Label" parent="patch notes/Panel" unique_id=1326011468]
 layout_mode = 0
 offset_right = 336.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 30
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 25
 text = "change log"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

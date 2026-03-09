@@ -40,15 +40,15 @@ max_value = 10.0
 
 [node name="useless" type="CheckButton" parent="settings" unique_id=764200169]
 layout_mode = 2
-text = "useless"
+text = "67 free robux"
 
 [node name="useless2" type="CheckButton" parent="settings" unique_id=773221494]
 layout_mode = 2
-text = "more useless"
+text = "one free robux"
 
 [node name="useless3" type="CheckButton" parent="settings" unique_id=1589223789]
 layout_mode = 2
-text = "other one"
+text = "Communism. not working"
 
 [node name="useless4" type="CheckButton" parent="settings" unique_id=696765285]
 layout_mode = 2
@@ -56,7 +56,7 @@ text = "ᗜˬᗜ"
 
 [node name="tuffMode" type="CheckButton" parent="settings" unique_id=807750738]
 layout_mode = 2
-text = "Tuff mode. doesn't work"
+text = "Tuff mode. not working"
 
 [node name="thickOfit" type="Button" parent="settings" unique_id=1038970202]
 layout_mode = 2

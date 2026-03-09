@@ -180,8 +180,8 @@ offset_left = 928.0
 offset_top = -92.0
 offset_right = 1129.0
 offset_bottom = -43.0
-text = "tnt damages you and the enemies
-but if you far away enough you will fly"
+text = "Tnt will damage you and enemy
+but can also send you flying"
 
 [node name="Label3" type="Label" parent="." unique_id=361495334]
 offset_left = 1879.0

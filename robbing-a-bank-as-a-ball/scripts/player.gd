@@ -26,6 +26,7 @@ var fallStrength: int = 0
 @export var slam: AudioStream
 
 func _ready() -> void:
+
 	UIHP = get_node("UI/HP")
 	$Regeneration.start()
 	

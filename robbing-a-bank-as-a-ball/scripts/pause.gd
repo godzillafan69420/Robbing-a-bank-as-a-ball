@@ -17,6 +17,7 @@ func _on_continue_button_down() -> void:
 	if get_tree().paused:
 		visible = false
 		get_tree().paused = false
+		get_viewport().set_input_as_handled()
 
 
 
