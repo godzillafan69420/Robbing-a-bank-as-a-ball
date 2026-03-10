@@ -40,6 +40,7 @@ func _process(delta: float) -> void:
 		
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
+	get_viewport().set_input_as_handled()
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		fallStrength = velocity.y
