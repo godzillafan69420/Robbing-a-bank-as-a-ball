@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="2_u47qm"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="3_ilkkl"]
 [ext_resource type="Texture2D" uid="uid://c10p6pyil0kix" path="res://art/tiles/marblePillarbottom.png" id="4_kiwqh"]
+[ext_resource type="Texture2D" uid="uid://dghmjcwrp2gv6" path="res://art/decoration/6.png" id="5_2tptg"]
 [ext_resource type="Texture2D" uid="uid://dqbxn6vrbg8ig" path="res://art/tiles/marblePillarTop.png" id="5_s6chy"]
 [ext_resource type="Texture2D" uid="uid://gxatwgkuecfw" path="res://art/decoration/decoration3.png" id="5_ylsql"]
 [ext_resource type="Texture2D" uid="uid://dx8mwqy1byj6h" path="res://art/decoration/decoration0.png" id="6_2tptg"]
@@ -83,6 +84,10 @@ tile_set = SubResource("TileSet_hech3")
 [node name="Node2D" type="Node2D" parent="." unique_id=1816828714]
 modulate = Color(0.75398374, 0.7539839, 0.75398374, 1)
 position = Vector2(531, 251)
+
+[node name="6" type="Sprite2D" parent="Node2D" unique_id=1231265921]
+position = Vector2(-181, -51)
+texture = ExtResource("5_2tptg")
 
 [node name="Decoration3" type="Sprite2D" parent="Node2D" unique_id=1368537349]
 texture = ExtResource("5_ylsql")

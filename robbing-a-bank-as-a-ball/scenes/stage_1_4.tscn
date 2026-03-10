@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c10p6pyil0kix" path="res://art/tiles/marblePillarbottom.png" id="4_cc3ch"]
 [ext_resource type="Texture2D" uid="uid://dx8mwqy1byj6h" path="res://art/decoration/decoration0.png" id="5_4pat5"]
 [ext_resource type="Texture2D" uid="uid://dqbxn6vrbg8ig" path="res://art/tiles/marblePillarTop.png" id="5_ra3gq"]
+[ext_resource type="Texture2D" uid="uid://gsxy6j1vwp8" path="res://art/decoration/7.png" id="6_5cwha"]
 [ext_resource type="PackedScene" uid="uid://ou64xr7bwm7t" path="res://scenes/player.tscn" id="6_wacyc"]
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="7_s20fb"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="8_eegwp"]
@@ -80,6 +81,11 @@ tile_set = SubResource("TileSet_os3c7")
 modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
 position = Vector2(102, 250)
 texture = ExtResource("5_4pat5")
+
+[node name="7" type="Sprite2D" parent="." unique_id=1261721411]
+modulate = Color(0.78352344, 0.7835234, 0.7835234, 1)
+position = Vector2(283, 172)
+texture = ExtResource("6_5cwha")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1554102415]
 modulate = Color(0.90359825, 0.90359825, 0.9035982, 1)
