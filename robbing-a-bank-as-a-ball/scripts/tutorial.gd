@@ -7,7 +7,7 @@ func _ready() -> void:
 	loadingAnimation.get_node("player").play("fadeIn")
 	pauseUI.visible = false
 	get_tree().paused = true
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.7).timeout
 	get_tree().paused = false
 	AudioManager.play("tutorial")
 	loadingAnimation.visible = false
