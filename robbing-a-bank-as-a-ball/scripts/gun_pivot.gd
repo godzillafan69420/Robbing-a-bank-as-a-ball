@@ -1,8 +1,8 @@
 extends Node2D
-const bulletPrefab = preload("res://scenes/bullet.tscn")
 
-@export var shoot: AudioStream
-@export var reload: AudioStream
+
+
+
 var player
 var canShoot = true
 var degrees
@@ -10,6 +10,7 @@ var burstShot: int = 2
 var reloading: bool = false
 var UIBulletP: Label
 func _ready() -> void:
+
 	player = get_parent()
 	UIBulletP = player.get_node("UI/bulletAmont")
 func _process(delta: float) -> void:
@@ -19,45 +20,6 @@ func _process(delta: float) -> void:
 		$Sprite2D.flip_v = true
 	else:
 		$Sprite2D.flip_v = false
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot and burstShot > 0:
-		AudioManager.play_oneshot(shoot,-5)
-		for i in range(15):
-			var bullet = bulletPrefab.instantiate()
-			bullet.add_to_group("bullet")
-			bullet.position = player.position
-			player.get_parent().add_child(bullet)
-			bullet.rotation = deg_to_rad((i*2) +rad_to_deg(degrees)-10)
-		$"../shootTimer".start()
-		burstShot -= 1
-		canShoot = false
-	if burstShot < 1 and !reloading:
-		AudioManager.play_oneshot(reload,-5)
-		reloading = true
-		$"../reloadTime".start()
-	if Input.is_action_just_pressed("reload") and !reloading:
-		AudioManager.play_oneshot(reload)
-		burstShot = 0
-		player.burstCount = 0
-		reloading = true
-		$"../reloadTime".start()
-	if reloading:
-
-		UIBulletP.text = "reloading"
-	elif burstShot >0:
-		UIBulletP.text = str(burstShot)+"/2"
 	
-	else:
-		
-		UIBulletP.text = "reloading"
-		
-
-
-func _on_shoot_timer_timeout() -> void:
-	canShoot = true
-
-
-func _on_reload_time_timeout() -> void:
 	
-	burstShot = 2
-	canShoot = true
-	reloading = false
+		

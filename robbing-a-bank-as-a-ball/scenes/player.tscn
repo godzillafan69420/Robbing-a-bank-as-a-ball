@@ -64,6 +64,8 @@ radius = 15.0
 
 [node name="player" type="CharacterBody2D" unique_id=2057271089 groups=["player"]]
 script = ExtResource("1_qhqgy")
+shoot = ExtResource("6_smehm")
+reload = ExtResource("7_ur7pv")
 damage = ExtResource("2_ur7pv")
 slam = ExtResource("2_tuyoq")
 
@@ -76,10 +78,8 @@ animation = &"idle"
 frame_progress = 0.1341449
 
 [node name="gunPivot" type="Node2D" parent="." unique_id=522363693]
-rotation = -1.7348574
+rotation = -0.015707964
 script = ExtResource("4_qlg0r")
-shoot = ExtResource("6_smehm")
-reload = ExtResource("7_ur7pv")
 
 [node name="Sprite2D" type="Sprite2D" parent="gunPivot" unique_id=139556560]
 position = Vector2(14, 2)
@@ -110,9 +110,7 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_tuyoq")
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shootTimer" to="gunPivot" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="reloadTime" to="." method="_on_reload_time_timeout"]
-[connection signal="timeout" from="reloadTime" to="gunPivot" method="_on_reload_time_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="timeout" from="invincibility" to="." method="_on_invincibility_timeout"]
 [connection signal="timeout" from="Regeneration" to="." method="_on_regeneration_timeout"]

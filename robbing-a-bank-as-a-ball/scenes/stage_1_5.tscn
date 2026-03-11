@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="7_e7ggg"]
 [ext_resource type="PackedScene" uid="uid://dx8ym8ec06e2" path="res://scenes/box.tscn" id="8_v2uhh"]
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="9_dbvqn"]
+[ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="10_lewax"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="11_vblkt"]
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="12_e7ggg"]
 
@@ -94,13 +95,21 @@ tile_set = SubResource("TileSet_adswf")
 [node name="player" parent="." unique_id=2057271089 instance=ExtResource("6_vblkt")]
 position = Vector2(65, 268)
 
+[node name="loading" parent="player" unique_id=2079187412 instance=ExtResource("10_lewax")]
+visible = false
+offset_left = -310.0
+offset_top = -170.0
+offset_right = -270.0
+offset_bottom = -130.0
+
 [node name="UI" parent="player" unique_id=1997593276 instance=ExtResource("7_e7ggg")]
 stageNumber = 1
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1959648364]
 
-[node name="win" parent="." unique_id=402803828 instance=ExtResource("9_dbvqn")]
+[node name="win" parent="." unique_id=402803828 node_paths=PackedStringArray("loadingAnimation") instance=ExtResource("9_dbvqn")]
 position = Vector2(721, 218)
+loadingAnimation = NodePath("../player/loading")
 sceneToChange = 1
 
 [node name="box" parent="." unique_id=436887472 instance=ExtResource("8_v2uhh")]
@@ -129,6 +138,12 @@ position = Vector2(296, 197)
 
 [node name="box9" parent="." unique_id=701892645 instance=ExtResource("8_v2uhh")]
 position = Vector2(332, 263)
+
+[node name="box10" parent="." unique_id=1114432956 instance=ExtResource("8_v2uhh")]
+position = Vector2(606, 264)
+
+[node name="box11" parent="." unique_id=923642272 instance=ExtResource("8_v2uhh")]
+position = Vector2(641, 264)
 
 [node name="boxBoi" parent="." unique_id=1633303472 instance=ExtResource("11_vblkt")]
 position = Vector2(494, 274)

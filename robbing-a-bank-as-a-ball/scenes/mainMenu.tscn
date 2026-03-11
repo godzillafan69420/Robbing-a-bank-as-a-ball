@@ -98,7 +98,7 @@ offset_left = 5.0
 offset_top = 305.0
 offset_right = 157.0
 offset_bottom = 354.0
-text = "my fastest: 32 sec"
+text = "my fastest: 40 sec"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
 

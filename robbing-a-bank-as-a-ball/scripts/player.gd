@@ -5,8 +5,13 @@ const HPLook2 = preload("res://art/UI/UI2.png")
 const HPLook3 = preload("res://art/UI/UI3.png")
 const HPLook4 = preload("res://art/UI/UI4.png")
 const SLAMINTC = preload("res://scenes/slam_area.tscn")
+const bulletPrefab = preload("res://scenes/bullet.tscn")
 
-
+@export var shoot: AudioStream
+@export var reload: AudioStream
+var degrees
+var reloading: bool = false
+var UIBulletP: Label
 
 const MAXSPEED = 100
 const SPEED = 25.0
@@ -27,20 +32,30 @@ var fallStrength: int = 0
 @export var slam: AudioStream
 
 func _ready() -> void:
-
+	get_viewport().set_input_as_handled()
+	UIBulletP = get_node("UI/bulletAmont")
 	UIHP = get_node("UI/HP")
 	$Regeneration.start()
 	
 func _process(delta: float) -> void:
 	mouseposition = get_global_mouse_position()
 	mouseDirection = mouseposition - position
+	if reloading:
+
+		UIBulletP.text = "reloading"
+	elif burstCount >0:
+		UIBulletP.text = str(burstCount)+"/2"
+	
+	else:
+		
+		UIBulletP.text = "reloading"
 	
 	
 	
 		
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	get_viewport().set_input_as_handled()
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		fallStrength = velocity.y
@@ -67,7 +82,11 @@ func _physics_process(delta: float) -> void:
 		momentum = MAXSPEED
 	if momentum < -MAXSPEED:
 		momentum = -MAXSPEED
-	
+	if Input.is_action_just_pressed("shoot") and canJump and burstCount > 0:
+			degrees = atan2(get_global_mouse_position().y - position.y, get_global_mouse_position().x - position.x)
+			velocity =shotgunStrength*mouseDirection.normalized()  * -1
+			createBullets(degrees)
+			
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
@@ -82,11 +101,7 @@ func _physics_process(delta: float) -> void:
 	if Currentstate == States.walking:
 		
 		$direction/AnimatedSprite2D.stop()
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump and burstCount > 0:
-			velocity = mouseDirection.normalized() * shotgunStrength * -1
-			
-			canJump = false
-			burstCount -= 1
+		
 		
 		velocity.x += momentum
 		if velocity.x > 400 and is_on_floor():
@@ -98,14 +113,17 @@ func _physics_process(delta: float) -> void:
 		if velocity.x < -600 and !is_on_floor():
 			velocity.x = -600
 	else:
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canJump and burstCount > 0:
-			velocity = mouseDirection.normalized() * shotgunStrength * -1
-			canJump = false
-			burstCount -= 1
-		elif Currentstate != States.walking and is_on_floor():
+		if Currentstate != States.walking and is_on_floor():
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			$direction/AnimatedSprite2D.play("idle")
-	
+	if  burstCount < 1 and !reloading:
+		AudioManager.play_oneshot(reload,-5)
+		reloading = true
+		$reloadTime.start()
+	elif burstCount >0 and !reloading and Input.is_action_just_pressed("reload"):
+		AudioManager.play_oneshot(reload,-5)
+		reloading = true
+		$reloadTime.start()
 	if HP <= 0:
 		get_tree().change_scene_to_file("res://scenes/youlost.tscn")
 	if HP > 5:
@@ -126,9 +144,11 @@ func _on_shoot_timer_timeout() -> void:
 
 
 
+
 func _on_reload_time_timeout() -> void:
 	burstCount = 2
 	canJump = true
+	reloading = false
 
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
@@ -148,3 +168,16 @@ func _on_invincibility_timeout() -> void:
 
 func _on_regeneration_timeout() -> void:
 	HP += 1
+	
+func createBullets(deg: float):
+	AudioManager.play_oneshot(shoot,-5)
+	for i in range(15):
+		var bullet = bulletPrefab.instantiate()
+		bullet.add_to_group("bullet")
+		bullet.position = position
+		get_parent().add_child(bullet)
+		bullet.rotation = deg_to_rad((i*2) +rad_to_deg(deg)-10)
+	$shootTimer.start()
+	canJump = false
+	burstCount -= 1
+	

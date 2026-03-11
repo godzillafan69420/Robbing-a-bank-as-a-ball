@@ -21,12 +21,12 @@ theme_override_font_sizes/font_size = 31
 text = "Credits"
 
 [node name="Label3" type="Label" parent="." unique_id=1744763721]
-offset_left = 27.0
-offset_top = 317.0
-offset_right = 133.0
-offset_bottom = 361.0
-theme_override_font_sizes/font_size = 31
-text = "art  bad i know"
+offset_left = -2.0
+offset_top = 328.0
+offset_right = 303.0
+offset_bottom = 372.0
+theme_override_font_sizes/font_size = 22
+text = "don't have any ball relate art"
 
 [node name="Button" type="Button" parent="." unique_id=337412111]
 offset_left = 13.0

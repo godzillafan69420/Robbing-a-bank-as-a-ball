@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://dqbxn6vrbg8ig" path="res://art/tiles/marblePillarTop.png" id="9_g2equ"]
 [ext_resource type="PackedScene" uid="uid://dx8ym8ec06e2" path="res://scenes/box.tscn" id="10_0epgs"]
 [ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="10_5qvs7"]
-[ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="12_0hilk"]
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="12_ej4tf"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="14_0hilk"]
+[ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="21_210s6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbqnl"]
 texture = ExtResource("3_cq4me")
@@ -74,8 +74,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6yjpi")
 
-[node name="Tutorial" type="Node2D" unique_id=1960580465]
+[node name="Tutorial" type="Node2D" unique_id=1960580465 node_paths=PackedStringArray("loadingAnimation")]
 script = ExtResource("1_0hilk")
+loadingAnimation = NodePath("player/loading")
 
 [node name="pause" parent="." unique_id=1337328558 instance=ExtResource("2_vrdqu")]
 
@@ -236,11 +237,14 @@ position = Vector2(1597, 209)
 [node name="box6" parent="." unique_id=565803943 instance=ExtResource("10_0epgs")]
 position = Vector2(1661, 209)
 
-[node name="win" parent="." unique_id=402803828 instance=ExtResource("12_ej4tf")]
-position = Vector2(2815, 160)
-
 [node name="player" parent="." unique_id=2057271089 instance=ExtResource("1_ph3nu")]
 position = Vector2(175, 216)
+
+[node name="loading" parent="player" unique_id=2079187412 instance=ExtResource("21_210s6")]
+offset_left = -312.0
+offset_top = -177.0
+offset_right = -272.0
+offset_bottom = -137.0
 
 [node name="UI" parent="player" unique_id=1997593276 instance=ExtResource("2_4kmhl")]
 
@@ -257,5 +261,6 @@ texture = ExtResource("4_ikfo1")
 [node name="TNT" parent="." unique_id=309049693 instance=ExtResource("14_0hilk")]
 position = Vector2(1077, 176)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=669179014]
-stream = ExtResource("12_0hilk")
+[node name="win" parent="." unique_id=402803828 node_paths=PackedStringArray("loadingAnimation") instance=ExtResource("12_ej4tf")]
+position = Vector2(2815, 160)
+loadingAnimation = NodePath("../player/loading")
