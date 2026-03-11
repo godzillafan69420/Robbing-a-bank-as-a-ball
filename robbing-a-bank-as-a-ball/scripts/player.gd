@@ -26,10 +26,10 @@ var momentum: float
 var HP: float = 6
 var invincibility: bool = false
 var UIHP: Sprite2D
-var fallStrength: int = 0
+var fallStrength: float = 0
 
 @export var damage: AudioStream
-@export var slam: AudioStream
+@export var slamAudio: AudioStream
 
 func _ready() -> void:
 	get_viewport().set_input_as_handled()
@@ -37,7 +37,7 @@ func _ready() -> void:
 	UIHP = get_node("UI/HP")
 	$Regeneration.start()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	mouseposition = get_global_mouse_position()
 	mouseDirection = mouseposition - position
 	if reloading:
@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		
 		if fallStrength > 800:
-			AudioManager.play_oneshot(slam, -10)
+			AudioManager.play_oneshot(slamAudio, -10)
 			var slam = SLAMINTC.instantiate()
 			slam.position = position
 			slam.add_to_group("bullet")

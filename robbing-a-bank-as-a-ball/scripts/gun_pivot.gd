@@ -13,7 +13,7 @@ func _ready() -> void:
 
 	player = get_parent()
 	UIBulletP = player.get_node("UI/bulletAmont")
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	degrees = atan2(get_global_mouse_position().y - $"..".position.y, get_global_mouse_position().x - $"..".position.x)
 	$".".rotation =  degrees
 	if (abs(rad_to_deg(degrees)) < 270) && (abs(rad_to_deg(degrees)) > 90):

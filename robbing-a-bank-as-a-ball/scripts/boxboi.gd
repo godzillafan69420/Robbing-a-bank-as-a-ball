@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		
 	move_and_slide()
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	playerPosition = player.position
 	direction = atan2(playerPosition.y - position.y, playerPosition.x - position.x) 
 	gun.rotation = direction

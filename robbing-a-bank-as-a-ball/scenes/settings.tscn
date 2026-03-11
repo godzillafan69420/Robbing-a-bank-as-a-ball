@@ -4,11 +4,74 @@
 [ext_resource type="AudioStream" uid="uid://b6drghcxlai0s" path="res://sfx/play on the lowest volume.wav" id="2_f4mfi"]
 [ext_resource type="AudioStream" uid="uid://bkpt8tgcyy5vl" path="res://sfx/dyingagain.mp3" id="3_es4n0"]
 [ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="4_f4mfi"]
+[ext_resource type="Texture2D" uid="uid://dqojefyt7u2ej" path="res://art/rick.jpg" id="5_es4n0"]
 
-[node name="settings" type="Node2D" unique_id=1894853199]
+[sub_resource type="Animation" id="Animation_es4n0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gis3k"]
+resource_name = "rolled"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.43666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83j8s"]
+_data = {
+&"RESET": SubResource("Animation_es4n0"),
+&"rolled": SubResource("Animation_gis3k")
+}
+
+[node name="settings" type="Node2D" unique_id=1894853199 node_paths=PackedStringArray("rolled")]
 script = ExtResource("1_r6d6q")
 thickOfIt = ExtResource("2_f4mfi")
 dying = ExtResource("3_es4n0")
+rolled = NodePath("Rick/AnimationPlayer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=221334271]
 
@@ -44,7 +107,7 @@ text = "67 free robux"
 
 [node name="useless2" type="CheckButton" parent="settings" unique_id=773221494]
 layout_mode = 2
-text = "one free robux"
+text = "god Mode"
 
 [node name="useless3" type="CheckButton" parent="settings" unique_id=1589223789]
 layout_mode = 2
@@ -71,9 +134,21 @@ offset_right = 82.0
 offset_bottom = 34.0
 text = "main menu"
 
+[node name="Rick" type="Sprite2D" parent="." unique_id=2080380819]
+position = Vector2(308, 218)
+scale = Vector2(1.949074, 1.9490741)
+texture = ExtResource("5_es4n0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rick" unique_id=792591370]
+libraries/ = SubResource("AnimationLibrary_83j8s")
+
 [connection signal="toggled" from="settings/turnOffMusic" to="." method="_on_turn_off_music_toggled"]
 [connection signal="value_changed" from="settings/vol" to="." method="_on_vol_value_changed"]
+[connection signal="button_down" from="settings/useless" to="." method="_on_useless_button_down"]
+[connection signal="button_down" from="settings/useless2" to="." method="_on_useless_2_button_down"]
+[connection signal="button_down" from="settings/useless3" to="." method="_on_useless_3_button_down"]
 [connection signal="toggled" from="settings/useless4" to="." method="_on_useless_4_toggled"]
+[connection signal="button_down" from="settings/tuffMode" to="." method="_on_tuff_mode_button_down"]
 [connection signal="button_down" from="settings/thickOfit" to="." method="_on_thick_ofit_button_down"]
 [connection signal="button_down" from="settings/diesOfdeath" to="." method="_on_dies_ofdeath_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

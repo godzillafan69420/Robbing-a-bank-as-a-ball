@@ -23,7 +23,7 @@ offset_top = 295.0
 offset_right = 173.0
 offset_bottom = 345.0
 theme_override_font_sizes/font_size = 32
-text = "tung tung sahur"
+text = "balls"
 
 [node name="Label" type="Label" parent="." unique_id=290117184]
 offset_left = 287.0
