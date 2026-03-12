@@ -238,6 +238,33 @@ position = Vector2(1597, 209)
 [node name="box6" parent="." unique_id=565803943 instance=ExtResource("10_0epgs")]
 position = Vector2(1661, 209)
 
+[node name="box7" parent="." unique_id=234506686 instance=ExtResource("10_0epgs")]
+position = Vector2(1840, -334)
+
+[node name="box8" parent="." unique_id=1651935418 instance=ExtResource("10_0epgs")]
+position = Vector2(1873, -334)
+
+[node name="box9" parent="." unique_id=1522267875 instance=ExtResource("10_0epgs")]
+position = Vector2(1711, -334)
+
+[node name="box10" parent="." unique_id=1116497122 instance=ExtResource("10_0epgs")]
+position = Vector2(1775, -334)
+
+[node name="box11" parent="." unique_id=1710539472 instance=ExtResource("10_0epgs")]
+position = Vector2(1744, -334)
+
+[node name="box12" parent="." unique_id=1468834773 instance=ExtResource("10_0epgs")]
+position = Vector2(1808, -334)
+
+[node name="HePromise" type="Sprite2D" parent="." unique_id=391111841]
+position = Vector2(-232, 172.00002)
+scale = Vector2(0.26438355, 0.26438355)
+texture = ExtResource("23_210s6")
+
+[node name="Unnamed2" type="Sprite2D" parent="." unique_id=1858234747]
+position = Vector2(3144, -3)
+texture = ExtResource("4_ikfo1")
+
 [node name="player" parent="." unique_id=2057271089 instance=ExtResource("1_ph3nu")]
 position = Vector2(175, 216)
 
@@ -253,15 +280,6 @@ offset_bottom = -137.0
 
 [node name="Unnamed" type="Sprite2D" parent="." unique_id=790948693]
 position = Vector2(-248, -402)
-texture = ExtResource("4_ikfo1")
-
-[node name="HePromise" type="Sprite2D" parent="." unique_id=391111841]
-position = Vector2(-232, 172.00002)
-scale = Vector2(0.26438355, 0.26438355)
-texture = ExtResource("23_210s6")
-
-[node name="Unnamed2" type="Sprite2D" parent="." unique_id=1858234747]
-position = Vector2(3144, -3)
 texture = ExtResource("4_ikfo1")
 
 [node name="TNT" parent="." unique_id=309049693 instance=ExtResource("14_0hilk")]

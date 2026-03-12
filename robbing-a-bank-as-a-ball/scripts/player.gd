@@ -13,6 +13,8 @@ var degrees
 var reloading: bool = false
 var UIBulletP: Label
 
+const PUSHFORCE = 200
+const MINPUSHFORCE =  50
 const MAXSPEED = 100
 const SPEED = 25.0
 const shotgunStrength = 670
@@ -143,6 +145,11 @@ func _physics_process(delta: float) -> void:
 	elif HP == 1:
 		UIHP.texture = HPLook4
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			var pushForce = (PUSHFORCE * velocity.length() / MAXSPEED) + MINPUSHFORCE
+			c.get_collider().apply_central_impulse(-c.get_normal() * pushForce)
 
 
 func _on_shoot_timer_timeout() -> void:

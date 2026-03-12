@@ -111,7 +111,7 @@ text = "god Mode"
 
 [node name="useless3" type="CheckButton" parent="settings" unique_id=1589223789]
 layout_mode = 2
-text = "Communism. not working"
+text = "Communism mode 100% work Kallum wang trust me"
 
 [node name="useless4" type="CheckButton" parent="settings" unique_id=696765285]
 layout_mode = 2

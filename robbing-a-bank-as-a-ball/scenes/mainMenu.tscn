@@ -116,10 +116,10 @@ theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "logs"
 
 [node name="timeStage2" type="Label" parent="." unique_id=994991176]
-offset_left = 5.0
-offset_top = 305.0
-offset_right = 157.0
-offset_bottom = 354.0
+offset_left = 1.0
+offset_top = 308.0
+offset_right = 153.0
+offset_bottom = 357.0
 text = "my fastest: 40 sec"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
