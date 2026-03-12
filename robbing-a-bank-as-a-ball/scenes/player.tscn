@@ -67,7 +67,7 @@ script = ExtResource("1_qhqgy")
 shoot = ExtResource("6_smehm")
 reload = ExtResource("7_ur7pv")
 damage = ExtResource("2_ur7pv")
-slam = ExtResource("2_tuyoq")
+slamAudio = ExtResource("2_tuyoq")
 
 [node name="direction" type="Node2D" parent="." unique_id=87363467]
 
