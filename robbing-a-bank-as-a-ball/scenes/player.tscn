@@ -10,6 +10,10 @@
 [ext_resource type="AudioStream" uid="uid://5r7i75b8bq41" path="res://sfx/dennish18-shotgun-146188.mp3" id="6_smehm"]
 [ext_resource type="Texture2D" uid="uid://bnx2ar77bpk2x" path="res://art/player/New Piskel (2).png" id="6_y4r1p"]
 [ext_resource type="AudioStream" uid="uid://btbrg6tcdr8sv" path="res://sfx/freesound_community-realistic-shotgun-cocking-sound-38640.mp3" id="7_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://b77bvp38c8qqw" path="res://art/particles/fire/flame0.png" id="11_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://c51nnep1ayjmn" path="res://art/particles/fire/flame1.png" id="12_oprun"]
+[ext_resource type="Texture2D" uid="uid://qrps8weukfgq" path="res://art/particles/fire/flame2.png" id="13_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://5c6x08o2yw0r" path="res://art/particles/fire/flame3.png" id="14_qfm1y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
 atlas = ExtResource("6_y4r1p")
@@ -70,6 +74,26 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fulsm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qfm1y")
+}],
+"loop": false,
+"name": &"fire",
+"speed": 24.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_qlg0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tuyoq"]
@@ -90,19 +114,23 @@ sprite_frames = SubResource("SpriteFrames_fjrip")
 animation = &"hehe"
 
 [node name="gunPivot" type="Node2D" parent="." unique_id=522363693]
-rotation = -0.015707964
 script = ExtResource("4_qlg0r")
 
 [node name="Sprite2D" type="Sprite2D" parent="gunPivot" unique_id=139556560]
 position = Vector2(14, 2)
 texture = ExtResource("4_dqkch")
 
+[node name="shootDecoration" type="AnimatedSprite2D" parent="gunPivot" unique_id=1194595403]
+position = Vector2(46, 1)
+sprite_frames = SubResource("SpriteFrames_fulsm")
+animation = &"fire"
+
 [node name="shootTimer" type="Timer" parent="." unique_id=787396112]
 wait_time = 0.3
 one_shot = true
 
 [node name="reloadTime" type="Timer" parent="." unique_id=2009690881]
-wait_time = 1.0999999999999999
+wait_time = 1.2
 one_shot = true
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=2039845215]
@@ -120,6 +148,7 @@ wait_time = 7.0
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_tuyoq")
 
+[connection signal="animation_finished" from="gunPivot/shootDecoration" to="." method="_on_shoot_decoration_animation_finished"]
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="reloadTime" to="." method="_on_reload_time_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

@@ -32,6 +32,7 @@ var fallStrength: float = 0
 @export var slamAudio: AudioStream
 
 func _ready() -> void:
+	$gunPivot/shootDecoration.visible = false
 	if Global.badapple:
 		$direction/AnimatedSprite2D.play("hehe")
 	else:
@@ -176,6 +177,8 @@ func _on_regeneration_timeout() -> void:
 	
 func createBullets(deg: float):
 	AudioManager.play_oneshot(shoot,-5)
+	$gunPivot/shootDecoration.visible = true
+	$gunPivot/shootDecoration.play("fire")
 	for i in range(15):
 		var bullet = bulletPrefab.instantiate()
 		bullet.add_to_group("bullet")
@@ -186,3 +189,8 @@ func createBullets(deg: float):
 	canJump = false
 	burstCount -= 1
 	
+	
+
+
+func _on_shoot_decoration_animation_finished() -> void:
+	$gunPivot/shootDecoration.visible = false

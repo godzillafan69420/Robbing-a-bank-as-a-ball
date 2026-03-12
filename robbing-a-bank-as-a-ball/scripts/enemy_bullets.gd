@@ -1,5 +1,5 @@
 extends Area2D
-
+class_name enemyBullet
 const bulletSpeed = 300
 
 func _process(delta: float) -> void:
