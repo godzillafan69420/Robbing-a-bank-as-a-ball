@@ -4,7 +4,7 @@ enum state {idle, attacking}
 var CurrentStates
 var playerPosition: Vector2
 var direction: Vector2
-var HP: float = 5
+var HP: float = 2
 @export var death_audio: AudioStream
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

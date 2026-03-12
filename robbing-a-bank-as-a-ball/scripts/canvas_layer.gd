@@ -6,12 +6,12 @@ var patchNotes: bool = false
 func _ready() -> void:
 	$"patch notes".visible = false
 	if Global.badapple == true:
+		
 		$Masterart.animation = "fumo"
+		AudioManager.play("yes")
 	else:
 		$Masterart.animation = "default"
-	
-
-	AudioManager.play("MainMenu")
+		AudioManager.play("MainMenu")
 	
 	$timeStage1.text = "Best Time: " + str(roundf(Global.topTime))
 

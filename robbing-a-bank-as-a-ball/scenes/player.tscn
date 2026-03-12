@@ -8,10 +8,23 @@
 [ext_resource type="Texture2D" uid="uid://5mdbc6ivgst" path="res://art/player/sprite_2.png" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://bdkfr7d0n3xq3" path="res://scripts/gun_pivot.gd" id="4_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://5r7i75b8bq41" path="res://sfx/dennish18-shotgun-146188.mp3" id="6_smehm"]
+[ext_resource type="Texture2D" uid="uid://bnx2ar77bpk2x" path="res://art/player/New Piskel (2).png" id="6_y4r1p"]
 [ext_resource type="AudioStream" uid="uid://btbrg6tcdr8sv" path="res://sfx/freesound_community-realistic-shotgun-cocking-sound-38640.mp3" id="7_ur7pv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("6_y4r1p")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}],
+"loop": true,
+"name": &"hehe",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_dqkch")
@@ -74,8 +87,7 @@ slamAudio = ExtResource("2_tuyoq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="direction" unique_id=367426644]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"idle"
-frame_progress = 0.1341449
+animation = &"hehe"
 
 [node name="gunPivot" type="Node2D" parent="." unique_id=522363693]
 rotation = -0.015707964
@@ -86,11 +98,11 @@ position = Vector2(14, 2)
 texture = ExtResource("4_dqkch")
 
 [node name="shootTimer" type="Timer" parent="." unique_id=787396112]
-wait_time = 0.4
+wait_time = 0.3
 one_shot = true
 
 [node name="reloadTime" type="Timer" parent="." unique_id=2009690881]
-wait_time = 1.2
+wait_time = 1.0999999999999999
 one_shot = true
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=2039845215]
@@ -99,11 +111,10 @@ one_shot = true
 shape = SubResource("CircleShape2D_qlg0r")
 
 [node name="invincibility" type="Timer" parent="." unique_id=1530486998]
-wait_time = 0.7
 one_shot = true
 
 [node name="Regeneration" type="Timer" parent="." unique_id=865714969]
-wait_time = 10.0
+wait_time = 7.0
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1000295492]
 position = Vector2(0, -5)

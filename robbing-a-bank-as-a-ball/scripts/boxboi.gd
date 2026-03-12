@@ -7,7 +7,7 @@ var player: CharacterBody2D
 var playerPosition: Vector2
 var direction: float
 var CurrentState
-@export var HP: int = 6
+@export var HP: int = 3
 
 @export var death_audio: AudioStream
 

@@ -32,12 +32,16 @@ var fallStrength: float = 0
 @export var slamAudio: AudioStream
 
 func _ready() -> void:
-	get_viewport().set_input_as_handled()
+	if Global.badapple:
+		$direction/AnimatedSprite2D.play("hehe")
+	else:
+		$direction/AnimatedSprite2D.play("idle")
 	UIBulletP = get_node("UI/bulletAmont")
 	UIHP = get_node("UI/HP")
 	$Regeneration.start()
 	
 func _process(_delta: float) -> void:
+	
 	mouseposition = get_global_mouse_position()
 	mouseDirection = mouseposition - position
 	if reloading:
@@ -115,7 +119,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		if Currentstate != States.walking and is_on_floor():
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-			$direction/AnimatedSprite2D.play("idle")
+			if !Global.badapple:
+				$direction/AnimatedSprite2D.play("idle")
 	if  burstCount < 1 and !reloading:
 		AudioManager.play_oneshot(reload,-5)
 		reloading = true

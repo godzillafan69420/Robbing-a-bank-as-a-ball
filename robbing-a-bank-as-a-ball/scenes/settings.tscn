@@ -115,7 +115,7 @@ text = "Communism. not working"
 
 [node name="useless4" type="CheckButton" parent="settings" unique_id=696765285]
 layout_mode = 2
-text = "ᗜˬᗜ"
+text = "Old stuff - ᗜˬᗜ"
 
 [node name="tuffMode" type="CheckButton" parent="settings" unique_id=807750738]
 layout_mode = 2

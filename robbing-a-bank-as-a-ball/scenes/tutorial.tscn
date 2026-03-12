@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="12_ej4tf"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="14_0hilk"]
 [ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="21_210s6"]
+[ext_resource type="Texture2D" uid="uid://cjd06vdt5se3a" path="res://art/tiles/he promise.png" id="23_210s6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbqnl"]
 texture = ExtResource("3_cq4me")
@@ -253,6 +254,11 @@ offset_bottom = -137.0
 [node name="Unnamed" type="Sprite2D" parent="." unique_id=790948693]
 position = Vector2(-248, -402)
 texture = ExtResource("4_ikfo1")
+
+[node name="HePromise" type="Sprite2D" parent="." unique_id=391111841]
+position = Vector2(-232, 172.00002)
+scale = Vector2(0.26438355, 0.26438355)
+texture = ExtResource("23_210s6")
 
 [node name="Unnamed2" type="Sprite2D" parent="." unique_id=1858234747]
 position = Vector2(3144, -3)

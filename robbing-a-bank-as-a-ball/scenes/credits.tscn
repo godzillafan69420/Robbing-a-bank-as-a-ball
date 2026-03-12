@@ -8,7 +8,7 @@ script = ExtResource("1_0bpdh")
 
 [node name="OopsYouLost" type="Sprite2D" parent="." unique_id=1182657021]
 modulate = Color(0.51007515, 0.51007515, 0.51007503, 1)
-position = Vector2(334.94052, 189.1096)
+position = Vector2(314, 178)
 scale = Vector2(0.5384448, 0.5384449)
 texture = ExtResource("2_2ckv8")
 
@@ -28,6 +28,18 @@ offset_bottom = 372.0
 theme_override_font_sizes/font_size = 22
 text = "don't have any ball relate art"
 
+[node name="Label4" type="Label" parent="." unique_id=302845516]
+offset_left = 378.0
+offset_top = 112.0
+offset_right = 683.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 22
+text = "blame Ivan if game too
+hard.
+Blame sean if game too
+easy.
+"
+
 [node name="Button" type="Button" parent="." unique_id=337412111]
 offset_left = 13.0
 offset_top = 66.0
@@ -36,9 +48,9 @@ offset_bottom = 116.0
 text = "main menu"
 
 [node name="Label2" type="Label" parent="." unique_id=1297466382]
-offset_left = 176.0
-offset_top = 61.0
-offset_right = 455.0
+offset_left = 164.0
+offset_top = 9.0
+offset_right = 443.0
 offset_bottom = 318.0
 text = "art-  Kevin Xu (mee67)
 programming-  Kevin Xu
@@ -46,9 +58,11 @@ music-  Kevin Xu
 sfx-  Kevin Xu, pixabay.com and that
 meme soundboard
 
-
-yeah my itch.io username is 
-cooked
+Programs
+-Godot
+-MuseScore
+- piskel and Kleki
+-audacity
 "
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
