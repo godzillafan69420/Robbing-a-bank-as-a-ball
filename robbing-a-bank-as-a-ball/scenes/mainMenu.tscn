@@ -75,13 +75,14 @@ theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "settings"
 
 [node name="Label" type="Label" parent="." unique_id=1336749874]
-offset_left = 161.0
-offset_top = 43.0
-offset_right = 438.0
-offset_bottom = 130.0
+offset_left = 13.0
+offset_top = 35.0
+offset_right = 631.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 23
 text = "Rob a bank as a disable ball with a shotgun
-and kill box and other shapes. 
-(I know good title)"
+and kill boxes and other shapes with no discrimination 
+to get rich and buy a private island. (I know good title)"
 
 [node name="timeStage1" type="Label" parent="." unique_id=2006250236]
 offset_left = 381.0
@@ -89,14 +90,6 @@ offset_top = 209.0
 offset_right = 461.0
 offset_bottom = 258.0
 text = "best time:
-"
-
-[node name="e" type="Label" parent="." unique_id=344996958]
-offset_left = 2.0
-offset_top = 335.0
-offset_right = 159.0
-offset_bottom = 384.0
-text = "e
 "
 
 [node name="Button4" type="Button" parent="." unique_id=1546009225]
@@ -116,11 +109,10 @@ theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "logs"
 
 [node name="timeStage2" type="Label" parent="." unique_id=994991176]
-offset_left = 1.0
-offset_top = 308.0
-offset_right = 153.0
-offset_bottom = 357.0
-text = "my fastest: 40 sec"
+offset_top = 306.0
+offset_right = 152.0
+offset_bottom = 355.0
+text = "my fastest: 50 sec"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
 visible = false

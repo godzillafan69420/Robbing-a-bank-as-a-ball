@@ -8,7 +8,7 @@ size = Vector2(32, 32)
 
 [node name="box" type="RigidBody2D" unique_id=436887472]
 disable_mode = 2
-mass = 0.5
+mass = 0.4
 can_sleep = false
 script = ExtResource("1_ks2v0")
 

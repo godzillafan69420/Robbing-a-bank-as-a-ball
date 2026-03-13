@@ -210,7 +210,10 @@ offset_left = 2566.0
 offset_top = 126.0
 offset_right = 2795.0
 offset_bottom = 175.0
-text = "touch the vault to win"
+text = "touch the vault to win
+
+and remenber flying is 
+not banable"
 
 [node name="Label5" type="Label" parent="." unique_id=692959292]
 offset_left = 1435.0

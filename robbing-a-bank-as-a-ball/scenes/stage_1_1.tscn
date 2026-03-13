@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="10_n80nk"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="11_q20x3"]
 [ext_resource type="PackedScene" uid="uid://dx8ym8ec06e2" path="res://scenes/box.tscn" id="12_f7qdm"]
+[ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="20_f6kss"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yiwy1"]
 texture = ExtResource("1_c66hc")
@@ -215,3 +216,12 @@ position = Vector2(1952, 1096)
 
 [node name="box4" parent="." unique_id=703925997 instance=ExtResource("12_f7qdm")]
 position = Vector2(2400, 1096)
+
+[node name="TNT" parent="." unique_id=309049693 instance=ExtResource("20_f6kss")]
+position = Vector2(707, 296)
+
+[node name="TNT2" parent="." unique_id=546587921 instance=ExtResource("20_f6kss")]
+position = Vector2(849, 300)
+
+[node name="TNT3" parent="." unique_id=345513892 instance=ExtResource("20_f6kss")]
+position = Vector2(1509, 360)

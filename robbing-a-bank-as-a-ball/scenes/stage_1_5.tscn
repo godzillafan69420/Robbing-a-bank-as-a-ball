@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="10_lewax"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="11_vblkt"]
 [ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="12_e7ggg"]
+[ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="16_a2wug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_whqh8"]
 texture = ExtResource("1_i7ddg")
@@ -112,6 +113,30 @@ position = Vector2(721, 218)
 loadingAnimation = NodePath("../player/loading")
 sceneToChange = 1
 
+[node name="boxBoi" parent="." unique_id=1633303472 instance=ExtResource("11_vblkt")]
+position = Vector2(494, 274)
+
+[node name="boxBoi2" parent="." unique_id=892982879 instance=ExtResource("11_vblkt")]
+position = Vector2(457, 274)
+
+[node name="boxBoi3" parent="." unique_id=955857587 instance=ExtResource("11_vblkt")]
+position = Vector2(496, 236)
+
+[node name="boxBoi4" parent="." unique_id=1033044931 instance=ExtResource("11_vblkt")]
+position = Vector2(493, 205)
+
+[node name="enemies" parent="." unique_id=1433434572 instance=ExtResource("12_e7ggg")]
+position = Vector2(269, 137)
+
+[node name="enemies2" parent="." unique_id=707615660 instance=ExtResource("12_e7ggg")]
+position = Vector2(268, 106)
+
+[node name="enemies3" parent="." unique_id=1912605825 instance=ExtResource("12_e7ggg")]
+position = Vector2(269, 73)
+
+[node name="enemies4" parent="." unique_id=763358207 instance=ExtResource("12_e7ggg")]
+position = Vector2(269, 45)
+
 [node name="box" parent="." unique_id=436887472 instance=ExtResource("8_v2uhh")]
 position = Vector2(233, 262)
 
@@ -145,26 +170,8 @@ position = Vector2(606, 264)
 [node name="box11" parent="." unique_id=923642272 instance=ExtResource("8_v2uhh")]
 position = Vector2(641, 264)
 
-[node name="boxBoi" parent="." unique_id=1633303472 instance=ExtResource("11_vblkt")]
-position = Vector2(494, 274)
+[node name="TNT" parent="." unique_id=309049693 instance=ExtResource("16_a2wug")]
+position = Vector2(330, 237)
 
-[node name="boxBoi2" parent="." unique_id=892982879 instance=ExtResource("11_vblkt")]
-position = Vector2(457, 274)
-
-[node name="boxBoi3" parent="." unique_id=955857587 instance=ExtResource("11_vblkt")]
-position = Vector2(496, 236)
-
-[node name="boxBoi4" parent="." unique_id=1033044931 instance=ExtResource("11_vblkt")]
-position = Vector2(493, 205)
-
-[node name="enemies" parent="." unique_id=1433434572 instance=ExtResource("12_e7ggg")]
-position = Vector2(269, 137)
-
-[node name="enemies2" parent="." unique_id=707615660 instance=ExtResource("12_e7ggg")]
-position = Vector2(268, 106)
-
-[node name="enemies3" parent="." unique_id=1912605825 instance=ExtResource("12_e7ggg")]
-position = Vector2(269, 73)
-
-[node name="enemies4" parent="." unique_id=763358207 instance=ExtResource("12_e7ggg")]
-position = Vector2(269, 45)
+[node name="TNT2" parent="." unique_id=1177721848 instance=ExtResource("16_a2wug")]
+position = Vector2(536, 261)

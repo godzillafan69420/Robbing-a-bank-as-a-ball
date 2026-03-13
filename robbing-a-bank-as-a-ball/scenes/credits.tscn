@@ -38,6 +38,9 @@ text = "blame Ivan if game too
 hard.
 Blame sean if game too
 easy.
+Blame me if game is
+ugly, have lots of bugs
+and bad sfx and music
 "
 
 [node name="Button" type="Button" parent="." unique_id=337412111]

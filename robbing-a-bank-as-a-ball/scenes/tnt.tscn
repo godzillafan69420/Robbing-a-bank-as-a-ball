@@ -10,6 +10,8 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [node name="TNT" type="RigidBody2D" unique_id=309049693]
+mass = 1.2
+can_sleep = false
 script = ExtResource("1_5ic85")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1398351684]

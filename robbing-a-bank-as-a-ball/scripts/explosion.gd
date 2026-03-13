@@ -24,3 +24,5 @@ func _on_blast_force_detection_body_entered(body: Node2D) -> void:
 		await get_tree().create_timer(0.1).timeout
 		body.velocity += (body.position- position).normalized() * BLASTFORCE
 		body.velocity.y += 400
+	
+	
