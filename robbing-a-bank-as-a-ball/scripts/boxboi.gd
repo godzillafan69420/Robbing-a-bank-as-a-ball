@@ -9,6 +9,7 @@ var direction: float
 var CurrentState
 @export var HP: int = 3
 
+@export var shoot: AudioStream
 @export var death_audio: AudioStream
 
 func _ready() -> void:
@@ -37,6 +38,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_shoot_time_timeout() -> void:
+	AudioManager.play_oneshot(shoot)
 	var newBullet = bullet.instantiate()
 	newBullet.add_to_group("enemy")
 	newBullet.position = position

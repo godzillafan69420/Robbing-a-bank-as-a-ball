@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="9_dbvqn"]
 [ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="10_lewax"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="11_vblkt"]
-[ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="12_e7ggg"]
+[ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/triangleboi.tscn" id="12_e7ggg"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="16_a2wug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_whqh8"]

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ou64xr7bwm7t" path="res://scenes/player.tscn" id="1_yldxj"]
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="2_f0p7x"]
 [ext_resource type="PackedScene" uid="uid://dhusf0g6f6idm" path="res://scenes/ui.tscn" id="3_a0f05"]
-[ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="3_vtm10"]
+[ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/triangleboi.tscn" id="3_vtm10"]
 [ext_resource type="AudioStream" uid="uid://cth7irmr3po2c" path="res://music/the what 2.mp3" id="6_576i8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnrqy"]

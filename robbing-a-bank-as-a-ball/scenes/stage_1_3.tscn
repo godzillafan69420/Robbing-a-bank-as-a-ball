@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://be7s7ul2p3av2" path="res://art/decoration/decoration4.png" id="7_yokq4"]
 [ext_resource type="Texture2D" uid="uid://cn3t3a1nxugy1" path="res://art/decoration/decoration2.png" id="8_t7iya"]
 [ext_resource type="Texture2D" uid="uid://gxatwgkuecfw" path="res://art/decoration/decoration3.png" id="9_akldf"]
-[ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/enemies.tscn" id="9_wb577"]
+[ext_resource type="PackedScene" uid="uid://bgbc0pvj3lmxq" path="res://scenes/triangleboi.tscn" id="9_wb577"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="10_mpjmt"]
 [ext_resource type="PackedScene" uid="uid://i1vjewqas3pv" path="res://scenes/elevator.tscn" id="11_wb577"]
 [ext_resource type="PackedScene" uid="uid://cwo5sbejcvmfg" path="res://scenes/stage_1_4.tscn" id="12_mpjmt"]
