@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c1hq2ytobbf25"]
+
+[ext_resource type="Script" uid="uid://bu8f6i2t7cof4" path="res://scenes/rick_ashley.gd" id="1_ltd0j"]
+[ext_resource type="AudioStream" uid="uid://d1gxre16kn1ib" path="res://sfx/where-are-you-goingg.mp3" id="2_elr47"]
+[ext_resource type="Texture2D" uid="uid://dyu836l1aymfp" path="res://art/tiles/unnamed.jpg" id="2_ltd0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltd0j"]
+size = Vector2(94, 101)
+
+[node name="rickAshley" type="Area2D" unique_id=1844980791]
+script = ExtResource("1_ltd0j")
+death_audio = ExtResource("2_elr47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=954277989]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ltd0j")
+
+[node name="Rick" type="Sprite2D" parent="." unique_id=1469521126]
+modulate = Color(0.2936601, 0.29366007, 0.29366007, 1)
+position = Vector2(0.49999714, 2.4999952)
+scale = Vector2(0.26388887, 0.2861111)
+texture = ExtResource("2_ltd0j")
+
+[node name="Timer" type="Timer" parent="." unique_id=1860567624]
+wait_time = 2.5
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

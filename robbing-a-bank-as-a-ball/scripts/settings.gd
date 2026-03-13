@@ -1,5 +1,9 @@
 extends Node2D
 
+var input:int
+var code: Array = [1,3,2,4]
+var correct = 0
+var clicks = 0
 @export var thickOfIt: AudioStream
 @export var dying: AudioStream
 @export var rolled: AnimationPlayer
@@ -12,8 +16,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	
 
+	if correct == 4:
+		get_tree().change_scene_to_file("res://scenes/rick_roll_horror.tscn")
+		
 
 func _on_turn_off_music_toggled(toggled_on: bool) -> void:
 	AudioServer.set_bus_mute(0, toggled_on)
@@ -47,15 +54,35 @@ func _on_dies_ofdeath_button_down() -> void:
 
 
 func _on_useless_button_down() -> void:
+	clicks += 1
+	input = 1
+	if clicks == 1:
+		if input == code[0]:
+			correct +=1
 	rickRolled()
 
 
 func _on_useless_2_button_down() -> void:
+	clicks += 1
+	input = 2
+	if clicks == 3:
+		if input == code[2]:
+			correct +=1
 	rickRolled()
 
 func _on_useless_3_button_down() -> void:
+	clicks += 1
+	input = 3
+	if clicks == 2:
+		if input == code[1]:
+			correct +=1
 	rickRolled()
 
 
 func _on_tuff_mode_button_down() -> void:
+	clicks += 1
+	input = 4
+	if clicks == 4:
+		if input == code[3]:
+			correct +=1
 	rickRolled()

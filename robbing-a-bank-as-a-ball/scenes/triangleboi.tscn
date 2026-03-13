@@ -4,7 +4,11 @@
 [ext_resource type="AudioStream" uid="uid://dt2mkl1ubixxv" path="res://sfx/enemy dies.mp3" id="2_5xlyl"]
 [ext_resource type="AudioStream" uid="uid://d1gxre16kn1ib" path="res://sfx/where-are-you-goingg.mp3" id="3_75trx"]
 [ext_resource type="Texture2D" uid="uid://tva7ldu20ots" path="res://art/enemy/spike.png" id="4_q3e37"]
+[ext_resource type="AudioStream" uid="uid://p8x1cvx6teng" path="res://sfx/Griffon Roar - Stick War Sounds.mp3" id="4_ycw2j"]
+[ext_resource type="AudioStream" uid="uid://bmxbx40ss0408" path="res://sfx/ive-got-this.mp3" id="5_tfffg"]
 [ext_resource type="Texture2D" uid="uid://ncvw4bt0ky1j" path="res://art/enemy/spikes.png" id="5_ycw2j"]
+[ext_resource type="AudioStream" uid="uid://dbkbq7npyob38" path="res://sfx/where-are-you-going-i-dunno.mp3" id="6_eep4h"]
+[ext_resource type="AudioStream" uid="uid://du4pfdp7r5pc3" path="res://sfx/take-a-look-around-you.mp3" id="7_okml1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ad2ka"]
 radius = 130.24593
@@ -32,6 +36,10 @@ animations = [{
 script = ExtResource("1_xhaxn")
 death_audio = ExtResource("2_5xlyl")
 active = ExtResource("3_75trx")
+active1 = ExtResource("4_ycw2j")
+active2 = ExtResource("5_tfffg")
+active3 = ExtResource("6_eep4h")
+active4 = ExtResource("7_okml1")
 
 [node name="playerdector" type="Area2D" parent="." unique_id=338606296]
 position = Vector2(238, 30)

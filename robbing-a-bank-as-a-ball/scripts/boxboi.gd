@@ -55,3 +55,9 @@ func _on_view_sight_body_entered(body: Node2D) -> void:
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bullet"):
 		HP -= area.damage
+
+
+func _on_view_sight_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		CurrentState = state.idle
+		$shootTime.stop()

@@ -41,4 +41,7 @@ stream = ExtResource("8_sgvax")
 [node name="secret" type="AudioStreamPlayer" parent="music" unique_id=1654951299]
 stream = ExtResource("9_0uo38")
 
+[node name="rickRoll" type="AudioStreamPlayer" parent="music" unique_id=1587160623]
+stream = ExtResource("9_0uo38")
+
 [node name="sfx" type="Node" parent="." unique_id=1387054646]

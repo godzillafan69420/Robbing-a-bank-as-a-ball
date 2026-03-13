@@ -51,4 +51,5 @@ wait_time = 1.5
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="viewSight" to="." method="_on_view_sight_body_entered"]
+[connection signal="body_exited" from="viewSight" to="." method="_on_view_sight_body_exited"]
 [connection signal="timeout" from="shootTime" to="." method="_on_shoot_time_timeout"]

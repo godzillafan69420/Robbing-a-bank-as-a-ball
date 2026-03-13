@@ -7,9 +7,15 @@ var direction: Vector2
 var HP: float = 2
 @export var death_audio: AudioStream
 @export var active: AudioStream
+@export var active1: AudioStream
+@export var active2: AudioStream
+@export var active3: AudioStream
+@export var active4: AudioStream
+var sfx: int 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	CurrentStates = state.idle
+	sfx = randi() % 4
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,7 +34,14 @@ func _process(delta: float) -> void:
 
 func _on_playerdector_body_entered(body: CharacterBody2D) -> void:
 	if body.is_in_group("player") and CurrentStates != state.attacking:
-		AudioManager.play_oneshot(active)
+		if sfx ==0:
+			AudioManager.play_oneshot(active)
+		if sfx ==1:
+			AudioManager.play_oneshot(active2)
+		if sfx ==2:
+			AudioManager.play_oneshot(active3)
+		if sfx ==3:
+			AudioManager.play_oneshot(active4)
 		CurrentStates = state.attacking
 		
 
