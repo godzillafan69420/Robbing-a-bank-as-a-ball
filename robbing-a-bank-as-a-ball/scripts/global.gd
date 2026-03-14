@@ -6,4 +6,12 @@ var tries:int = 0
 var stageNum: int
 
 var badapple: bool = false
+
+var surviveTime: float = 30
+
+var beatbarry: bool = false
+var beattutorial: bool = false
+var beatlevel: bool = false
+var oldMode: bool = false
+var beatPersonal: bool = false
 	

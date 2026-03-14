@@ -12,9 +12,11 @@ var player: CharacterBody2D
 @export var active2: AudioStream
 @export var active3: AudioStream
 @export var active4: AudioStream
+var eyes: PointLight2D
 var sfx: int 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	eyes = get_node("eyes")
 	player = get_parent().get_node("player")
 	$Timer.start()
 
@@ -44,4 +46,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
+	
 	AudioManager.play_oneshot(death_audio)

@@ -42,6 +42,7 @@ func rickRolled():
 
 
 func _on_useless_4_toggled(toggled_on: bool) -> void:
+	Global.oldMode = true
 	Global.badapple = toggled_on
 
 

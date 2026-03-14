@@ -4,6 +4,16 @@ var patchNotes: bool = false
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
+	if Global.beatbarry:
+		$achieveMents/Todd.visible = true
+	if Global.beattutorial:
+		$achieveMents/Unnamed.visible = true
+	if Global.beatlevel:
+		$achieveMents/Ui1.visible = true
+	if Global.oldMode:
+		$"achieveMents/NewPiskel(2)".visible = true
+	if Global.beatPersonal:
+		$achieveMents/Ui4.visible = true
 	$"patch notes".visible = false
 	if Global.badapple == true:
 		
