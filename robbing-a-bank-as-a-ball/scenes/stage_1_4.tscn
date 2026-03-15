@@ -119,7 +119,7 @@ position = Vector2(732, 265)
 position = Vector2(829, 264)
 
 [node name="TNT5" parent="." unique_id=567947165 instance=ExtResource("9_cc3ch")]
-position = Vector2(990, 73)
+position = Vector2(990, 71)
 
 [node name="elevator" parent="." unique_id=1408608567 instance=ExtResource("10_cc3ch")]
 position = Vector2(1197, 217)
