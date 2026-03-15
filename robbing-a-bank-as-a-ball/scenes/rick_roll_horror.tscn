@@ -68,6 +68,9 @@ sources/0 = SubResource("TileSetAtlasSource_72eaj")
 script = ExtResource("1_ve3bk")
 loadingAnimation = NodePath("player/loading")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1306819979]
+color = Color(0.2702219, 0.27022195, 0.27022177, 1)
+
 [node name="pause" parent="." unique_id=1337328558 instance=ExtResource("1_tsxoh")]
 visible = false
 
@@ -104,20 +107,18 @@ stageNumber = -1
 position = Vector2(2, -2)
 
 [node name="PointLight2D" type="PointLight2D" parent="player" unique_id=1345591332]
-position = Vector2(2.7499945, 0.25000018)
+position = Vector2(2.75, 0.25)
 scale = Vector2(7.5468755, 7.703125)
 color = Color(0.728822, 0.728822, 0.728822, 1)
 energy = 0.9
 texture = ExtResource("12_jw6gw")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1306819979]
-color = Color(0.20871013, 0.20871016, 0.20871013, 1)
 
 [node name="rickAshley" parent="." unique_id=1844980791 instance=ExtResource("12_sjvrd")]
 position = Vector2(-675, 370)
 
 [node name="eyes" type="PointLight2D" parent="rickAshley" unique_id=1855088044]
 position = Vector2(1.3032455, -11.532975)
+rotation = -0.1868982
 scale = Vector2(0.34293285, 0.35003293)
-energy = 5.68
+energy = 2.39
 texture = ExtResource("14_jw6gw")
