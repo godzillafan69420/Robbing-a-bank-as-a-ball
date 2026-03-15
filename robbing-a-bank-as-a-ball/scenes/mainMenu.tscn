@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bvjicl7ao5mcy" path="res://art/todd.png" id="8_tov5d"]
 [ext_resource type="Texture2D" uid="uid://b3vf3fwr58fwy" path="res://art/UI/UI4.png" id="9_6b2wv"]
 [ext_resource type="Texture2D" uid="uid://bnx2ar77bpk2x" path="res://art/player/New Piskel (2).png" id="9_epn8x"]
+[ext_resource type="Texture2D" uid="uid://gujqmom7blu3" path="res://art/whyBother.png" id="11_tov5d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
 atlas = ExtResource("2_48ign")
@@ -43,8 +44,8 @@ script = ExtResource("1_qkhwq")
 
 [node name="Masterart" type="AnimatedSprite2D" parent="." unique_id=1401550080]
 modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
-position = Vector2(319, 181)
-scale = Vector2(0.5512153, 0.55401236)
+position = Vector2(291, 223.00002)
+scale = Vector2(0.6204332, 0.6235815)
 sprite_frames = SubResource("SpriteFrames_48ign")
 
 [node name="Button" type="Button" parent="." unique_id=1599516938]
@@ -114,11 +115,12 @@ theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "logs"
 
 [node name="timeStage2" type="Label" parent="." unique_id=994991176]
-offset_left = 1.0
-offset_top = 280.0
-offset_right = 153.0
-offset_bottom = 329.0
-text = "my fastest: 45 sec"
+offset_left = 399.0
+offset_top = 299.0
+offset_right = 640.0
+offset_bottom = 348.0
+text = "beat 45 sec for 
+an achievement"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
 visible = false
@@ -175,30 +177,35 @@ offset_bottom = 358.0
 
 [node name="Unnamed" type="Sprite2D" parent="achieveMents" unique_id=289747469]
 visible = false
-position = Vector2(32, 19.000002)
+position = Vector2(19.999998, 22.000002)
 scale = Vector2(0.097222224, 0.097222224)
 texture = ExtResource("6_dj72i")
 
 [node name="Ui1" type="Sprite2D" parent="achieveMents" unique_id=1563322400]
 visible = false
-position = Vector2(75, 19)
+position = Vector2(58, 22)
 texture = ExtResource("7_6b2wv")
 
 [node name="Todd" type="Sprite2D" parent="achieveMents" unique_id=1277204109]
 visible = false
-position = Vector2(121, 18.999998)
+position = Vector2(92, 21.999998)
 scale = Vector2(0.20481928, 0.20481928)
 texture = ExtResource("8_tov5d")
 
 [node name="Ui4" type="Sprite2D" parent="achieveMents" unique_id=236612218]
 visible = false
-position = Vector2(207, 19)
+position = Vector2(163, 21)
 texture = ExtResource("9_6b2wv")
 
 [node name="NewPiskel(2)" type="Sprite2D" parent="achieveMents" unique_id=990897467]
 visible = false
-position = Vector2(166, 19)
+position = Vector2(128, 22)
 texture = ExtResource("9_epn8x")
+
+[node name="WhyBother" type="Sprite2D" parent="achieveMents" unique_id=1760255880]
+visible = false
+position = Vector2(197, 22)
+texture = ExtResource("11_tov5d")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

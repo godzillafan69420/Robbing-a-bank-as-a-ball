@@ -14,4 +14,5 @@ var beattutorial: bool = false
 var beatlevel: bool = false
 var oldMode: bool = false
 var beatPersonal: bool = false
+var openLogs: bool = false
 	

@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltd0j"]
 size = Vector2(94, 101)
 
-[node name="rickAshley" type="Area2D" unique_id=1844980791]
+[node name="barry" type="Area2D" unique_id=1844980791]
 script = ExtResource("1_ltd0j")
 death_audio = ExtResource("2_elr47")
 

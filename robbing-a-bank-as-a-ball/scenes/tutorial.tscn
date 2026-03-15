@@ -211,9 +211,7 @@ offset_top = 103.0
 offset_right = 2738.0
 offset_bottom = 204.0
 text = "touch the vault to win
-and remenber you're
-already robbing a bank
-so it doesn't matter if  you fly"
+and you can fly as well"
 
 [node name="Label5" type="Label" parent="." unique_id=692959292]
 offset_left = 1435.0

@@ -126,11 +126,11 @@ sprite_frames = SubResource("SpriteFrames_fulsm")
 animation = &"fire"
 
 [node name="shootTimer" type="Timer" parent="." unique_id=787396112]
-wait_time = 0.3
+wait_time = 0.25
 one_shot = true
 
 [node name="reloadTime" type="Timer" parent="." unique_id=2009690881]
-wait_time = 1.2
+wait_time = 1.15
 one_shot = true
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=2039845215]
@@ -142,7 +142,7 @@ shape = SubResource("CircleShape2D_qlg0r")
 one_shot = true
 
 [node name="Regeneration" type="Timer" parent="." unique_id=865714969]
-wait_time = 7.0
+wait_time = 8.0
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1000295492]
 position = Vector2(0, -5)
