@@ -211,20 +211,27 @@ offset_bottom = 200.0
 text = "watch out for spikes.
 don't let it touch you"
 
+[node name="Label12" type="Label" parent="." unique_id=1915268574]
+offset_left = 5140.0
+offset_top = 163.0
+offset_right = 5369.0
+offset_bottom = 264.0
+text = "touch the vault to win
+"
+
+[node name="Label13" type="Label" parent="." unique_id=2021088069]
+offset_left = 5135.0
+offset_top = 271.0
+offset_right = 5364.0
+offset_bottom = 372.0
+text = "touch the vault to win
+"
+
 [node name="Label7" type="Label" parent="." unique_id=1971933037]
 offset_left = 2567.0
 offset_top = 162.0
 offset_right = 2796.0
 offset_bottom = 263.0
-text = "touch the vault to win
-"
-
-[node name="Label7" type="Label" parent="Label7" unique_id=2021088069]
-layout_mode = 0
-offset_left = 2568.0
-offset_top = 109.0
-offset_right = 2797.0
-offset_bottom = 210.0
 text = "touch the vault to win
 "
 
@@ -236,12 +243,11 @@ offset_bottom = 155.0
 text = "67, communism, god, tuff
 "
 
-[node name="Label7" type="Label" parent="Label11" unique_id=1915268574]
-layout_mode = 0
-offset_left = 2568.0
-offset_top = 109.0
-offset_right = 2797.0
-offset_bottom = 210.0
+[node name="Label14" type="Label" parent="." unique_id=692734865]
+offset_left = 4790.0
+offset_top = 244.0
+offset_right = 5019.0
+offset_bottom = 345.0
 text = "touch the vault to win
 "
 
@@ -250,17 +256,7 @@ offset_left = 2222.0
 offset_top = 135.0
 offset_right = 2405.0
 offset_bottom = 236.0
-text = "Yeah. I tried that and it 
-worked
-"
-
-[node name="Label7" type="Label" parent="Label10" unique_id=692734865]
-layout_mode = 0
-offset_left = 2568.0
-offset_top = 109.0
-offset_right = 2797.0
-offset_bottom = 210.0
-text = "touch the vault to win
+text = "Yeah, why not.
 "
 
 [node name="Label5" type="Label" parent="." unique_id=692959292]
