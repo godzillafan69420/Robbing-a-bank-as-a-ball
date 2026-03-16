@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dx8ym8ec06e2" path="res://scenes/box.tscn" id="10_0epgs"]
 [ext_resource type="Texture2D" uid="uid://ul22j27ln1vj" path="res://art/tiles/2026_03_03_0y1_Kleki.png" id="10_5qvs7"]
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="12_ej4tf"]
+[ext_resource type="Texture2D" uid="uid://cto6v3y1fj1te" path="res://art/whoishe.png" id="13_5qvs7"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="14_0hilk"]
 [ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="21_210s6"]
 [ext_resource type="Texture2D" uid="uid://cjd06vdt5se3a" path="res://art/tiles/he promise.png" id="23_210s6"]
@@ -92,7 +93,7 @@ position = Vector2(99.999985, 75)
 scale = Vector2(0.32227895, 0.32227892)
 
 [node name="7" type="Sprite2D" parent="decoration" unique_id=553724148]
-position = Vector2(7710.7114, 186.17415)
+position = Vector2(7468.685, 136.52771)
 scale = Vector2(3.1029022, 3.1029024)
 texture = ExtResource("5_feaue")
 
@@ -125,9 +126,14 @@ scale = Vector2(0.679957, 0.67995703)
 texture = ExtResource("8_feaue")
 
 [node name="202603030y1Kleki" type="Sprite2D" parent="decoration" unique_id=1029153762]
-position = Vector2(6959.8096, 65.16095)
+position = Vector2(6115.8203, 62.05805)
 scale = Vector2(0.5844507, 0.5844508)
 texture = ExtResource("10_5qvs7")
+
+[node name="Whoishe" type="Sprite2D" parent="decoration" unique_id=2123884304]
+position = Vector2(6848.105, 65.33014)
+scale = Vector2(1.8408651, 4.3872037)
+texture = ExtResource("13_5qvs7")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2094826264]
 modulate = Color(0.90359825, 0.90359825, 0.9035982, 1)
@@ -206,12 +212,56 @@ text = "watch out for spikes.
 don't let it touch you"
 
 [node name="Label7" type="Label" parent="." unique_id=1971933037]
-offset_left = 2509.0
-offset_top = 103.0
-offset_right = 2738.0
-offset_bottom = 204.0
+offset_left = 2567.0
+offset_top = 162.0
+offset_right = 2796.0
+offset_bottom = 263.0
 text = "touch the vault to win
-and you can fly as well"
+"
+
+[node name="Label7" type="Label" parent="Label7" unique_id=2021088069]
+layout_mode = 0
+offset_left = 2568.0
+offset_top = 109.0
+offset_right = 2797.0
+offset_bottom = 210.0
+text = "touch the vault to win
+"
+
+[node name="Label11" type="Label" parent="." unique_id=11589627]
+offset_left = 2572.0
+offset_top = 54.0
+offset_right = 2801.0
+offset_bottom = 155.0
+text = "67, communism, god, tuff
+"
+
+[node name="Label7" type="Label" parent="Label11" unique_id=1915268574]
+layout_mode = 0
+offset_left = 2568.0
+offset_top = 109.0
+offset_right = 2797.0
+offset_bottom = 210.0
+text = "touch the vault to win
+"
+
+[node name="Label10" type="Label" parent="." unique_id=1300822347]
+offset_left = 2222.0
+offset_top = 135.0
+offset_right = 2405.0
+offset_bottom = 236.0
+text = "Yeah. I tried that and it 
+worked
+"
+
+[node name="Label7" type="Label" parent="Label10" unique_id=692734865]
+layout_mode = 0
+offset_left = 2568.0
+offset_top = 109.0
+offset_right = 2797.0
+offset_bottom = 210.0
+text = "touch the vault to win
+"
 
 [node name="Label5" type="Label" parent="." unique_id=692959292]
 offset_left = 1435.0

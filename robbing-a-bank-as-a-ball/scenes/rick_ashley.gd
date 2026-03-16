@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 	playerPosition = player.position
 
 	direction = playerPosition - position
-	position += direction.normalized() * 450 * delta
+	position += direction.normalized() * 430 * delta
 	if HP <= 0:
 		AudioManager.play_oneshot(death_audio, 10)
 		queue_free()

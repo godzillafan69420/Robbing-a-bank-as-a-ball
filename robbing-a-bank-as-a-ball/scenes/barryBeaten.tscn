@@ -117,7 +117,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Camera2D/Label:visible_characters")
+tracks/4/path = NodePath("../Camera2D/CanvasLayer/Label:visible_characters")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -165,7 +165,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../Camera2D/Label2:visible_characters")
+tracks/8/path = NodePath("../Camera2D/CanvasLayer/Label2:visible_characters")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -228,7 +228,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Camera2D/Label:visible_characters")
+tracks/4/path = NodePath("../Camera2D/CanvasLayer/Label:visible_characters")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -276,7 +276,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../Camera2D/Label2:visible_characters")
+tracks/8/path = NodePath("../Camera2D/CanvasLayer/Label2:visible_characters")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -315,7 +315,7 @@ tile_map_data = PackedByteArray("AAD4/wYAAAAAAAAAAAD4/wcAAAAAAAAAAAD4/wgAAAAAAAA
 tile_set = SubResource("TileSet_5ayyy")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1695073734]
-color = Color(0.4849202, 0.4849202, 0.4849202, 1)
+color = Color(0.24115619, 0.24115601, 0.24115604, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1395449680]
 root_node = NodePath("../PleaseSpeedINeedThis")
@@ -353,11 +353,13 @@ texture = ExtResource("12_s1gmt")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=427949279]
 position = Vector2(20, 407)
 
-[node name="Label" type="Label" parent="Camera2D" unique_id=121179030]
-offset_left = 168.0
-offset_top = -167.0
-offset_right = 367.0
-offset_bottom = 12.0
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1593608858]
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer" unique_id=121179030]
+offset_left = 425.0
+offset_top = 86.0
+offset_right = 624.0
+offset_bottom = 265.0
 text = "Please barnaby I 
 need this
 My mom is kinda 
@@ -369,11 +371,11 @@ out
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label2" type="Label" parent="Camera2D" unique_id=227111427]
-offset_left = -281.0
-offset_top = -70.0
-offset_right = -120.0
-offset_bottom = -28.0
+[node name="Label2" type="Label" parent="Camera2D/CanvasLayer" unique_id=227111427]
+offset_left = 34.0
+offset_top = 184.0
+offset_right = 195.0
+offset_bottom = 226.0
 text = "Alr i give achivement"
 
 [node name="Timer" type="Timer" parent="." unique_id=818289241]

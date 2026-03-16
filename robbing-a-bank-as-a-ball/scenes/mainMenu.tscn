@@ -123,7 +123,6 @@ text = "beat 45 sec for
 an achievement"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
-visible = false
 
 [node name="Panel" type="Panel" parent="patch notes" unique_id=861968848]
 offset_left = 146.0
@@ -146,6 +145,7 @@ added tnt
 improve player movement
 add a score
 winning i guess
+Barry toes. code 67, communism, god, tuff
 
 never going to add
 communism mode
