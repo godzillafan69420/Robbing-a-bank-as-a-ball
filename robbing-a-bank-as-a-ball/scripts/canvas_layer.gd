@@ -8,6 +8,9 @@ var numberAchivement: int = 0
 func _ready() -> void:
 	if Global.nevershow:
 		$Panel.visible = false
+	else:
+		$Panel.visible = true
+		
 	
 	
 	if Global.beatbarry:

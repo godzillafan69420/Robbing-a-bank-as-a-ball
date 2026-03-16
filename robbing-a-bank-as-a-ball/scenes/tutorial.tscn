@@ -126,7 +126,7 @@ scale = Vector2(0.679957, 0.67995703)
 texture = ExtResource("8_feaue")
 
 [node name="202603030y1Kleki" type="Sprite2D" parent="decoration" unique_id=1029153762]
-position = Vector2(6115.8203, 62.05805)
+position = Vector2(5858.2793, 49.64644)
 scale = Vector2(0.5844507, 0.5844508)
 texture = ExtResource("10_5qvs7")
 

@@ -63,7 +63,7 @@ offset_left = 225.0
 offset_top = 274.0
 offset_right = 430.0
 offset_bottom = 324.0
-text = "Punchyourbuns2(correct)"
+text = "PunchYourBuns2(correct)"
 
 [node name="alsoRight" type="Button" parent="." unique_id=699106112]
 offset_left = 431.0

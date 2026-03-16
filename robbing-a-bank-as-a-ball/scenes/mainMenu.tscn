@@ -235,6 +235,7 @@ scale = Vector2(0.20129868, 0.20129868)
 texture = ExtResource("13_vt84v")
 
 [node name="Panel" type="Panel" parent="." unique_id=23816440]
+visible = false
 offset_left = 116.0
 offset_top = 93.0
 offset_right = 480.0
