@@ -4,7 +4,7 @@ extends Node2D
 @export var loadingAnimation: Control
 func _ready() -> void:
 	AudioManager.play("yes")
-	Global.surviveTime = 30
+	Global.surviveTime = 40
 		
 	get_tree().paused = true
 	Global.stageNum = -1
@@ -20,4 +20,4 @@ func _process(delta: float) -> void:
 			get_tree().paused = true
 	if Global.surviveTime <0:
 		Global.beatbarry = true
-		get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
+		get_tree().change_scene_to_file("res://scenes/barryBeaten.tscn")

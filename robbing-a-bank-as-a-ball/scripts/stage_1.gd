@@ -5,7 +5,7 @@ extends Node2D
 var ranMusic: int
 
 func _ready() -> void:
-	ranMusic = randi() % 3
+	ranMusic = randi() % 2
 	loadingAnimation.get_node("player").play("fadeIn")
 	get_tree().paused = true
 	Global.stageNum =1
@@ -19,9 +19,8 @@ func _ready() -> void:
 	elif ranMusic == 0:
 		AudioManager.play("stage1")
 	elif ranMusic == 1:
-		AudioManager.play("tutorial")
-	elif ranMusic == 2:
 		AudioManager.play("stage1Old")
+		
 
 func _process(delta: float) -> void:
 	Global.STAGE1time += delta
