@@ -6,6 +6,10 @@ var numberAchivement: int = 0
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
+	if Global.nevershow:
+		$Panel.visible = false
+	
+	
 	if Global.beatbarry:
 		numberAchivement +=1
 		$achieveMents/Todd.visible = true
@@ -78,3 +82,8 @@ func _on_button_5_button_down() -> void:
 			$achieveMents/WhyBother.visible = true
 	else:
 		$"patch notes".visible = false
+
+
+func _on_never_show_up_button_down() -> void:
+	Global.nevershow = true
+	$Panel.visible = false
