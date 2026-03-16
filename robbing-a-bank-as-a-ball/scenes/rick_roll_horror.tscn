@@ -114,15 +114,14 @@ energy = 0.9
 texture = ExtResource("12_jw6gw")
 
 [node name="rickAshley" parent="." unique_id=1844980791 instance=ExtResource("12_sjvrd")]
-position = Vector2(-675, 370)
+position = Vector2(-399, 374)
 
 [node name="eyes" type="PointLight2D" parent="rickAshley" unique_id=1855088044]
-position = Vector2(1.3032455, -11.532975)
-rotation = -0.19468406
-scale = Vector2(0.34293285, 0.35003293)
-energy = 8.05
+position = Vector2(1.9999881, -9.000011)
+rotation = -0.34204406
+scale = Vector2(0.3194902, 0.45189577)
+energy = 3.14
 shadow_enabled = true
 shadow_color = Color(0.9529412, 0, 0, 0)
-shadow_filter = 2
-shadow_filter_smooth = 15.5
+shadow_filter_smooth = 4.4
 texture = ExtResource("14_jw6gw")
