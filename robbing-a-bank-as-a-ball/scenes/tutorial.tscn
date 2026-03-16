@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://jeopehmglj32" path="res://art/tiles/2026_03_02_0xx_Kleki.png" id="5_15kfc"]
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="5_cq4me"]
 [ext_resource type="Texture2D" uid="uid://gsxy6j1vwp8" path="res://art/decoration/7.png" id="5_feaue"]
+[ext_resource type="Texture2D" uid="uid://b6xl1anb46nf3" path="res://art/damn.png" id="5_qbchm"]
 [ext_resource type="Texture2D" uid="uid://be7s7ul2p3av2" path="res://art/decoration/decoration4.png" id="6_15kfc"]
-[ext_resource type="Texture2D" uid="uid://dghmjcwrp2gv6" path="res://art/decoration/6.png" id="6_210s6"]
 [ext_resource type="Texture2D" uid="uid://bny2dxsq5uii3" path="res://art/decoration/decoration1.png" id="7_7a100"]
 [ext_resource type="Texture2D" uid="uid://bhd156jxbj8s1" path="res://art/tiles/nottuff.png" id="7_e13mp"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="7_nlqja"]
@@ -92,15 +92,15 @@ modulate = Color(0.8776157, 0.8776158, 0.8776157, 1)
 position = Vector2(99.999985, 75)
 scale = Vector2(0.32227895, 0.32227892)
 
+[node name="Damn" type="Sprite2D" parent="decoration" unique_id=714467015]
+position = Vector2(4911.894, -12.411621)
+scale = Vector2(3.1029022, 3.1029024)
+texture = ExtResource("5_qbchm")
+
 [node name="7" type="Sprite2D" parent="decoration" unique_id=553724148]
 position = Vector2(7468.685, 136.52771)
 scale = Vector2(3.1029022, 3.1029024)
 texture = ExtResource("5_feaue")
-
-[node name="6" type="Sprite2D" parent="decoration" unique_id=1111039401]
-position = Vector2(4914.997, 89.98416)
-scale = Vector2(3.1029022, 3.1029024)
-texture = ExtResource("6_210s6")
 
 [node name="202603020XxKleki" type="Sprite2D" parent="decoration" unique_id=1940727065]
 position = Vector2(3928.275, 114.8074)
@@ -154,7 +154,7 @@ position = Vector2(2076, 208)
 position = Vector2(2044, 208)
 
 [node name="boxBoi" parent="." unique_id=1633303472 instance=ExtResource("5_cq4me")]
-position = Vector2(732, 221)
+position = Vector2(779, 220)
 
 [node name="boxBoi2" parent="." unique_id=348558815 instance=ExtResource("5_cq4me")]
 position = Vector2(1076, 221)
@@ -236,12 +236,19 @@ text = "touch the vault to win
 "
 
 [node name="Label11" type="Label" parent="." unique_id=11589627]
-offset_left = 2572.0
-offset_top = 54.0
-offset_right = 2801.0
-offset_bottom = 155.0
+offset_left = 2652.0
+offset_top = 231.0
+offset_right = 2881.0
+offset_bottom = 332.0
 text = "67, communism, god, tuff
 "
+
+[node name="Label15" type="Label" parent="." unique_id=866729235]
+offset_left = 1598.0
+offset_top = 149.0
+offset_right = 1781.0
+offset_bottom = 198.0
+text = "who is he countering"
 
 [node name="Label14" type="Label" parent="." unique_id=692734865]
 offset_left = 4790.0
