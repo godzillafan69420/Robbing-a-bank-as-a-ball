@@ -7,6 +7,7 @@ var clicks = 0
 @export var thickOfIt: AudioStream
 @export var dying: AudioStream
 @export var rolled: AnimationPlayer
+@export var rickRollSfx: AudioStream
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +35,7 @@ func _on_button_button_down() -> void:
 	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
 
 func rickRolled():
+	AudioManager.play_oneshot(rickRollSfx)
 	$settings/useless.button_pressed = false
 	$settings/useless2.button_pressed = false
 	$settings/useless3.button_pressed = false
@@ -47,10 +49,12 @@ func _on_useless_4_toggled(toggled_on: bool) -> void:
 
 
 func _on_thick_ofit_button_down() -> void:
+	Global.PlayThickOfIt = true
 	AudioManager.play_oneshot(thickOfIt)
 
 
 func _on_dies_ofdeath_button_down() -> void:
+	Global.PlayThickOfIt = true
 	AudioManager.play_oneshot(dying)
 
 

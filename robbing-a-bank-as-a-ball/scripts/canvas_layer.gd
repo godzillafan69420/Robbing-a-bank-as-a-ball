@@ -25,6 +25,15 @@ func _ready() -> void:
 	if Global.openLogs:
 		numberAchivement +=1
 		$achieveMents/WhyBother.visible = true
+	if Global.PlayThickOfIt:
+		numberAchivement +=1
+		$achieveMents/playAudio.visible = true
+	if Global.pacifist:
+		numberAchivement +=1
+		$achieveMents/Damn.visible = true
+	if Global.fraudDetector:
+		numberAchivement +=1
+		$achieveMents/marisa.visible = true
 	$"patch notes".visible = false
 	if Global.badapple == true:
 		
@@ -37,7 +46,7 @@ func _ready() -> void:
 	$timeStage1.text = "Best Time: " + str(roundf(Global.topTime))
 
 func _process(delta: float) -> void:
-	$Label2.text = "Achievements " + str(numberAchivement) + "/6"
+	$Label2.text = "Achievements " + str(numberAchivement) + "/9"
 
 
 func _on_button_button_down() -> void:

@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 		position += direction.normalized() * 100 * delta
 		rotation = atan2(direction.y, direction.x) + PI/2
 	if HP <= 0:
+		Global.kills += 1
 		AudioManager.play_oneshot(death_audio, 10)
 		queue_free()
 

@@ -5,14 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://bvjicl7ao5mcy" path="res://art/todd.png" id="3_3887x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltd0j"]
-size = Vector2(94, 101)
+size = Vector2(84, 78)
 
 [node name="barry" type="Area2D" unique_id=1844980791]
 script = ExtResource("1_ltd0j")
 death_audio = ExtResource("2_elr47")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=954277989]
-position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_ltd0j")
 
 [node name="Rick" type="Sprite2D" parent="." unique_id=1469521126]

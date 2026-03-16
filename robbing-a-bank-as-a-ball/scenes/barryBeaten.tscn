@@ -330,7 +330,7 @@ scale = Vector2(0.19666666, 0.19666666)
 texture = ExtResource("8_jjn1q")
 
 [node name="eyes" type="PointLight2D" parent="Todd" unique_id=1966098362]
-position = Vector2(10.344782, -6.206837)
+position = Vector2(-3.1250057, -12.999958)
 rotation = -0.19468406
 scale = Vector2(0.34293285, 0.35003293)
 energy = 0.0
@@ -376,7 +376,8 @@ offset_left = 34.0
 offset_top = 184.0
 offset_right = 195.0
 offset_bottom = 226.0
-text = "Alr i give achivement"
+text = "Ok i will bestowe you 
+this achievement"
 
 [node name="Timer" type="Timer" parent="." unique_id=818289241]
 wait_time = 16.0

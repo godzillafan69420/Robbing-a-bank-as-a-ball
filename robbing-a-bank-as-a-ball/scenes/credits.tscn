@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://j5domrbamuok" path="res://scripts/credits.gd" id="1_0bpdh"]
 [ext_resource type="Texture2D" uid="uid://dq73me0se4hvl" path="res://art/UI/2026_03_05_0t8_Kleki.png" id="2_2ckv8"]
+[ext_resource type="Texture2D" uid="uid://d27gpsavhe3vu" path="res://art/2026_03_16_0z5_Kleki.png" id="3_0ctdu"]
 
 [node name="credits" type="CanvasLayer" unique_id=1500838099]
 script = ExtResource("1_0bpdh")
@@ -13,12 +14,20 @@ scale = Vector2(0.5384448, 0.5384449)
 texture = ExtResource("2_2ckv8")
 
 [node name="Label" type="Label" parent="." unique_id=1060309969]
-offset_left = 33.0
-offset_top = 16.0
-offset_right = 139.0
-offset_bottom = 60.0
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 116.0
+offset_bottom = 56.0
 theme_override_font_sizes/font_size = 31
 text = "Credits"
+
+[node name="Label5" type="Label" parent="." unique_id=1549458612]
+offset_left = 324.0
+offset_top = 230.0
+offset_right = 430.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 31
+text = "Which one is a fraud"
 
 [node name="Label3" type="Label" parent="." unique_id=1744763721]
 offset_left = -2.0
@@ -29,10 +38,10 @@ theme_override_font_sizes/font_size = 22
 text = "don't have any ball relate art"
 
 [node name="Label4" type="Label" parent="." unique_id=302845516]
-offset_left = 378.0
-offset_top = 112.0
-offset_right = 683.0
-offset_bottom = 211.0
+offset_left = 376.0
+offset_top = 4.0
+offset_right = 625.0
+offset_bottom = 273.0
 theme_override_font_sizes/font_size = 22
 text = "blame Ivan if game too
 hard.
@@ -44,22 +53,35 @@ and bad sfx and music
 "
 
 [node name="Button" type="Button" parent="." unique_id=337412111]
-offset_left = 13.0
-offset_top = 66.0
-offset_right = 158.0
-offset_bottom = 116.0
+offset_top = 73.0
+offset_right = 145.0
+offset_bottom = 123.0
 text = "main menu"
 
+[node name="right" type="Button" parent="." unique_id=1764477714]
+offset_left = 225.0
+offset_top = 274.0
+offset_right = 430.0
+offset_bottom = 324.0
+text = "Punchyourbuns2(correct)"
+
+[node name="alsoRight" type="Button" parent="." unique_id=699106112]
+offset_left = 431.0
+offset_top = 275.0
+offset_right = 636.0
+offset_bottom = 325.0
+text = "Kallum Wang(correct)"
+
 [node name="Label2" type="Label" parent="." unique_id=1297466382]
-offset_left = 164.0
-offset_top = 9.0
-offset_right = 443.0
-offset_bottom = 318.0
+offset_left = 152.0
+offset_top = -3.0
+offset_right = 431.0
+offset_bottom = 306.0
 text = "art-  Kevin Xu (mee67)
 programming-  Kevin Xu
 music-  Kevin Xu
-sfx-  Kevin Xu, pixabay.com and that
-meme soundboard
+sfx-  Kevin Xu, pixabay.com 
+and thatmeme soundboard
 
 Programs
 -Godot
@@ -68,4 +90,11 @@ Programs
 -audacity
 "
 
+[node name="202603160z5Kleki" type="Sprite2D" parent="." unique_id=475288310]
+position = Vector2(71, 222.00002)
+scale = Vector2(0.20821916, 0.20821916)
+texture = ExtResource("3_0ctdu")
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="right" to="." method="_on_right_button_down"]
+[connection signal="button_down" from="alsoRight" to="." method="_on_also_right_button_down"]

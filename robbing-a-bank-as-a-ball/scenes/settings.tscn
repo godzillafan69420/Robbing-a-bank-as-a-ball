@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://b6drghcxlai0s" path="res://sfx/play on the lowest volume.wav" id="2_f4mfi"]
 [ext_resource type="AudioStream" uid="uid://bkpt8tgcyy5vl" path="res://sfx/dyingagain.mp3" id="3_es4n0"]
 [ext_resource type="Texture2D" uid="uid://1x4abotw080f" path="res://art/UI/masterart.png" id="4_f4mfi"]
+[ext_resource type="AudioStream" uid="uid://c14h0oo3nt4m" path="res://sfx/rolled.mp3" id="4_gis3k"]
 [ext_resource type="Texture2D" uid="uid://dqojefyt7u2ej" path="res://art/rick.jpg" id="5_es4n0"]
 
 [sub_resource type="Animation" id="Animation_es4n0"]
@@ -72,6 +73,7 @@ script = ExtResource("1_r6d6q")
 thickOfIt = ExtResource("2_f4mfi")
 dying = ExtResource("3_es4n0")
 rolled = NodePath("Rick/AnimationPlayer")
+rickRollSfx = ExtResource("4_gis3k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=221334271]
 

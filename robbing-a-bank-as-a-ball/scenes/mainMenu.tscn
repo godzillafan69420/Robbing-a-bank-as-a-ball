@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://b3vf3fwr58fwy" path="res://art/UI/UI4.png" id="9_6b2wv"]
 [ext_resource type="Texture2D" uid="uid://bnx2ar77bpk2x" path="res://art/player/New Piskel (2).png" id="9_epn8x"]
 [ext_resource type="Texture2D" uid="uid://gujqmom7blu3" path="res://art/whyBother.png" id="11_tov5d"]
+[ext_resource type="Texture2D" uid="uid://rnxm15u5evbj" path="res://art/images.jpg" id="12_epn8x"]
+[ext_resource type="Texture2D" uid="uid://b6xl1anb46nf3" path="res://art/damn.png" id="13_vt84v"]
+[ext_resource type="Texture2D" uid="uid://d27gpsavhe3vu" path="res://art/2026_03_16_0z5_Kleki.png" id="14_lam2r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
 atlas = ExtResource("2_48ign")
@@ -123,6 +126,7 @@ text = "beat 45 sec for
 an achievement"
 
 [node name="patch notes" type="CanvasLayer" parent="." unique_id=619729117]
+visible = false
 
 [node name="Panel" type="Panel" parent="patch notes" unique_id=861968848]
 offset_left = 146.0
@@ -162,18 +166,24 @@ text = "change log"
 
 [node name="Label2" type="Label" parent="." unique_id=1589559357]
 offset_left = -1.0
-offset_top = 297.0
+offset_top = 257.0
 offset_right = 135.0
-offset_bottom = 320.0
+offset_bottom = 280.0
 text = "achievements"
 
 [node name="achieveMents" type="Control" parent="." unique_id=1965289854]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 2.0
-offset_top = 318.0
-offset_right = 240.0
-offset_bottom = 358.0
+offset_left = 1.0
+offset_top = 279.0
+offset_right = 239.0
+offset_bottom = 355.0
+
+[node name="marisa" type="Sprite2D" parent="achieveMents" unique_id=1557502605]
+visible = false
+position = Vector2(96, 61)
+scale = Vector2(0.047945034, 0.047945034)
+texture = ExtResource("14_lam2r")
 
 [node name="Unnamed" type="Sprite2D" parent="achieveMents" unique_id=289747469]
 visible = false
@@ -183,7 +193,7 @@ texture = ExtResource("6_dj72i")
 
 [node name="Ui1" type="Sprite2D" parent="achieveMents" unique_id=1563322400]
 visible = false
-position = Vector2(58, 22)
+position = Vector2(55, 22)
 texture = ExtResource("7_6b2wv")
 
 [node name="Todd" type="Sprite2D" parent="achieveMents" unique_id=1277204109]
@@ -206,6 +216,18 @@ texture = ExtResource("9_epn8x")
 visible = false
 position = Vector2(197, 22)
 texture = ExtResource("11_tov5d")
+
+[node name="playAudio" type="Sprite2D" parent="achieveMents" unique_id=1511342344]
+visible = false
+position = Vector2(20, 60.00003)
+scale = Vector2(0.16222222, 0.16222222)
+texture = ExtResource("12_epn8x")
+
+[node name="Damn" type="Sprite2D" parent="achieveMents" unique_id=2135047568]
+visible = false
+position = Vector2(56.000004, 59.99999)
+scale = Vector2(0.20129868, 0.20129868)
+texture = ExtResource("13_vt84v")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
