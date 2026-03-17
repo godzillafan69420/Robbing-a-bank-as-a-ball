@@ -94,9 +94,9 @@ offset_top = 35.0
 offset_right = 631.0
 offset_bottom = 137.0
 theme_override_font_sizes/font_size = 23
-text = "Rob a bank as a disable ball with a shotgun
-and kill boxes and other shapes with no discrimination 
-to get rich and buy a private island. (I know good title)"
+text = "Rob a bank as a  ball with a shotgun and kill boxes and 
+other shapes with no discrimination to get rich and buy
+ a private island. (I know good title)"
 
 [node name="timeStage1" type="Label" parent="." unique_id=2006250236]
 offset_left = 381.0
