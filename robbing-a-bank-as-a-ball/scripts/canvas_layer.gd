@@ -45,10 +45,10 @@ func _ready() -> void:
 	if Global.badapple == true:
 		
 		$Masterart.animation = "fumo"
-		AudioManager.play("yes")
+		AudioManager.play("stage1Old")
 	else:
 		$Masterart.animation = "default"
-		AudioManager.play("MainMenu")
+		AudioManager.play("stage1")
 	
 	$timeStage1.text = "Best Time: " + str(roundf(Global.topTime))
 
