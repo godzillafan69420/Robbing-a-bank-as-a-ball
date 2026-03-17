@@ -4,6 +4,7 @@ extends Node2D
 @export var loadingAnimation: Control
 
 func _ready() -> void:
+	Global.stageNum = 0
 	loadingAnimation.get_node("player").play("fadeIn")
 	pauseUI.visible = false
 	get_tree().paused = true

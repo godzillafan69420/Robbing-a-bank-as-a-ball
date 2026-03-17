@@ -6,8 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="3_xoic8"]
 [ext_resource type="AudioStream" uid="uid://cth7irmr3po2c" path="res://music/the what 2.mp3" id="4_pa2ev"]
 [ext_resource type="AudioStream" uid="uid://dqi2kegrexisk" path="res://music/death.mp3" id="5_cbhue"]
+[ext_resource type="AudioStream" uid="uid://ch8m2amasyewe" path="res://music/WHAT.mp3" id="6_0uo38"]
 [ext_resource type="AudioStream" uid="uid://dxu0ndxl037ce" path="res://music/jbbyvucu.mp3" id="6_sgvax"]
-[ext_resource type="AudioStream" uid="uid://bjvv16l7jil4p" path="res://music/brings me tear to my eyes Yeah right.mp3" id="8_sgvax"]
 [ext_resource type="AudioStream" uid="uid://l0ff454a7tjp" path="res://music/vanOfCandies.mp3" id="9_0uo38"]
 
 [node name="Audiomanager" type="Node" unique_id=903281979 node_paths=PackedStringArray("music", "sfx")]
@@ -30,13 +30,13 @@ stream = ExtResource("3_xoic8")
 stream = ExtResource("4_pa2ev")
 
 [node name="stage1Old" type="AudioStreamPlayer" parent="music" unique_id=860212069]
-stream = ExtResource("6_sgvax")
+stream = ExtResource("6_0uo38")
 
 [node name="death" type="AudioStreamPlayer" parent="music" unique_id=1817650165]
 stream = ExtResource("5_cbhue")
 
 [node name="yes" type="AudioStreamPlayer" parent="music" unique_id=399567102]
-stream = ExtResource("8_sgvax")
+stream = ExtResource("6_sgvax")
 volume_db = -5.045
 
 [node name="secret" type="AudioStreamPlayer" parent="music" unique_id=1654951299]

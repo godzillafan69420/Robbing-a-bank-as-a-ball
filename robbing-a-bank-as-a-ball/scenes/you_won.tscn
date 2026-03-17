@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://b8b7sg11kqxp8" path="res://sfx/thank-you-thank-you-thank-you-meme.mp3" id="13_515le"]
 [ext_resource type="AudioStream" uid="uid://bet6twyojy5sh" path="res://sfx/vine-boom.mp3" id="15_jun6g"]
 [ext_resource type="AudioStream" uid="uid://bmxbx40ss0408" path="res://sfx/ive-got-this.mp3" id="16_jun6g"]
+[ext_resource type="AudioStream" uid="uid://ccufu0kqdbptq" path="res://sfx/jackpot-hakari.mp3" id="18_bbe35"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bu5ol"]
 texture = ExtResource("1_cfpfi")
@@ -250,10 +251,22 @@ tracks/14/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("JackpotHakari:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_5bp6i"]
 resource_name = "WinScene"
-length = 8.0
+length = 9.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -261,7 +274,7 @@ tracks/0/path = NodePath("Sprite0:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.36666667, 1.3999999, 1.4333333, 2.1333332, 6.9866667, 7.6766663),
+"times": PackedFloat32Array(0, 0.36666667, 2.9333332, 2.9666667, 3.6666665, 8.52, 9.209999),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-263, 641), Vector2(-96, 639), Vector2(-96, 639), Vector2(-242, 639), Vector2(58, 633), Vector2(58, 633), Vector2(-245.5, 630)]
@@ -273,7 +286,7 @@ tracks/1/path = NodePath("background:enabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.033333335, 0.06666667, 1.4966667),
+"times": PackedFloat32Array(-0.033333335, 0.06666667, 3.03),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -285,7 +298,7 @@ tracks/2/path = NodePath("ground level:enabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.033333335, 1.4966667),
+"times": PackedFloat32Array(0.033333335, 3.03),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -297,7 +310,7 @@ tracks/3/path = NodePath("Gold:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.4733334),
+"times": PackedFloat32Array(0, 3.0066667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -309,7 +322,7 @@ tracks/4/path = NodePath("Gold2:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.4733334, 2.233333),
+"times": PackedFloat32Array(0, 3.0066667, 3.7666664),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -321,7 +334,7 @@ tracks/5/path = NodePath("Gold3:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.4733334),
+"times": PackedFloat32Array(0, 3.0066667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -333,7 +346,7 @@ tracks/6/path = NodePath("Gold4:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 1.4733334),
+"times": PackedFloat32Array(0, 3.0066667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -345,7 +358,7 @@ tracks/7/path = NodePath("Unc:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1.4333333),
+"times": PackedFloat32Array(0, 2.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -357,7 +370,7 @@ tracks/8/path = NodePath("Unc:texture")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 2.4733334, 3.5966668),
+"times": PackedFloat32Array(0, 4.0066667, 5.13),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("8_j7dev"), ExtResource("9_s7mvk"), ExtResource("8_j7dev")]
@@ -369,7 +382,7 @@ tracks/9/path = NodePath("Unc:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(2.4733334, 3.646667, 3.696667, 4.256667, 4.5566664, 4.786667, 5.1566668, 5.533333, 5.866667, 6.243333, 6.4766665, 6.833333),
+"times": PackedFloat32Array(4.0066667, 5.1800003, 5.2300005, 5.7900004, 6.0899997, 6.32, 6.69, 7.066666, 7.3999996, 7.7766666, 8.01, 8.366667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(245.99997, 629), Vector2(245.99997, 629), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(245.99997, 629)]
@@ -381,7 +394,7 @@ tracks/10/path = NodePath("Unc:scale")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 2.4433331, 2.4733334, 3.5866668, 3.5966668, 3.696667, 4.256667, 4.5566664, 4.786667, 5.1566668, 5.5166664, 5.866667, 6.2266665, 6.4766665, 6.783333),
+"times": PackedFloat32Array(0, 3.9766665, 4.0066667, 5.12, 5.13, 5.2300005, 5.7900004, 6.0899997, 6.32, 6.69, 7.0499997, 7.3999996, 7.76, 8.01, 8.316666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1.053, 1), Vector2(1.053, 1), Vector2(0.35310918, 0.33741546), Vector2(0.35310918, 0.33741546), Vector2(1.053, 1), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(1.053, 1)]
@@ -393,7 +406,7 @@ tracks/11/path = NodePath("ThankYouThankYouThankYouMeme:playing")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(3.6666667, 6.966666),
+"times": PackedFloat32Array(5.2, 8.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -405,7 +418,7 @@ tracks/12/path = NodePath("Sprite0:scale")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 6.8866663, 7.006666),
+"times": PackedFloat32Array(0, 8.42, 8.539999),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1)]
@@ -429,10 +442,22 @@ tracks/14/path = NodePath("IveGotThis:playing")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(2.3),
+"times": PackedFloat32Array(3.833333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("JackpotHakari:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.43, 3.2101786),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hxylx"]
@@ -514,7 +539,7 @@ texture = ExtResource("8_j7dev")
 stream = ExtResource("13_515le")
 
 [node name="Timer" type="Timer" parent="." unique_id=695167395]
-wait_time = 8.0
+wait_time = 9.5
 autostart = true
 
 [node name="Explosion" type="AudioStreamPlayer" parent="." unique_id=1530078526]
@@ -524,5 +549,8 @@ stream = ExtResource("15_jun6g")
 stream = ExtResource("16_jun6g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1987197194]
+
+[node name="JackpotHakari" type="AudioStreamPlayer" parent="." unique_id=379908838]
+stream = ExtResource("18_bbe35")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
