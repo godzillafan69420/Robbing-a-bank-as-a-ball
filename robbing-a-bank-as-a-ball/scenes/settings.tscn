@@ -117,7 +117,7 @@ text = "Communism mode 100% work Kallum wang trust me"
 
 [node name="useless4" type="CheckButton" parent="settings" unique_id=696765285]
 layout_mode = 2
-text = "Old stuff - ᗜˬᗜ"
+text = "Old stuff "
 
 [node name="tuffMode" type="CheckButton" parent="settings" unique_id=807750738]
 layout_mode = 2

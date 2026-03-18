@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 	playerPosition = player.position
 
 	direction = playerPosition - position
-	position += direction.normalized() * 420 * delta
+	position += direction.normalized() * 422.5 * delta
 	if HP <= 0:
 		AudioManager.play_oneshot(death_audio, 10)
 		queue_free()
@@ -38,6 +38,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bullet"):
 		
 		HP -= area.damage
+		area.queue_free()
 	
 
 func _on_body_entered(body: Node2D) -> void:

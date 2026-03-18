@@ -10,7 +10,7 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [node name="TNT" type="RigidBody2D" unique_id=309049693]
-mass = 1.2
+mass = 0.8
 can_sleep = false
 script = ExtResource("1_5ic85")
 

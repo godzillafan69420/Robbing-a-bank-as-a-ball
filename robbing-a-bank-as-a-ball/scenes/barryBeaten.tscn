@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://b4rbp0d4c8hbt"]
 
-[ext_resource type="Script" uid="uid://bxpbmm4jaglib" path="res://CutScene.gd" id="1_07gvl"]
+[ext_resource type="Script" uid="uid://bxpbmm4jaglib" path="res://scripts/CutScene.gd" id="1_07gvl"]
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="2_uhvfa"]
 [ext_resource type="Texture2D" uid="uid://df7aexx1it8ch" path="res://art/tiles/wall.png" id="3_ygugk"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="4_f14rw"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cxpu785hxq852" path="res://art/red eyes.png" id="10_681oy"]
 [ext_resource type="Texture2D" uid="uid://8310dahbwb7t" path="res://art/player/sprite_0.png" id="11_lpptk"]
 [ext_resource type="Texture2D" uid="uid://bmxmhxdm3ppf4" path="res://art/light.png" id="12_s1gmt"]
+[ext_resource type="AudioStream" uid="uid://du4pfdp7r5pc3" path="res://sfx/take-a-look-around-you.mp3" id="13_uhvfa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhvdr"]
 texture = ExtResource("2_uhvfa")
@@ -174,6 +175,18 @@ tracks/8/keys = {
 "update": 1,
 "values": [0, -1]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../TakeALookAroundYou:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_x1jbc"]
 length = 0.001
@@ -285,6 +298,18 @@ tracks/8/keys = {
 "update": 1,
 "values": [-1]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../TakeALookAroundYou:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_km40p"]
 _data = {
@@ -383,6 +408,9 @@ this achievement"
 wait_time = 16.0
 one_shot = true
 autostart = true
+
+[node name="TakeALookAroundYou" type="AudioStreamPlayer" parent="." unique_id=237518709]
+stream = ExtResource("13_uhvfa")
 
 [connection signal="done" from="." to="." method="_on_done"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

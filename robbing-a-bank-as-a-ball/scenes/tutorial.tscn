@@ -275,40 +275,40 @@ text = "falling down with enough
 momentum will damage enemies"
 
 [node name="box" parent="." unique_id=436887472 instance=ExtResource("10_0epgs")]
-position = Vector2(1693, 209)
+position = Vector2(1682, 207)
 
 [node name="box2" parent="." unique_id=1784019866 instance=ExtResource("10_0epgs")]
-position = Vector2(1726, 209)
+position = Vector2(1715, 207)
 
 [node name="box3" parent="." unique_id=66532970 instance=ExtResource("10_0epgs")]
-position = Vector2(1564, 209)
+position = Vector2(1553, 207)
 
 [node name="box4" parent="." unique_id=1546661437 instance=ExtResource("10_0epgs")]
-position = Vector2(1628, 209)
+position = Vector2(1617, 207)
 
 [node name="box5" parent="." unique_id=407611490 instance=ExtResource("10_0epgs")]
-position = Vector2(1597, 209)
+position = Vector2(1586, 207)
 
 [node name="box6" parent="." unique_id=565803943 instance=ExtResource("10_0epgs")]
-position = Vector2(1661, 209)
+position = Vector2(1650, 207)
 
 [node name="box7" parent="." unique_id=234506686 instance=ExtResource("10_0epgs")]
-position = Vector2(1840, -334)
+position = Vector2(1877, 207)
 
 [node name="box8" parent="." unique_id=1651935418 instance=ExtResource("10_0epgs")]
-position = Vector2(1873, -334)
+position = Vector2(1910, 207)
 
 [node name="box9" parent="." unique_id=1522267875 instance=ExtResource("10_0epgs")]
-position = Vector2(1711, -334)
+position = Vector2(1748, 207)
 
 [node name="box10" parent="." unique_id=1116497122 instance=ExtResource("10_0epgs")]
-position = Vector2(1775, -334)
+position = Vector2(1812, 207)
 
 [node name="box11" parent="." unique_id=1710539472 instance=ExtResource("10_0epgs")]
-position = Vector2(1744, -334)
+position = Vector2(1781, 207)
 
 [node name="box12" parent="." unique_id=1468834773 instance=ExtResource("10_0epgs")]
-position = Vector2(1808, -334)
+position = Vector2(1845, 207)
 
 [node name="HePromise" type="Sprite2D" parent="." unique_id=391111841]
 position = Vector2(-232, 172.00002)

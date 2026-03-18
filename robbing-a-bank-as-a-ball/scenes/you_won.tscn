@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8310dahbwb7t" path="res://art/player/sprite_0.png" id="1_02j60"]
 [ext_resource type="Texture2D" uid="uid://ca7goigwnk66k" path="res://art/tiles/concrete.png" id="1_cfpfi"]
-[ext_resource type="Script" uid="uid://ckd5u2ldxhmus" path="res://scenes/you_won.gd" id="1_f7dx0"]
+[ext_resource type="Script" uid="uid://ckd5u2ldxhmus" path="res://scripts/you_won.gd" id="1_f7dx0"]
 [ext_resource type="Texture2D" uid="uid://dsc5vk1eo1x1l" path="res://art/New Piskel (4).png" id="2_515le"]
 [ext_resource type="Texture2D" uid="uid://df7aexx1it8ch" path="res://art/tiles/wall.png" id="2_tgsk8"]
 [ext_resource type="Texture2D" uid="uid://damor723f2ipq" path="res://art/tiles/marblepillar.png" id="3_80m04"]
@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://bet6twyojy5sh" path="res://sfx/vine-boom.mp3" id="15_jun6g"]
 [ext_resource type="AudioStream" uid="uid://bmxbx40ss0408" path="res://sfx/ive-got-this.mp3" id="16_jun6g"]
 [ext_resource type="AudioStream" uid="uid://ccufu0kqdbptq" path="res://sfx/jackpot-hakari.mp3" id="18_bbe35"]
+[ext_resource type="AudioStream" uid="uid://dt2mkl1ubixxv" path="res://sfx/enemy dies.mp3" id="19_5bp6i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bu5ol"]
 texture = ExtResource("1_cfpfi")
@@ -263,6 +264,18 @@ tracks/15/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("EnemyDies:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_5bp6i"]
 resource_name = "WinScene"
@@ -310,7 +323,7 @@ tracks/3/path = NodePath("Gold:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 3.0066667),
+"times": PackedFloat32Array(0, 2.7666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -322,7 +335,7 @@ tracks/4/path = NodePath("Gold2:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 3.0066667, 3.7666664),
+"times": PackedFloat32Array(0, 2.4, 3.7666664),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -334,7 +347,7 @@ tracks/5/path = NodePath("Gold3:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 3.0066667),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -346,7 +359,7 @@ tracks/6/path = NodePath("Gold4:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 3.0066667),
+"times": PackedFloat32Array(0, 1.6333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -382,10 +395,10 @@ tracks/9/path = NodePath("Unc:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(4.0066667, 5.1800003, 5.2300005, 5.7900004, 6.0899997, 6.32, 6.69, 7.066666, 7.3999996, 7.7766666, 8.01, 8.366667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 4.0066667, 5.1800003, 5.233333, 5.46, 5.7900004, 6.0899997, 6.32, 6.69, 7.066666, 7.3999996, 7.7766666, 8.01, 8.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(245.99997, 629), Vector2(245.99997, 629), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(245.99997, 629)]
+"values": [Vector2(250, 606), Vector2(245.99997, 629), Vector2(245.99997, 629), Vector2(250, 606), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(251, 632.00006), Vector2(250, 606), Vector2(245.99997, 629)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -394,10 +407,10 @@ tracks/10/path = NodePath("Unc:scale")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 3.9766665, 4.0066667, 5.12, 5.13, 5.2300005, 5.7900004, 6.0899997, 6.32, 6.69, 7.0499997, 7.3999996, 7.76, 8.01, 8.316666),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 3.9766665, 4.0066667, 5.12, 5.13, 5.233333, 5.46, 5.7900004, 6.0899997, 6.32, 6.69, 7.0499997, 7.3999996, 7.76, 8.01, 8.316666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1.053, 1), Vector2(1.053, 1), Vector2(0.35310918, 0.33741546), Vector2(0.35310918, 0.33741546), Vector2(1.053, 1), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(1.053, 1)]
+"values": [Vector2(1.5937502, 2.46875), Vector2(1.053, 1), Vector2(0.35310918, 0.33741546), Vector2(0.35310918, 0.33741546), Vector2(1.053, 1), Vector2(1.5937502, 2.46875), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(3.265625, 0.8593747), Vector2(1.5937502, 2.46875), Vector2(1.053, 1)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -430,7 +443,7 @@ tracks/13/path = NodePath("Explosion:playing")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(-0.06666667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -458,6 +471,18 @@ tracks/15/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("EnemyDies:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.5, 1.8666667, 2.26, 2.2666667, 2.62, 2.6333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, true, false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hxylx"]
@@ -552,5 +577,8 @@ stream = ExtResource("16_jun6g")
 
 [node name="JackpotHakari" type="AudioStreamPlayer" parent="." unique_id=379908838]
 stream = ExtResource("18_bbe35")
+
+[node name="EnemyDies" type="AudioStreamPlayer" parent="." unique_id=969640933]
+stream = ExtResource("19_5bp6i")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
