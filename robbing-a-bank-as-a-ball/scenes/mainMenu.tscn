@@ -64,14 +64,6 @@ offset_bottom = 193.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "Museum(tutorial)"
 
-[node name="Button2" type="Button" parent="." unique_id=172081464]
-offset_left = 237.0
-offset_top = 196.0
-offset_right = 381.0
-offset_bottom = 240.0
-theme_override_styles/normal = ExtResource("4_7nrmo")
-text = "bank"
-
 [node name="Button6" type="Button" parent="." unique_id=981541002]
 offset_left = 237.0
 offset_top = 196.0
@@ -273,7 +265,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_amia2")
 text = "Never show yourself again"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="Button6" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
 [connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]

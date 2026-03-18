@@ -332,10 +332,6 @@ offset_bottom = -137.0
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1698522927]
 
-[node name="Unnamed" type="Sprite2D" parent="." unique_id=790948693]
-position = Vector2(-248, -402)
-texture = ExtResource("4_ikfo1")
-
 [node name="TNT" parent="." unique_id=309049693 instance=ExtResource("14_0hilk")]
 position = Vector2(1077, 176)
 

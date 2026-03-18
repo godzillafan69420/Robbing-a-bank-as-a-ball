@@ -150,7 +150,12 @@ func _physics_process(delta: float) -> void:
 		if c.get_collider() is RigidBody2D:
 			var pushForce = (PUSHFORCE * velocity.length() / MAXSPEED) + MINPUSHFORCE
 			c.get_collider().apply_central_impulse(-c.get_normal() * pushForce)
-
+	if invincibility:
+		$HurtBox.monitoring = false
+		$HurtBox.monitorable = false
+	else:
+		$HurtBox.monitoring = true
+		$HurtBox.monitorable = true
 
 func _on_shoot_timer_timeout() -> void:
 	canJump = true
@@ -166,6 +171,8 @@ func _on_reload_time_timeout() -> void:
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy") and !invincibility:
+		$HurtBox.monitoring = false
+		$HurtBox.monitorable = false
 		AudioManager.play_oneshot(damage, 10)
 		HP -= 1
 		invincibility = true
@@ -175,8 +182,10 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 
 
 func _on_invincibility_timeout() -> void:
+	
 	invincibility = false
 	$direction/AnimatedSprite2D.set_modulate(Color8(255,255,255,255))
+
 
 
 func _on_regeneration_timeout() -> void:

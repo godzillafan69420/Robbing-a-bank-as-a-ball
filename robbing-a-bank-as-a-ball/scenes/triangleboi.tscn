@@ -56,5 +56,10 @@ animation = &"angry"
 position = Vector2(0, 1)
 polygon = PackedVector2Array(-15.875, 14.785, 0, -17, 16, 15)
 
+[node name="attackRate" type="Timer" parent="." unique_id=395286658]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="playerdector" to="." method="_on_playerdector_body_entered"]
+[connection signal="timeout" from="attackRate" to="." method="_on_attack_rate_timeout"]

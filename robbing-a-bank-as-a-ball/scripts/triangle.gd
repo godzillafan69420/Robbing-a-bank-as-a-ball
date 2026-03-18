@@ -1,6 +1,7 @@
 extends Area2D
 
 enum state {idle, attacking}
+var canAttack: bool = true
 var CurrentStates
 var playerPosition: Vector2
 var direction: Vector2
@@ -50,6 +51,9 @@ func _on_playerdector_body_entered(body: CharacterBody2D) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bullet"):
 		HP -= area.damage
+
+
+	
 
 
 		
