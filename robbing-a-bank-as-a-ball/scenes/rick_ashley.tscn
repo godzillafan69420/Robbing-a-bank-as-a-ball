@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bu8f6i2t7cof4" path="res://scripts/rick_ashley.gd" id="1_ltd0j"]
 [ext_resource type="AudioStream" uid="uid://d1gxre16kn1ib" path="res://sfx/where-are-you-goingg.mp3" id="2_elr47"]
-[ext_resource type="Texture2D" uid="uid://bvjicl7ao5mcy" path="res://art/todd.png" id="3_3887x"]
+[ext_resource type="Texture2D" uid="uid://cbmg5sb2ut2y3" path="res://art/scaryKevin.png" id="3_elr47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltd0j"]
 size = Vector2(84, 78)
@@ -18,7 +18,7 @@ shape = SubResource("RectangleShape2D_ltd0j")
 modulate = Color(0.63539076, 0.63539076, 0.63539076, 1)
 position = Vector2(1, 1)
 scale = Vector2(0.5667329, 0.6144578)
-texture = ExtResource("3_3887x")
+texture = ExtResource("3_elr47")
 
 [node name="Timer" type="Timer" parent="." unique_id=1860567624]
 wait_time = 4.0

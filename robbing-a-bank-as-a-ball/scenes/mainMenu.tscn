@@ -7,12 +7,11 @@
 [ext_resource type="StyleBox" uid="uid://cj3ecxp45r03u" path="res://logs.tres" id="4_l7wge"]
 [ext_resource type="Texture2D" uid="uid://dyu836l1aymfp" path="res://art/tiles/unnamed.jpg" id="6_dj72i"]
 [ext_resource type="Texture2D" uid="uid://ivbckqnoi84i" path="res://art/UI/UI1.png" id="7_6b2wv"]
-[ext_resource type="Texture2D" uid="uid://bvjicl7ao5mcy" path="res://art/todd.png" id="8_tov5d"]
 [ext_resource type="Texture2D" uid="uid://b3vf3fwr58fwy" path="res://art/UI/UI4.png" id="9_6b2wv"]
 [ext_resource type="Texture2D" uid="uid://bnx2ar77bpk2x" path="res://art/player/New Piskel (2).png" id="9_epn8x"]
+[ext_resource type="Texture2D" uid="uid://cbmg5sb2ut2y3" path="res://art/scaryKevin.png" id="9_vt84v"]
 [ext_resource type="Texture2D" uid="uid://gujqmom7blu3" path="res://art/whyBother.png" id="11_tov5d"]
 [ext_resource type="Texture2D" uid="uid://rnxm15u5evbj" path="res://art/images.jpg" id="12_epn8x"]
-[ext_resource type="Texture2D" uid="uid://b6xl1anb46nf3" path="res://art/damn.png" id="13_vt84v"]
 [ext_resource type="Texture2D" uid="uid://d27gpsavhe3vu" path="res://art/2026_03_16_0z5_Kleki.png" id="14_lam2r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
@@ -41,6 +40,9 @@ animations = [{
 "name": &"fumo",
 "speed": 5.0
 }]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vt84v"]
+load_path = "res://.godot/imported/damn.png-97d7b7ddab16d238524e028d44ea90ba.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lam2r"]
 bg_color = Color(0.37844455, 0.41926783, 0.5756086, 1)
@@ -197,7 +199,7 @@ texture = ExtResource("7_6b2wv")
 visible = false
 position = Vector2(92, 21.999998)
 scale = Vector2(0.20481928, 0.20481928)
-texture = ExtResource("8_tov5d")
+texture = ExtResource("9_vt84v")
 
 [node name="Ui4" type="Sprite2D" parent="achieveMents" unique_id=236612218]
 visible = false
@@ -224,7 +226,7 @@ texture = ExtResource("12_epn8x")
 visible = false
 position = Vector2(56.000004, 59.99999)
 scale = Vector2(0.20129868, 0.20129868)
-texture = ExtResource("13_vt84v")
+texture = SubResource("CompressedTexture2D_vt84v")
 
 [node name="Panel" type="Panel" parent="." unique_id=23816440]
 visible = false

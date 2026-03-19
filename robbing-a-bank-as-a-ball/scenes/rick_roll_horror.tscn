@@ -103,6 +103,13 @@ offset_bottom = -130.0
 [node name="UI" parent="player" unique_id=1997593276 instance=ExtResource("10_uwof4")]
 stageNumber = -1
 
+[node name="Label2" type="Label" parent="player/UI" unique_id=625327973]
+offset_left = 300.0
+offset_top = 298.0
+offset_right = 626.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 39
+
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=296956703]
 position = Vector2(2, -2)
 
@@ -117,10 +124,10 @@ texture = ExtResource("12_jw6gw")
 position = Vector2(-399, 374)
 
 [node name="eyes" type="PointLight2D" parent="rickAshley" unique_id=1855088044]
-position = Vector2(1.9999881, -9.000011)
+position = Vector2(-11, -0.9999943)
 rotation = -0.34204406
-scale = Vector2(0.3194902, 0.45189577)
-energy = 3.14
+scale = Vector2(0.3112683, 0.44026664)
+energy = 10.84
 shadow_enabled = true
 shadow_color = Color(0.9529412, 0, 0, 0)
 shadow_filter_smooth = 4.4

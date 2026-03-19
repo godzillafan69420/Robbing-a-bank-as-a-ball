@@ -14,7 +14,6 @@ config/name="robbing a bank as a ball"
 run/main_scene="uid://c1xp223bkxciv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
-boot_splash/image="uid://b6xl1anb46nf3"
 config/icon="res://art/icon.svg"
 
 [audio]

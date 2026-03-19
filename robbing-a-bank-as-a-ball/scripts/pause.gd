@@ -28,6 +28,7 @@ func _on_restart_button_down() -> void:
 		
 		
 	else:
+		Global.kills = 0
 		get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
 	
 
