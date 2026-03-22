@@ -141,20 +141,7 @@ offset_top = 30.0
 offset_right = 333.0
 offset_bottom = 313.0
 theme_override_font_sizes/font_size = 13
-text = "added death you can die now
-added banks 
-added settings for volume
-added tnt
-improve player movement
-add a score
-winning i guess
-Barry toes. code 67, communism, god, tuff
-
-never going to add
-communism mode
-tuff mode
-me67
-second level"
+text = "Bro is actually interested"
 
 [node name="Label2" type="Label" parent="patch notes/Panel" unique_id=1326011468]
 layout_mode = 0
