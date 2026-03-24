@@ -59,68 +59,68 @@ scale = Vector2(0.6204332, 0.6235815)
 sprite_frames = SubResource("SpriteFrames_48ign")
 
 [node name="Button" type="Button" parent="." unique_id=1599516938]
-offset_left = 19.0
-offset_top = 149.0
-offset_right = 161.0
-offset_bottom = 193.0
+offset_left = 262.0
+offset_top = 124.0
+offset_right = 404.0
+offset_bottom = 168.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "Museum(tutorial)"
 
 [node name="Button6" type="Button" parent="." unique_id=981541002]
-offset_left = 468.0
-offset_top = 143.0
-offset_right = 612.0
-offset_bottom = 187.0
+offset_left = 257.0
+offset_top = 172.0
+offset_right = 401.0
+offset_bottom = 216.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "bank"
 
 [node name="Button3" type="Button" parent="." unique_id=151522675]
-offset_left = 249.0
-offset_top = 2.0
-offset_right = 385.0
-offset_bottom = 46.0
+offset_left = 238.0
+offset_top = 229.0
+offset_right = 374.0
+offset_bottom = 273.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "settings"
 
 [node name="Label" type="Label" parent="." unique_id=1336749874]
-offset_left = 19.0
-offset_top = 256.0
-offset_right = 633.0
-offset_bottom = 358.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 622.0
+offset_bottom = 105.0
 theme_override_font_sizes/font_size = 23
 text = "Rob a bank as a  ball with a shotgun and kill boxes and 
 other shapes with no discrimination to get rich and buy
  a private island. (I know good title)"
 
 [node name="timeStage1" type="Label" parent="." unique_id=2006250236]
-offset_left = 464.0
-offset_top = 115.0
-offset_right = 544.0
-offset_bottom = 164.0
+offset_left = 454.0
+offset_top = 234.0
+offset_right = 534.0
+offset_bottom = 283.0
 text = "best time:
 "
 
 [node name="Button4" type="Button" parent="." unique_id=1546009225]
-offset_left = 113.0
-offset_top = 200.0
-offset_right = 251.0
-offset_bottom = 250.0
+offset_left = 264.0
+offset_top = 281.0
+offset_right = 402.0
+offset_bottom = 331.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "credits"
 
 [node name="Button5" type="Button" parent="." unique_id=637477796]
-offset_left = 523.0
-offset_top = 225.0
-offset_right = 612.9
-offset_bottom = 256.0
+offset_left = 15.0
+offset_top = 320.0
+offset_right = 104.900024
+offset_bottom = 351.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "logs"
 
 [node name="timeStage2" type="Label" parent="." unique_id=994991176]
-offset_left = 383.0
-offset_top = 215.0
-offset_right = 624.0
-offset_bottom = 264.0
+offset_left = 475.0
+offset_top = 129.0
+offset_right = 716.0
+offset_bottom = 178.0
 text = "beat 45 sec for 
 an achievement"
 
@@ -141,7 +141,14 @@ offset_top = 30.0
 offset_right = 333.0
 offset_bottom = 313.0
 theme_override_font_sizes/font_size = 13
-text = "Bro is actually interested"
+text = "Bro is actually interested
+
+go to setting and input:
+67
+communism
+god mode
+and tuff
+"
 
 [node name="Label2" type="Label" parent="patch notes/Panel" unique_id=1326011468]
 layout_mode = 0
@@ -151,19 +158,19 @@ theme_override_font_sizes/font_size = 25
 text = "change log"
 
 [node name="Label2" type="Label" parent="." unique_id=1589559357]
-offset_left = 43.0
-offset_top = 13.0
-offset_right = 179.0
-offset_bottom = 36.0
+offset_left = 32.0
+offset_top = 131.0
+offset_right = 168.0
+offset_bottom = 154.0
 text = "achievements"
 
 [node name="achieveMents" type="Control" parent="." unique_id=1965289854]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 27.0
-offset_top = 43.0
-offset_right = 265.0
-offset_bottom = 119.0
+offset_left = 33.0
+offset_top = 155.0
+offset_right = 271.0
+offset_bottom = 231.0
 
 [node name="marisa" type="Sprite2D" parent="achieveMents" unique_id=1557502605]
 visible = false
