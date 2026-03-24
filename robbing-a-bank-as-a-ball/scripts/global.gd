@@ -22,4 +22,5 @@ var openLogs: bool = false
 var PlayThickOfIt: bool = false
 var pacifist: bool = false
 var fraudDetector: bool = false
+var death: bool = false
 	

@@ -177,7 +177,7 @@ position = Vector2(533, 179)
 position = Vector2(479, 90)
 
 [node name="boxBoi7" parent="." unique_id=438967241 instance=ExtResource("8_eegwp")]
-position = Vector2(958, 83)
+position = Vector2(1067, 204)
 
 [node name="boxBoi8" parent="." unique_id=622127857 instance=ExtResource("8_eegwp")]
 position = Vector2(1070, 241)

@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://rnxm15u5evbj" path="res://art/images.jpg" id="12_epn8x"]
 [ext_resource type="PackedScene" uid="uid://g1vj817pk7md" path="res://scenes/achivement_discription.tscn" id="14_amia2"]
 [ext_resource type="Texture2D" uid="uid://d27gpsavhe3vu" path="res://art/2026_03_16_0z5_Kleki.png" id="14_lam2r"]
-[ext_resource type="Texture2D" uid="uid://dj0vv0dw6owm" path="res://art/bruuh.jpg" id="15_25e00"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1i7"]
 atlas = ExtResource("2_48ign")
@@ -44,35 +43,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25e00"]
+size = Vector2(35, 34)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amia2"]
 size = Vector2(34, 35)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_25e00"]
-size = Vector2(33, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfr2g"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5i7h7"]
-size = Vector2(31, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6c1hc"]
-size = Vector2(30, 31)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0jpb"]
-size = Vector2(30, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewahu"]
-size = Vector2(27.000008, 29)
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vt84v"]
 load_path = "res://.godot/imported/damn.png-97d7b7ddab16d238524e028d44ea90ba.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7xfv"]
-size = Vector2(33, 33)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6aseq"]
-size = Vector2(29, 32)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lam2r"]
 bg_color = Color(0.37844455, 0.41926783, 0.5756086, 1)
@@ -123,10 +101,10 @@ other shapes with no discrimination to get rich and buy
  a private island. (I know good title)"
 
 [node name="timeStage1" type="Label" parent="." unique_id=2006250236]
-offset_left = 474.0
-offset_top = 181.0
-offset_right = 554.0
-offset_bottom = 230.0
+offset_left = 454.0
+offset_top = 234.0
+offset_right = 534.0
+offset_bottom = 283.0
 text = "best time:
 "
 
@@ -139,10 +117,10 @@ theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "credits"
 
 [node name="Button5" type="Button" parent="." unique_id=637477796]
-offset_left = 539.0
-offset_top = 316.0
-offset_right = 628.9
-offset_bottom = 347.0
+offset_left = 15.0
+offset_top = 320.0
+offset_right = 104.900024
+offset_bottom = 351.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "logs"
 
@@ -166,19 +144,18 @@ theme_override_styles/panel = ExtResource("4_l7wge")
 
 [node name="Label" type="Label" parent="patch notes/Panel" unique_id=1868177932]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 26.0
-offset_right = 330.0
-offset_bottom = 309.0
+offset_left = 2.0
+offset_top = 30.0
+offset_right = 333.0
+offset_bottom = 313.0
 theme_override_font_sizes/font_size = 13
 text = "Bro is actually interested
-Here is some hints for achievements
 
-be a pacifist 
-
-settings is a code room
-
-idk the other should be ez
+go to setting and input:
+67
+communism
+god mode
+and tuff
 "
 
 [node name="Label2" type="Label" parent="patch notes/Panel" unique_id=1326011468]
@@ -189,156 +166,73 @@ theme_override_font_sizes/font_size = 25
 text = "change log"
 
 [node name="Label2" type="Label" parent="." unique_id=1589559357]
-offset_left = 10.0
-offset_top = 208.0
-offset_right = 146.0
-offset_bottom = 231.0
+offset_left = 32.0
+offset_top = 131.0
+offset_right = 168.0
+offset_bottom = 154.0
 text = "achievements"
 
-[node name="achieveMents" type="Node2D" parent="." unique_id=1379675493]
-position = Vector2(15, 246)
-
-[node name="tutorial" parent="achieveMents" unique_id=507735036 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "Beat tutorial. easy huh"
-title = "tutorial"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/tutorial" unique_id=1429314369]
-position = Vector2(20, 22.5)
-shape = SubResource("RectangleShape2D_amia2")
-
-[node name="Unnamed" type="Sprite2D" parent="achieveMents/tutorial" unique_id=289747469]
-position = Vector2(20, 22)
-scale = Vector2(0.097222224, 0.097222224)
-texture = ExtResource("6_dj72i")
-
-[node name="marisa" parent="achieveMents" unique_id=1038511634 instance=ExtResource("6_amia2")]
-visible = false
-position = Vector2(86, 56)
+[node name="AchievementLooker" parent="." unique_id=1038511634 instance=ExtResource("6_amia2")]
+position = Vector2(121, 211)
 discripttion = "Select the correct answer"
 title = "Kallum the fraud"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/marisa" unique_id=951131164]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AchievementLooker" unique_id=951131164]
 position = Vector2(6.999939, 5.499939)
 shape = SubResource("RectangleShape2D_25e00")
 
-[node name="marisa" type="Sprite2D" parent="achieveMents/marisa" unique_id=1557502605]
+[node name="marisa" type="Sprite2D" parent="AchievementLooker" unique_id=1557502605]
 position = Vector2(6.499939, 5.499939)
 scale = Vector2(0.047945034, 0.047945034)
 texture = ExtResource("14_lam2r")
 
-[node name="main" parent="achieveMents" unique_id=1536236260 instance=ExtResource("6_amia2")]
-visible = false
-position = Vector2(54, 22)
-discripttion = "rob the bank with a shot gun
-and kill boxes and other shapes
-with not discrimination to get rich 
-and buy a private island"
-title = "My island"
+[node name="AchievementLooker2" parent="." unique_id=507735036 instance=ExtResource("6_amia2")]
+position = Vector2(35, 155)
+discripttion = "Beat tutorial. easy huh"
+title = "tutorial"
 
-[node name="Ui1" type="Sprite2D" parent="achieveMents/main" unique_id=1563322400]
-position = Vector2(1, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AchievementLooker2" unique_id=1429314369]
+position = Vector2(20, 22.5)
+shape = SubResource("RectangleShape2D_amia2")
+
+[node name="Unnamed" type="Sprite2D" parent="AchievementLooker2" unique_id=289747469]
+position = Vector2(20, 22)
+scale = Vector2(0.097222224, 0.097222224)
+texture = ExtResource("6_dj72i")
+
+[node name="achieveMents" type="Node2D" parent="." unique_id=1379675493]
+position = Vector2(35, 155)
+
+[node name="Ui1" type="Sprite2D" parent="achieveMents" unique_id=1563322400]
+position = Vector2(55, 22)
 texture = ExtResource("7_6b2wv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/main" unique_id=579597168]
-position = Vector2(1.5, 1)
-shape = SubResource("RectangleShape2D_25e00")
-
-[node name="me" parent="achieveMents" unique_id=733359317 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "who is this nerd"
-title = "find Me67"
-
-[node name="Todd" type="Sprite2D" parent="achieveMents/me" unique_id=1277204109]
-position = Vector2(92, 22)
+[node name="Todd" type="Sprite2D" parent="achieveMents" unique_id=1277204109]
+position = Vector2(92, 21.999998)
 scale = Vector2(0.20481928, 0.20481928)
 texture = ExtResource("9_vt84v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/me" unique_id=1401459621]
-position = Vector2(91, 24)
-shape = SubResource("RectangleShape2D_jfr2g")
-
-[node name="old" parent="achieveMents" unique_id=55580019 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "try get 35 sec. Now"
-title = "sweat ball"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/old" unique_id=363580591]
-position = Vector2(163.5, 21)
-shape = SubResource("RectangleShape2D_5i7h7")
-
-[node name="Ui4" type="Sprite2D" parent="achieveMents/old" unique_id=236612218]
+[node name="Ui4" type="Sprite2D" parent="achieveMents" unique_id=236612218]
 position = Vector2(163, 21)
 texture = ExtResource("9_6b2wv")
 
-[node name="sweat" parent="achieveMents" unique_id=1352875642 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "why did you use this skin"
-title = "old stuff"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/sweat" unique_id=178741303]
-position = Vector2(129, 23.5)
-shape = SubResource("RectangleShape2D_6c1hc")
-
-[node name="NewPiskel(2)" type="Sprite2D" parent="achieveMents/sweat" unique_id=990897467]
+[node name="NewPiskel(2)" type="Sprite2D" parent="achieveMents" unique_id=990897467]
 position = Vector2(128, 22)
 texture = ExtResource("9_epn8x")
 
-[node name="son" parent="achieveMents" unique_id=1231730862 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "what waste of time"
-title = "did bro really"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/son" unique_id=295818850]
-position = Vector2(197, 22)
-shape = SubResource("RectangleShape2D_k0jpb")
-
-[node name="WhyBother" type="Sprite2D" parent="achieveMents/son" unique_id=1760255880]
+[node name="WhyBother" type="Sprite2D" parent="achieveMents" unique_id=1760255880]
 position = Vector2(197, 22)
 texture = ExtResource("11_tov5d")
 
-[node name="passive" parent="achieveMents" unique_id=2120532526 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "did you tried it in main game?"
-title = "I have no enemies"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/passive" unique_id=763964689]
-position = Vector2(57, 58.5)
-shape = SubResource("RectangleShape2D_ewahu")
-
-[node name="Damn" type="Sprite2D" parent="achieveMents/passive" unique_id=2135047568]
-position = Vector2(56, 59.999985)
-scale = Vector2(0.20129868, 0.20129868)
-texture = SubResource("CompressedTexture2D_vt84v")
-
-[node name="tuff" parent="achieveMents" unique_id=5681987 instance=ExtResource("6_amia2")]
-visible = false
-discripttion = "Like my singing or voice acting"
-title = "did your ears bleed"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/tuff" unique_id=289818585]
-position = Vector2(18.5, 61.5)
-shape = SubResource("RectangleShape2D_d7xfv")
-
-[node name="playAudio" type="Sprite2D" parent="achieveMents/tuff" unique_id=1511342344]
+[node name="playAudio" type="Sprite2D" parent="achieveMents" unique_id=1511342344]
 position = Vector2(20, 60.00003)
 scale = Vector2(0.16222222, 0.16222222)
 texture = ExtResource("12_epn8x")
 
-[node name="genocide" parent="achieveMents" unique_id=568572105 instance=ExtResource("6_amia2")]
-visible = false
-position = Vector2(127, 60)
-discripttion = "It can't be that deep."
-title = "Genocide"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="achieveMents/genocide" unique_id=1155490435]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_6aseq")
-
-[node name="Bruuh" type="Sprite2D" parent="achieveMents/genocide" unique_id=2001396178]
-position = Vector2(5.0000076, 0.9999999)
-scale = Vector2(0.20608108, 0.20608108)
-texture = ExtResource("15_25e00")
+[node name="Damn" type="Sprite2D" parent="achieveMents" unique_id=2135047568]
+position = Vector2(56.000004, 59.99999)
+scale = Vector2(0.20129868, 0.20129868)
+texture = SubResource("CompressedTexture2D_vt84v")
 
 [node name="Panel" type="Panel" parent="." unique_id=23816440]
 visible = false
@@ -346,7 +240,6 @@ offset_left = 116.0
 offset_top = 93.0
 offset_right = 480.0
 offset_bottom = 302.0
-mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lam2r")
 
 [node name="Label" type="Label" parent="Panel" unique_id=2021034265]
@@ -380,10 +273,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_amia2")
 text = "Never show yourself again"
 
 [node name="achivementDiscription" parent="." unique_id=606882458 instance=ExtResource("14_amia2")]
-offset_left = 359.0
-offset_top = 252.0
-offset_right = 521.0
-offset_bottom = 348.0
+offset_left = 97.0
+offset_top = 222.0
+offset_right = 259.0
+offset_bottom = 318.0
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Button6" to="." method="_on_button_2_button_down"]

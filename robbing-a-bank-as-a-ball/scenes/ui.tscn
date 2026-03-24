@@ -31,3 +31,10 @@ offset_top = 19.0
 offset_right = 335.0
 offset_bottom = 75.0
 theme_override_font_sizes/font_size = 34
+
+[node name="kills" type="Label" parent="." unique_id=595491206]
+offset_left = 495.0
+offset_top = 294.0
+offset_right = 543.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 34

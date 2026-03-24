@@ -22,35 +22,12 @@ theme_override_font_sizes/font_size = 31
 text = "Credits"
 
 [node name="Label5" type="Label" parent="." unique_id=1549458612]
-offset_left = 324.0
-offset_top = 230.0
-offset_right = 430.0
-offset_bottom = 274.0
+offset_left = 21.0
+offset_top = 236.0
+offset_right = 327.0
+offset_bottom = 280.0
 theme_override_font_sizes/font_size = 31
 text = "Which one is a fraud"
-
-[node name="Label3" type="Label" parent="." unique_id=1744763721]
-offset_left = -2.0
-offset_top = 328.0
-offset_right = 303.0
-offset_bottom = 372.0
-theme_override_font_sizes/font_size = 22
-text = "don't have any ball relate art"
-
-[node name="Label4" type="Label" parent="." unique_id=302845516]
-offset_left = 376.0
-offset_top = 4.0
-offset_right = 625.0
-offset_bottom = 273.0
-theme_override_font_sizes/font_size = 22
-text = "blame Ivan if game too
-hard.
-Blame sean if game too
-easy.
-Blame me if game is
-ugly, have lots of bugs
-and bad sfx and music
-"
 
 [node name="Button" type="Button" parent="." unique_id=337412111]
 offset_top = 73.0
@@ -59,39 +36,35 @@ offset_bottom = 123.0
 text = "main menu"
 
 [node name="right" type="Button" parent="." unique_id=1764477714]
-offset_left = 225.0
-offset_top = 274.0
-offset_right = 430.0
-offset_bottom = 324.0
+offset_left = 20.0
+offset_top = 281.0
+offset_right = 226.0
+offset_bottom = 331.0
 text = "PunchYourBuns2(correct)"
 
 [node name="alsoRight" type="Button" parent="." unique_id=699106112]
-offset_left = 431.0
-offset_top = 275.0
-offset_right = 636.0
-offset_bottom = 325.0
+offset_left = 242.0
+offset_top = 282.0
+offset_right = 447.0
+offset_bottom = 332.0
 text = "Kallum Wang(correct)"
 
 [node name="Label2" type="Label" parent="." unique_id=1297466382]
-offset_left = 152.0
-offset_top = -3.0
-offset_right = 431.0
-offset_bottom = 306.0
-text = "art-  Kevin Xu (mee67)
+offset_left = 164.0
+offset_top = 15.0
+offset_right = 443.0
+offset_bottom = 220.0
+text = "art-  Kevin Xu (me67)
 programming-  Kevin Xu
 music-  Kevin Xu
 sfx-  Kevin Xu, pixabay.com 
-and thatmeme soundboard
+and that meme soundboard
 
-Programs
--Godot
--MuseScore
-- piskel and Kleki
--audacity
+
 "
 
 [node name="202603160z5Kleki" type="Sprite2D" parent="." unique_id=475288310]
-position = Vector2(71, 222.00002)
+position = Vector2(552, 258)
 scale = Vector2(0.20821916, 0.20821916)
 texture = ExtResource("3_0ctdu")
 

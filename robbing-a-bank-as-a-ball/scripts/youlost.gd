@@ -4,6 +4,7 @@ func _ready() -> void:
 	AudioManager.play("death")
 
 func _on_button_button_down() -> void:
+	Global.kills = 0
 	if Global.stageNum == 1:
 		Global.tries -= 1
 	Global.STAGE1time = 0

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c3efay4i4q51u"]
+
+[ext_resource type="Script" uid="uid://dx5b48nbj21yr" path="res://scenes/dies_of_death.gd" id="1_ajtsg"]
+
+[node name="boxExplosion" type="CPUParticles2D" unique_id=2013115584]
+emitting = false
+amount = 20
+lifetime = 0.65
+one_shot = true
+speed_scale = 1.3900000000000001
+explosiveness = 0.51
+randomness = 0.4
+direction = Vector2(0, -1)
+spread = 100.0
+initial_velocity_min = 100.42
+initial_velocity_max = 230.66
+angular_velocity_min = -177.14
+angular_velocity_max = 182.86
+orbit_velocity_min = -0.1
+orbit_velocity_max = 0.15
+linear_accel_max = 10.32
+angle_min = -62.9
+angle_max = 51.4
+scale_amount_min = 6.04
+scale_amount_max = 10.01
+color = Color(0.47609258, 0.24865314, 0.08783526, 1)
+script = ExtResource("1_ajtsg")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

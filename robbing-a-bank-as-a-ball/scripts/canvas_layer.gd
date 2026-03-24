@@ -15,32 +15,35 @@ func _ready() -> void:
 	
 	if Global.beatbarry:
 		numberAchivement +=1
-		$achieveMents/Todd.visible = true
+		$achieveMents/me.visible = true
 	if Global.beattutorial:
 		numberAchivement +=1
-		$achieveMents/Unnamed.visible = true
+		$achieveMents/tutorial.visible = true
 	if Global.beatlevel:
 		numberAchivement +=1
-		$achieveMents/Ui1.visible = true
+		$achieveMents/main.visible = true
 	if Global.oldMode:
 		numberAchivement +=1
-		$"achieveMents/NewPiskel(2)".visible = true
+		$"achieveMents/sweat".visible = true
 	if Global.beatPersonal:
 		
 		numberAchivement +=1
-		$achieveMents/Ui4.visible = true
+		$achieveMents/old.visible = true
 	if Global.openLogs:
 		numberAchivement +=1
-		$achieveMents/WhyBother.visible = true
+		$achieveMents/son.visible = true
 	if Global.PlayThickOfIt:
 		numberAchivement +=1
-		$achieveMents/playAudio.visible = true
+		$achieveMents/tuff.visible = true
 	if Global.pacifist:
 		numberAchivement +=1
-		$achieveMents/Damn.visible = true
+		$achieveMents/passive.visible = true
 	if Global.fraudDetector:
 		numberAchivement +=1
 		$achieveMents/marisa.visible = true
+	if Global.death:
+		numberAchivement +=1
+		$achieveMents/genocide.visible = true
 	$"patch notes".visible = false
 	if Global.badapple == true:
 		
@@ -53,7 +56,7 @@ func _ready() -> void:
 	$timeStage1.text = "Best Time: " + str(roundf(Global.topTime))
 
 func _process(delta: float) -> void:
-	$Label2.text = "Achievements " + str(numberAchivement) + "/9"
+	$Label2.text = "Achievements " + str(numberAchivement) + "/10"
 
 
 func _on_button_button_down() -> void:
@@ -82,7 +85,7 @@ func _on_button_5_button_down() -> void:
 		$"patch notes".visible = true
 		if Global.openLogs:
 			
-			$achieveMents/WhyBother.visible = true
+			$achieveMents/son.visible = true
 	else:
 		$"patch notes".visible = false
 

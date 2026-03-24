@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+const blood = preload("res://scenes/dies_of_death.tscn")
 const bullet = preload("res://scenes/enemy_bullets.tscn")
 enum state {idle, attacking}
 var gun: Node2D
@@ -7,6 +8,8 @@ var player: CharacterBody2D
 var playerPosition: Vector2
 var direction: float
 var CurrentState
+
+var isDying = false
 @export var HP: int = 3
 
 @export var shoot: AudioStream
@@ -29,9 +32,13 @@ func _process(_delta: float) -> void:
 		gun.find_child("Sprite2D").flip_v = true
 	else:
 		gun.find_child("Sprite2D").flip_v = false
-	if HP <= 0:
+	if HP <= 0 and !isDying:
 		Global.kills += 1
 		AudioManager.play_oneshot(death_audio, 10)
+		var bloodExplosion = blood.instantiate()
+		bloodExplosion.position = position
+		get_parent().add_child(bloodExplosion)
+		isDying = true
 		queue_free()
 
 	

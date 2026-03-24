@@ -20,6 +20,7 @@ func _on_continue_button_down() -> void:
 
 func _on_restart_button_down() -> void:
 	get_tree().paused = false
+	Global.kills = 0
 	if Global.stageNum == 1:
 		Global.STAGE1time = 0
 		Global.tries -= 1
@@ -28,7 +29,7 @@ func _on_restart_button_down() -> void:
 		
 		
 	else:
-		Global.kills = 0
+		
 		get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
 	
 

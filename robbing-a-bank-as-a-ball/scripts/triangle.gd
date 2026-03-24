@@ -1,5 +1,6 @@
 extends Area2D
 
+const blood = preload("res://scenes/dies_of_death.tscn")
 enum state {idle, attacking}
 var canAttack: bool = true
 var CurrentStates
@@ -13,6 +14,8 @@ var HP: float = 2
 @export var active3: AudioStream
 @export var active4: AudioStream
 var sfx: int 
+
+var isDying = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	CurrentStates = state.idle
@@ -29,9 +32,13 @@ func _process(delta: float) -> void:
 		direction = playerPosition - position
 		position += direction.normalized() * 100 * delta
 		rotation = atan2(direction.y, direction.x) + PI/2
-	if HP <= 0:
+	if HP <= 0 and !isDying:
 		Global.kills += 1
 		AudioManager.play_oneshot(death_audio, 10)
+		var bloodExplosion = blood.instantiate()
+		bloodExplosion.position = position
+		get_parent().add_child(bloodExplosion)
+		isDying = true
 		queue_free()
 
 func _on_playerdector_body_entered(body: CharacterBody2D) -> void:
