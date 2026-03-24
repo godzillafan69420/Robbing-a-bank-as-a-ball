@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bo71cvtdv6ve8" path="res://scenes/win.tscn" id="12_ej4tf"]
 [ext_resource type="Texture2D" uid="uid://cto6v3y1fj1te" path="res://art/whoishe.png" id="13_5qvs7"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="14_0hilk"]
+[ext_resource type="Texture2D" uid="uid://yt4hrhuvoh2x" path="res://leaderBoard/hehe.png" id="14_qbchm"]
 [ext_resource type="PackedScene" uid="uid://js5b2aa1gvni" path="res://scenes/loading.tscn" id="21_210s6"]
 [ext_resource type="Texture2D" uid="uid://cjd06vdt5se3a" path="res://art/tiles/he promise.png" id="23_210s6"]
 
@@ -98,7 +99,7 @@ scale = Vector2(3.1029022, 3.1029024)
 texture = ExtResource("5_qbchm")
 
 [node name="7" type="Sprite2D" parent="decoration" unique_id=553724148]
-position = Vector2(7468.685, 136.52771)
+position = Vector2(7180.115, 139.63062)
 scale = Vector2(3.1029022, 3.1029024)
 texture = ExtResource("5_feaue")
 
@@ -131,9 +132,14 @@ scale = Vector2(0.5844507, 0.5844508)
 texture = ExtResource("10_5qvs7")
 
 [node name="Whoishe" type="Sprite2D" parent="decoration" unique_id=2123884304]
-position = Vector2(6848.105, 65.33014)
+position = Vector2(6609.182, 77.572556)
 scale = Vector2(1.8408651, 4.3872037)
 texture = ExtResource("13_5qvs7")
+
+[node name="Hehe" type="Sprite2D" parent="decoration" unique_id=968758764]
+position = Vector2(7841.0327, 34.131924)
+scale = Vector2(0.600557, 0.600557)
+texture = ExtResource("14_qbchm")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2094826264]
 modulate = Color(0.90359825, 0.90359825, 0.9035982, 1)
@@ -259,10 +265,10 @@ text = "touch the vault to win
 "
 
 [node name="Label10" type="Label" parent="." unique_id=1300822347]
-offset_left = 2222.0
-offset_top = 135.0
-offset_right = 2405.0
-offset_bottom = 236.0
+offset_left = 2154.0
+offset_top = 141.0
+offset_right = 2337.0
+offset_bottom = 242.0
 text = "Yeah, why not.
 "
 
