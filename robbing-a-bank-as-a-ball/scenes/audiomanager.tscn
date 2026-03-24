@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cifdvw2ugtnh1" path="res://scripts/audioManger.gd" id="1_exa1w"]
 [ext_resource type="PackedScene" uid="uid://dc0dh3qvxpjnc" path="res://scenes/audio_one_shot.tscn" id="2_xoic8"]
-[ext_resource type="AudioStream" uid="uid://bltdb5lv185we" path="res://music/cooking.mp3" id="3_sgvax"]
+[ext_resource type="AudioStream" uid="uid://cooi86u3wihxw" path="res://music/peak.mp3" id="3_sgvax"]
 [ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="3_xoic8"]
 [ext_resource type="AudioStream" uid="uid://cth7irmr3po2c" path="res://music/the what 2.mp3" id="4_pa2ev"]
 [ext_resource type="AudioStream" uid="uid://dqi2kegrexisk" path="res://music/death.mp3" id="5_cbhue"]
