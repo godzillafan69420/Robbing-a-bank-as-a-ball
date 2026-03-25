@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1xp223bkxciv"]
 
-[ext_resource type="Script" uid="uid://umss8udplgxg" path="res://scripts/canvas_layer.gd" id="1_qkhwq"]
+[ext_resource type="Script" uid="uid://umss8udplgxg" path="res://scripts/mainMenu.gd" id="1_qkhwq"]
 [ext_resource type="Texture2D" uid="uid://jeopehmglj32" path="res://art/tiles/2026_03_02_0xx_Kleki.png" id="2_48ign"]
 [ext_resource type="Texture2D" uid="uid://bd5jede2tv7wr" path="res://art/tiles/2026_03_04_0sy_Kleki.png" id="3_48ign"]
 [ext_resource type="StyleBox" uid="uid://d30fdcnirp3yl" path="res://buttons.tres" id="4_7nrmo"]
@@ -97,18 +97,18 @@ theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "Museum(tutorial)"
 
 [node name="Button6" type="Button" parent="." unique_id=981541002]
-offset_left = 257.0
-offset_top = 172.0
-offset_right = 401.0
-offset_bottom = 216.0
+offset_left = 262.0
+offset_top = 177.0
+offset_right = 406.0
+offset_bottom = 221.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "bank"
 
 [node name="Button3" type="Button" parent="." unique_id=151522675]
-offset_left = 238.0
-offset_top = 229.0
-offset_right = 374.0
-offset_bottom = 273.0
+offset_left = 265.0
+offset_top = 230.0
+offset_right = 401.0
+offset_bottom = 274.0
 theme_override_styles/normal = ExtResource("4_7nrmo")
 text = "settings"
 

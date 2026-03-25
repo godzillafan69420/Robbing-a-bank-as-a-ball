@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://g1vj817pk7md"]
 
-[ext_resource type="Script" uid="uid://0rydc4tfwaha" path="res://scenes/achivement_discription.gd" id="1_7b46e"]
+[ext_resource type="Script" uid="uid://0rydc4tfwaha" path="res://scripts/achivement_discription.gd" id="1_7b46e"]
 
 [node name="achivementDiscription" type="Panel" unique_id=606882458]
 offset_left = 11.0

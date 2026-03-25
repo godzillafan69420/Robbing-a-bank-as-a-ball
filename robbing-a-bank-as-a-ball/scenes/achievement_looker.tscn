@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkmy0t6xqfv40"]
 
-[ext_resource type="Script" uid="uid://ch4h1ke7ke2v3" path="res://achievement_looker.gd" id="1_jjx5i"]
+[ext_resource type="Script" uid="uid://ch4h1ke7ke2v3" path="res://scripts/achievement_looker.gd" id="1_jjx5i"]
 
 [node name="AchievementLooker" type="Area2D" unique_id=1038511634]
 monitorable = false

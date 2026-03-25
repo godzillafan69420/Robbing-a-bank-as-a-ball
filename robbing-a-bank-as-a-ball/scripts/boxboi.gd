@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name boxboi
+
 const blood = preload("res://scenes/dies_of_death.tscn")
 const bullet = preload("res://scenes/enemy_bullets.tscn")
 enum state {idle, attacking}

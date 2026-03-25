@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cl2l8aqhhaqa3"]
 
-[ext_resource type="Script" uid="uid://dx5b48nbj21yr" path="res://scenes/dies_of_death.gd" id="1_aoi66"]
+[ext_resource type="Script" uid="uid://dx5b48nbj21yr" path="res://scripts/dies_of_death.gd" id="1_aoi66"]
 
 [node name="diesOfDeath" type="CPUParticles2D" unique_id=2013115584]
 emitting = false

@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name ExplosionHitbox
+
 var damage = 50
 const BLASTFORCE = 3000
 @export var explosion: AudioStream
