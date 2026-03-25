@@ -10,7 +10,11 @@ func _ready() -> void:
 	get_tree().paused = true
 	await get_tree().create_timer(0.7).timeout
 	get_tree().paused = false
-	AudioManager.play("tutorial")
+	if Global.badapple:
+		AudioManager.play("Yeahtutorial")
+	else:
+		
+		AudioManager.play("tutorial")
 	loadingAnimation.visible = false
 
 	

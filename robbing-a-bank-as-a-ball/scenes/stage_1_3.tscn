@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://csae7ql37s0pu" path="res://scenes/boxboi.tscn" id="10_mpjmt"]
 [ext_resource type="PackedScene" uid="uid://i1vjewqas3pv" path="res://scenes/elevator.tscn" id="11_wb577"]
 [ext_resource type="PackedScene" uid="uid://cwo5sbejcvmfg" path="res://scenes/stage_1_4.tscn" id="12_mpjmt"]
+[ext_resource type="Texture2D" uid="uid://dqho6malgew2f" path="res://art/this way.png" id="20_yokq4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wb577"]
 texture = ExtResource("1_bgnvo")
@@ -84,6 +85,11 @@ tile_set = SubResource("TileSet_1md8p")
 [node name="decoration" type="Node2D" parent="." unique_id=575054401]
 modulate = Color(0.851769, 0.8517689, 0.85176885, 1)
 position = Vector2(-154, 248)
+
+[node name="ThisWay" type="Sprite2D" parent="decoration" unique_id=1202340419]
+position = Vector2(1709, 218)
+rotation = -1.5628984
+texture = ExtResource("20_yokq4")
 
 [node name="7" type="Sprite2D" parent="decoration" unique_id=1911162405]
 position = Vector2(1171, 245)

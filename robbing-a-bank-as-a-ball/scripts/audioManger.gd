@@ -6,14 +6,22 @@ var active_music_stream: AudioStreamPlayer
 @export var music: Node
 @export var sfx: Node
 @export var audio_one_scene: PackedScene
+var nameOfMusicPlaying: String
 
 
 
 func play(audio_name: String, from_position: float = 0.0) -> void:
+	
 	for i in music.get_children():
-		i.stop()
+		if i.name != audio_name:
+			i.stop()
+		else:
+			nameOfMusicPlaying = i.name
+	if active_music_stream == music.get_node(audio_name):
+		return
 	active_music_stream = music.get_node(audio_name)
 	active_music_stream.play(from_position)
+
 	
 func play_oneshot(audioStream: AudioStream, volume_db: float = 0, from_positon:float = 0.0)-> AudioOneshot:
 	var audioOneShot: AudioOneshot = audio_one_scene.instantiate()

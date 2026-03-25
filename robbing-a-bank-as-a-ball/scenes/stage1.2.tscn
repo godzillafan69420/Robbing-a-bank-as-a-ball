@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://i1vjewqas3pv" path="res://scenes/elevator.tscn" id="10_t8t65"]
 [ext_resource type="PackedScene" uid="uid://biemtwjfjrosw" path="res://scenes/stage_1_3.tscn" id="11_crrgr"]
 [ext_resource type="PackedScene" uid="uid://bvgyx4a7knf6s" path="res://scenes/tnt.tscn" id="11_oj8af"]
+[ext_resource type="Texture2D" uid="uid://dqho6malgew2f" path="res://art/this way.png" id="20_cqp7g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_250dj"]
 texture = ExtResource("1_5ae5h")
@@ -84,6 +85,17 @@ tile_set = SubResource("TileSet_cqp7g")
 [node name="decoration" type="Node2D" parent="." unique_id=581697899]
 modulate = Color(0.83033526, 0.83033514, 0.83033514, 1)
 position = Vector2(-122, 280)
+
+[node name="ThisWay" type="Sprite2D" parent="decoration" unique_id=1009503817]
+position = Vector2(599, 161)
+rotation = -1.5714518
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("20_cqp7g")
+
+[node name="ThisWay2" type="Sprite2D" parent="decoration" unique_id=1540237288]
+position = Vector2(619, -628)
+rotation = -3.1305337
+texture = ExtResource("20_cqp7g")
 
 [node name="6" type="Sprite2D" parent="decoration" unique_id=1640711760]
 position = Vector2(271, -649)

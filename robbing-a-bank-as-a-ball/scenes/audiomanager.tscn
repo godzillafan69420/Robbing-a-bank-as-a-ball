@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cooi86u3wihxw" path="res://music/peak.mp3" id="3_sgvax"]
 [ext_resource type="AudioStream" uid="uid://tq1xitfigbls" path="res://music/yeahtutorial.mp3" id="3_xoic8"]
 [ext_resource type="AudioStream" uid="uid://cth7irmr3po2c" path="res://music/the what 2.mp3" id="4_pa2ev"]
+[ext_resource type="AudioStream" uid="uid://emu6msx5yhay" path="res://music/lastminutechange.mp3" id="4_sgvax"]
 [ext_resource type="AudioStream" uid="uid://dqi2kegrexisk" path="res://music/death.mp3" id="5_cbhue"]
 [ext_resource type="AudioStream" uid="uid://ch8m2amasyewe" path="res://music/WHAT.mp3" id="6_0uo38"]
 [ext_resource type="AudioStream" uid="uid://dxu0ndxl037ce" path="res://music/jbbyvucu.mp3" id="6_sgvax"]
@@ -19,12 +20,15 @@ audio_one_scene = ExtResource("2_xoic8")
 
 [node name="music" type="Node" parent="." unique_id=1688568191]
 
+[node name="Yeahtutorial" type="AudioStreamPlayer" parent="music" unique_id=1353979537]
+stream = ExtResource("3_xoic8")
+
 [node name="MainMenu" type="AudioStreamPlayer" parent="music" unique_id=922895579]
 stream = ExtResource("3_sgvax")
 parameters/looping = false
 
 [node name="tutorial" type="AudioStreamPlayer" parent="music" unique_id=1166541675]
-stream = ExtResource("3_xoic8")
+stream = ExtResource("4_sgvax")
 
 [node name="stage1" type="AudioStreamPlayer" parent="music" unique_id=325000058]
 stream = ExtResource("4_pa2ev")
