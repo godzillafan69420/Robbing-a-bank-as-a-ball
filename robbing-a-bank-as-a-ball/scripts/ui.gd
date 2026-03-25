@@ -8,6 +8,6 @@ extends CanvasLayer
 func _process(_delta: float) -> void:
 	$kills.text = "kills: " + str(Global.kills)
 	if stageNumber == 1:
-		$Label.text = str(round(Global.STAGE1time ))
+		$Label.text = str(snapped(Global.STAGE1time, 0.01))
 	if stageNumber == -1:
 		$Label.text = str(round(Global.surviveTime ))

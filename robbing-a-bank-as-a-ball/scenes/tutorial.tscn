@@ -217,22 +217,6 @@ offset_bottom = 200.0
 text = "watch out for spikes.
 don't let it touch you"
 
-[node name="Label12" type="Label" parent="." unique_id=1915268574]
-offset_left = 5140.0
-offset_top = 163.0
-offset_right = 5369.0
-offset_bottom = 264.0
-text = "touch the vault to win
-"
-
-[node name="Label13" type="Label" parent="." unique_id=2021088069]
-offset_left = 5135.0
-offset_top = 271.0
-offset_right = 5364.0
-offset_bottom = 372.0
-text = "touch the vault to win
-"
-
 [node name="Label7" type="Label" parent="." unique_id=1971933037]
 offset_left = 2567.0
 offset_top = 162.0
@@ -255,14 +239,6 @@ offset_top = 149.0
 offset_right = 1781.0
 offset_bottom = 198.0
 text = "who is he countering"
-
-[node name="Label14" type="Label" parent="." unique_id=692734865]
-offset_left = 4790.0
-offset_top = 244.0
-offset_right = 5019.0
-offset_bottom = 345.0
-text = "touch the vault to win
-"
 
 [node name="Label10" type="Label" parent="." unique_id=1300822347]
 offset_left = 2154.0

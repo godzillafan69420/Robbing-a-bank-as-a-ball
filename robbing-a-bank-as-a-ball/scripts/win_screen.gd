@@ -7,8 +7,8 @@ func _ready() -> void:
 		Global.topTime = Global.STAGE1time
 	if Global.topTime > Global.STAGE1time:
 		Global.topTime = Global.STAGE1time
-	$time.text = "time: " + str(round(Global.STAGE1time))
-	$bestTimre.text = "Best time: " + str(round(Global.topTime))
+	$time.text = "time: " + str(snapped(Global.STAGE1time, 0.01))
+	$bestTimre.text = "Best time: " + str(snapped(Global.STAGE1time, 0.01))
 	if Global.STAGE1time < 30:
 		$message.text = "what tech is that"
 	elif Global.STAGE1time < 40:
