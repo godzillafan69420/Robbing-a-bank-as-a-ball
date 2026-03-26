@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var pauseUI: CanvasLayer = $pause
+@onready var pauseUI: CanvasLayer = $pauseddddddddddddddddd
 @export var loadingAnimation: Control
 func _ready() -> void:
-	AudioManager.play("yes")
+	AudioManager.play("tutorial")
 	Global.surviveTime = 40
 		
 	get_tree().paused = true

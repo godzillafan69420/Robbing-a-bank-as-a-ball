@@ -10,4 +10,4 @@ func _process(_delta: float) -> void:
 	if stageNumber == 1:
 		$Label.text = str(snapped(Global.STAGE1time, 0.01))
 	if stageNumber == -1:
-		$Label.text = str(round(Global.surviveTime ))
+		$Label.text = str(snapped(Global.surviveTime, 0.1 ))

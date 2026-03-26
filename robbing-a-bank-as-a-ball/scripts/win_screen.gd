@@ -5,10 +5,12 @@ extends CanvasLayer
 func _ready() -> void:
 	if Global.tries == 1:
 		Global.topTime = Global.STAGE1time
-	if Global.topTime > Global.STAGE1time:
+
+	if Global.STAGE1time < Global.topTime:
 		Global.topTime = Global.STAGE1time
+
 	$time.text = "time: " + str(snapped(Global.STAGE1time, 0.01))
-	$bestTimre.text = "Best time: " + str(snapped(Global.STAGE1time, 0.01))
+	$bestTimre.text = "Best time: " + str(snapped(Global.topTime, 0.01))
 	if Global.STAGE1time < 30:
 		$message.text = "what tech is that"
 	elif Global.STAGE1time < 40:

@@ -53,7 +53,7 @@ func _ready() -> void:
 		$Masterart.animation = "default"
 		AudioManager.play("stage1")
 	
-	$timeStage1.text = "Best Time: " + str(snapped(Global.STAGE1time, 0.01))
+	$timeStage1.text = "Best Time: " + str(snapped(Global.topTime, 0.01))
 
 func _process(delta: float) -> void:
 	$Label2.text = "Achievements " + str(numberAchivement) + "/10"

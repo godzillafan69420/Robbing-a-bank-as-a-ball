@@ -3,6 +3,7 @@ extends CanvasLayer
 			
 
 func _on_main_menu_button_down() -> void:
+	Global.tries -= 1
 	Global.kills = 0
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
@@ -36,6 +37,10 @@ func _on_restart_button_down() -> void:
 
 
 func _on_settings_button_down() -> void:
+	if Global.stageNum == 1:
+		Global.tries -= 1
+	
+
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/settings.tscn")
 	

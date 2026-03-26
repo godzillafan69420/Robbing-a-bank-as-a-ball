@@ -2,6 +2,8 @@ extends Node
 
 var nevershow:bool = false
 
+var MusicVolume: float = 0
+
 var STAGE1time: float = 0
 var topTime: float
 var tries:int = 0

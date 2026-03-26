@@ -11,7 +11,7 @@ var clicks = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$settings/vol.value = -4
+	$settings/vol.value = -6.4
 	$Rick.visible = false
 
 
@@ -91,3 +91,8 @@ func _on_tuff_mode_button_down() -> void:
 		if input == code[3]:
 			correct +=1
 	rickRolled()
+
+
+func _on_music_value_changed(value: float) -> void:
+	Global.MusicVolume = value
+	AudioManager.changeVolume()

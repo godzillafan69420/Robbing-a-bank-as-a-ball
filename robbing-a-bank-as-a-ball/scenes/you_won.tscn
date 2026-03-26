@@ -582,4 +582,14 @@ stream = ExtResource("18_bbe35")
 [node name="EnemyDies" type="AudioStreamPlayer" parent="." unique_id=969640933]
 stream = ExtResource("19_5bp6i")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=858985900]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=2000428462]
+offset_left = 469.0
+offset_top = 298.0
+offset_right = 625.0
+offset_bottom = 344.0
+text = "Skip"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_button_button_down"]

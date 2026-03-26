@@ -90,18 +90,25 @@ offset_bottom = 361.0
 
 [node name="turnOffMusic" type="CheckButton" parent="settings" unique_id=1752292657]
 layout_mode = 2
-text = "I'm playing games in class
-please turn off the sound so i
-don't get caught"
+text = "turn off sound"
 
 [node name="Label" type="Label" parent="settings" unique_id=16698916]
 layout_mode = 2
-text = "volume"
+text = "General volume"
 
 [node name="vol" type="HScrollBar" parent="settings" unique_id=1048103106]
 layout_mode = 2
 min_value = -20.0
 max_value = 10.0
+
+[node name="Label2" type="Label" parent="settings" unique_id=824096236]
+layout_mode = 2
+text = "Music volume"
+
+[node name="music" type="HScrollBar" parent="settings" unique_id=583981634]
+layout_mode = 2
+min_value = -20.0
+max_value = 20.0
 
 [node name="useless" type="CheckButton" parent="settings" unique_id=764200169]
 layout_mode = 2
@@ -146,6 +153,7 @@ libraries/ = SubResource("AnimationLibrary_83j8s")
 
 [connection signal="toggled" from="settings/turnOffMusic" to="." method="_on_turn_off_music_toggled"]
 [connection signal="value_changed" from="settings/vol" to="." method="_on_vol_value_changed"]
+[connection signal="value_changed" from="settings/music" to="." method="_on_music_value_changed"]
 [connection signal="button_down" from="settings/useless" to="." method="_on_useless_button_down"]
 [connection signal="button_down" from="settings/useless2" to="." method="_on_useless_2_button_down"]
 [connection signal="button_down" from="settings/useless3" to="." method="_on_useless_3_button_down"]

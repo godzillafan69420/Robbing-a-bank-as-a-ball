@@ -7,8 +7,8 @@ func _ready() -> void:
 	pauseUI.visible = false
 
 func _process(delta: float) -> void:
-	if StageNum == 1:
-		Global.STAGE1time += delta
+
+	Global.STAGE1time += delta
 	if Input.is_action_just_pressed("pauses"):
 		if get_tree().paused == false:
 			pauseUI.visible = true
